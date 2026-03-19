@@ -1,0 +1,114 @@
+{
+  "posts": [
+    {
+      "id": "001",
+      "title": "Why Structure Beats Motivation Every Time",
+      "date": "2026-03-23",
+      "category": "Training",
+      "readTime": "5 min read",
+      "excerpt": "Motivation gets you started. Structure keeps you going. Here's why the most consistent athletes in the room aren't the most motivated — they're the most organised.",
+      "image": "https://images.unsplash.com/photo-1605296867304-46d5465a13f1?w=1200&q=80",
+      "featured": true,
+      "published": true,
+      "content": [
+        { "type": "paragraph", "text": "Every January, gyms fill up. By March, they're quiet again. The difference between the people who stayed and the people who left isn't talent, genetics, or even discipline in the way most people think about it." },
+        { "type": "paragraph", "text": "It's structure." },
+        { "type": "heading", "text": "The Motivation Myth" },
+        { "type": "paragraph", "text": "Motivation is emotional. It rises and falls with your mood, your stress levels, your sleep quality, and a hundred other variables outside your control. Building a training programme on motivation is like building a house on sand — it looks fine until the conditions change." },
+        { "type": "paragraph", "text": "Structure is different. Structure says: on Monday at 6am, you train. Not because you feel like it. Because that's what Monday at 6am is." },
+        { "type": "blockquote", "text": "The goal is not to be motivated. The goal is to build a system so clear and simple that motivation becomes irrelevant." },
+        { "type": "heading", "text": "What Structure Actually Looks Like" },
+        { "type": "paragraph", "text": "A structured programme has three things a motivation-based approach doesn't: a clear starting point, defined milestones, and a mechanism for tracking progress. Without all three, you're just exercising. With all three, you're training." },
+        { "type": "list", "items": ["Scheduled sessions at fixed times", "A programme built around your goals, not generic templates", "Metrics that tell you whether you're moving forward", "A review point every 4 weeks to assess and adjust"] },
+        { "type": "paragraph", "text": "This is the foundation of everything we build at ODU Active. Not hype, not motivation — a system." },
+        { "type": "cta", "text": "Want to build structure into your training? Start with an assessment.", "link": "booking.html", "label": "Book Assessment" }
+      ]
+    },
+    {
+      "id": "002",
+      "title": "The Science Behind Progressive Overload",
+      "date": "2026-03-20",
+      "category": "Training",
+      "readTime": "7 min read",
+      "excerpt": "Progressive overload is the single most important principle in strength training. Here's what it actually means, why most people apply it wrong, and how to do it right.",
+      "image": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=1200&q=80",
+      "featured": false,
+      "published": true,
+      "content": [
+        { "type": "paragraph", "text": "If you've been training for more than a few weeks, you've probably heard the term progressive overload. It's one of the most cited principles in fitness — and one of the most misunderstood." },
+        { "type": "heading", "text": "What It Actually Means" },
+        { "type": "paragraph", "text": "Progressive overload simply means that for your body to continue adapting, the demands placed on it must gradually increase over time. Your body is efficient — it adapts to stress, and once adapted, it stops changing." },
+        { "type": "paragraph", "text": "The key word is gradually. Not maximally, not randomly — gradually. A 2.5kg increase on your squat over 4 weeks is progressive overload done correctly." },
+        { "type": "heading", "text": "The Common Mistakes" },
+        { "type": "list", "items": ["Adding too much load too quickly and getting injured", "Only tracking weight and ignoring volume, density, and technique", "Applying overload without adequate recovery", "Skipping deload weeks that allow adaptation to consolidate"] },
+        { "type": "blockquote", "text": "More is not always better. Progressively more — applied intelligently — is what produces results." },
+        { "type": "cta", "text": "Ready to train with proper structure and progression?", "link": "booking.html", "label": "Book Assessment" }
+      ]
+    },
+    {
+      "id": "003",
+      "title": "Nutrition Timing: What Actually Matters",
+      "date": "2026-03-17",
+      "category": "Nutrition",
+      "readTime": "6 min read",
+      "excerpt": "Pre-workout, post-workout, intermittent fasting — the nutrition timing debate never ends. Here's what the science actually says and what you should focus on instead.",
+      "image": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=1200&q=80",
+      "featured": false,
+      "published": true,
+      "content": [
+        { "type": "paragraph", "text": "Walk into any gym and you'll hear strong opinions about nutrition timing. Eat within 30 minutes of training. Fast until noon. Carbs at night will kill your results. The noise is endless." },
+        { "type": "paragraph", "text": "Here's the simple truth: for most people, nutrition timing matters far less than nutrition totals." },
+        { "type": "heading", "text": "The Hierarchy of Nutrition" },
+        { "type": "paragraph", "text": "Before worrying about when you eat, you need to get the fundamentals right. Total calories, protein intake, and food quality will determine 90% of your results. Timing accounts for the remaining 10% — and only if everything else is already dialled in." },
+        { "type": "list", "items": ["Total calorie intake relative to your goal", "Adequate protein — typically 1.6–2.2g per kg of bodyweight", "Carbohydrate and fat balance based on training demands", "Micronutrient sufficiency through food variety"] },
+        { "type": "heading", "text": "When Timing Does Matter" },
+        { "type": "paragraph", "text": "If you're training fasted, a small pre-workout meal containing protein and carbohydrates can improve performance. Post-workout protein within 2 hours supports muscle protein synthesis. But these are marginal gains — optimisations, not foundations." },
+        { "type": "blockquote", "text": "Build the foundation first. Optimise the details after." },
+        { "type": "cta", "text": "Want a nutrition plan built around your training?", "link": "booking.html?package=diet", "label": "Book Diet Coaching" }
+      ]
+    },
+    {
+      "id": "004",
+      "title": "From Zero to Consistent: One Client's 90-Day Journey",
+      "date": "2026-03-14",
+      "category": "Client Stories",
+      "readTime": "4 min read",
+      "excerpt": "James came to ODU Active having tried and quit three different gym programmes in two years. Here's what changed — and why consistency finally became possible.",
+      "image": "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=1200&q=80",
+      "featured": false,
+      "published": true,
+      "content": [
+        { "type": "paragraph", "text": "James (name changed) sent his first message in January. He'd tried three different gym programmes in two years — all abandoned within six weeks. He wasn't unfit. He wasn't unmotivated. He was unstructured." },
+        { "type": "heading", "text": "The Assessment" },
+        { "type": "paragraph", "text": "The first session wasn't about training at all. It was about understanding James's schedule, his stress levels, his history, and what had caused previous programmes to fall apart. The pattern was clear: every failed programme had been built around an ideal week that never actually existed." },
+        { "type": "paragraph", "text": "We built his programme around his real week — not the week he wished he had." },
+        { "type": "heading", "text": "90 Days In" },
+        { "type": "list", "items": ["Bench press up from 60kg to 82.5kg", "Squat up from 80kg to 115kg", "Zero missed sessions in the final 8 weeks", "Sleeping better and reporting higher energy levels at work"] },
+        { "type": "blockquote", "text": "I stopped trying to be the person who trains every day. I started being the person who trains on Mondays, Wednesdays, and Fridays. That's it. And it changed everything." },
+        { "type": "paragraph", "text": "The numbers are satisfying. But the shift in how James relates to training — from something he fails at to something he simply does — is the real result." },
+        { "type": "cta", "text": "Ready to build consistency that actually lasts?", "link": "booking.html", "label": "Book Assessment" }
+      ]
+    },
+    {
+      "id": "005",
+      "title": "Sleep, Recovery, and Why You're Leaving Gains on the Table",
+      "date": "2026-03-10",
+      "category": "Training",
+      "readTime": "5 min read",
+      "excerpt": "You can have the perfect programme and the perfect diet and still stall — if your recovery is broken. Here's what recovery actually requires and how to stop neglecting it.",
+      "image": "https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=1200&q=80",
+      "featured": false,
+      "published": true,
+      "content": [
+        { "type": "paragraph", "text": "Training is a stimulus. Adaptation happens during recovery. If your recovery is broken, your adaptation is broken — regardless of how well-designed your programme is." },
+        { "type": "heading", "text": "The Recovery Hierarchy" },
+        { "type": "list", "items": ["Sleep — 7–9 hours, consistent schedule, dark and cool environment", "Nutrition — adequate protein and calories to support repair", "Stress management — cortisol chronically elevated impairs recovery", "Active recovery — low-intensity movement that promotes blood flow without adding fatigue"] },
+        { "type": "heading", "text": "Sleep Is Non-Negotiable" },
+        { "type": "paragraph", "text": "Growth hormone is predominantly released during deep sleep. Muscle protein synthesis is upregulated during sleep. Cognitive function — which affects training quality and decision-making around nutrition — depends entirely on sleep quality." },
+        { "type": "paragraph", "text": "No supplement, no training protocol, and no nutrition strategy can compensate for chronic sleep deprivation." },
+        { "type": "blockquote", "text": "The best recovery tool in the world is free. It's just not exciting enough to sell." },
+        { "type": "cta", "text": "Want a programme that accounts for recovery, not just training?", "link": "booking.html", "label": "Book Assessment" }
+      ]
+    }
+  ]
+}

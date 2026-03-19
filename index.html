@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="ODU Active — Science Based Coaching. Actualize A Better You."/>
+  <title>ODU Active — Science Based Coaching</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/base.css"/>
+  <link rel="stylesheet" href="css/components.css"/>
+  <link rel="stylesheet" href="css/animations.css"/>
+  <link rel="stylesheet" href="css/pages/index.css"/>
+</head>
+<body>
+
+  <canvas id="particleCanvas"></canvas>
+  <div class="dot" id="dot" aria-hidden="true"></div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" aria-label="Main navigation">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__logo">
+        <img src="./assets/images/Sample-3(silver).png" alt="ODU Active" class="navbar__logo-img"/>
+      </a>
+      <ul class="navbar__links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="programs.html">Programs</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="booking.html">Booking</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+      <div class="navbar__actions">
+        <a href="booking.html" class="btn btn--primary">Book Assessment</a>
+      </div>
+      <button class="navbar__hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="navbar__mobile" aria-hidden="true">
+    <a href="index.html" class="active">Home</a>
+    <a href="about.html">About</a>
+    <a href="programs.html">Programs</a>
+    <a href="faq.html">FAQ</a>
+    <a href="booking.html">Booking</a>
+    <a href="booking.html" class="btn btn--primary">Book Assessment</a>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       HERO — Full screen bg image
+  ═══════════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <div class="hero__bg">
+      <!-- Replace with Paul's real photo -->
+      <img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1?w=1800&q=80" alt="" class="hero__bg-img" aria-hidden="true"/>
+      <div class="hero__bg-overlay"></div>
+    </div>
+
+    <div class="hero__content">
+      <div class="hero__eyebrow anim-fade-up anim-delay-1">Science Based Coaching</div>
+      <h1 class="hero__heading anim-fade-up anim-delay-2">
+        <span class="hero__line">Train</span>
+        <span class="hero__line accent">Smarter.</span>
+        <span class="hero__line">Progress</span>
+        <span class="hero__line accent">Faster.</span>
+      </h1>
+      <p class="hero__sub anim-fade-up anim-delay-3">Built Around You.</p>
+      <p class="hero__body anim-fade-up anim-delay-4">Structured programming. Consistent tracking. Steady progression — designed around your lifestyle and performance needs.</p>
+      <div class="hero__actions anim-fade-up anim-delay-5">
+        <a href="booking.html" class="btn btn--primary btn--lg">Book Assessment</a>
+        <a href="programs.html" class="btn btn--secondary btn--lg">View Programs</a>
+      </div>
+    </div>
+
+    <div class="hero__stats anim-fade-up anim-delay-6">
+      <div class="hero__stat">
+        <span class="hero__stat-num">3</span>
+        <span class="hero__stat-label">Coaching Packages</span>
+      </div>
+      <div class="hero__stat-divider"></div>
+      <div class="hero__stat">
+        <span class="hero__stat-num">2</span>
+        <span class="hero__stat-label">Session Formats</span>
+      </div>
+      <div class="hero__stat-divider"></div>
+      <div class="hero__stat">
+        <span class="hero__stat-num">4</span>
+        <span class="hero__stat-label">Client Pathways</span>
+      </div>
+      <div class="hero__stat-divider"></div>
+      <div class="hero__stat">
+        <span class="hero__stat-num">100%</span>
+        <span class="hero__stat-label">Science Based</span>
+      </div>
+    </div>
+
+    <div class="hero__scroll-hint">
+      <span>Scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       INTRO — Image left, text right
+  ═══════════════════════════════════════ -->
+  <section class="section intro" id="intro">
+    <div class="intro__inner">
+      <div class="intro__image-wrap reveal reveal--left">
+        <!-- Replace with Paul's real photo -->
+        <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=900&q=80" alt="ODU Active Coach" class="intro__image"/>
+        <div class="intro__image-badge">
+          <span>Science Based</span>
+          <span class="intro__badge-dot">·</span>
+          <span>Results Driven</span>
+        </div>
+      </div>
+      <div class="intro__text reveal reveal--right">
+        <div class="label-tag">Who We Are</div>
+        <h2 class="intro__heading">Progress Is Not<br/><span class="text-orange">Accidental.</span></h2>
+        <p class="intro__body">ODU Active is a science-based fitness coaching brand built on one principle — structured training produces measurable results. Every client follows a system built around assessment, strategic programming, tracked progress, and continuous refinement.</p>
+        <p class="intro__body">No guesswork. No recycled plans. Just a framework that works — calibrated to you.</p>
+        <a href="about.html" class="btn btn--secondary" style="margin-top:1.8rem;">Learn More About ODU Active</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       PROGRAMS — Cards only, no images
+  ═══════════════════════════════════════ -->
+  <section class="section programs-teaser" id="programs">
+    <div class="container">
+      <div class="section-header section-header--center reveal">
+        <div class="section-header__eyebrow">Packages</div>
+        <h2 class="section-header__title">Choose Your <span class="accent">Path</span></h2>
+        <p class="section-header__body">Three focused packages. One structured system. Built to get you moving in the right direction.</p>
+      </div>
+      <div class="programs-teaser__grid">
+
+        <div class="pkg-card reveal">
+          <div class="pkg-card__tag">Most Popular</div>
+          <div class="pkg-card__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <h3 class="pkg-card__title">Monthly Package</h3>
+          <p class="pkg-card__body">Consistent coaching across the month. Structured sessions, progress tracking, and regular refinement — built for steady, measurable advancement.</p>
+          <ul class="pkg-card__features">
+            <li>Recurring structured sessions</li>
+            <li>Monthly progress review</li>
+            <li>Programming adjustments</li>
+            <li>Online or in-person</li>
+          </ul>
+          <a href="programs.html" class="btn btn--primary pkg-card__cta">View Package</a>
+        </div>
+
+        <div class="pkg-card reveal">
+          <div class="pkg-card__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3 class="pkg-card__title">Single Session</h3>
+          <p class="pkg-card__body">One focused session. Whether you need a movement assessment, a programming consultation, or a targeted training block — this is where you start.</p>
+          <ul class="pkg-card__features">
+            <li>One dedicated session</li>
+            <li>Movement assessment</li>
+            <li>Immediate actionable output</li>
+            <li>Online or in-person</li>
+          </ul>
+          <a href="programs.html" class="btn btn--secondary pkg-card__cta">View Package</a>
+        </div>
+
+        <div class="pkg-card reveal">
+          <div class="pkg-card__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a9 9 0 1 0 9 9"/><path d="M12 6v6l4 2"/><circle cx="18" cy="6" r="3"/></svg>
+          </div>
+          <h3 class="pkg-card__title">Diet Coaching</h3>
+          <p class="pkg-card__body">Nutrition structured around your training. Science-based dietary guidance aligned with your goals — not generic advice, but a plan built for your performance.</p>
+          <ul class="pkg-card__features">
+            <li>Personalised nutrition plan</li>
+            <li>Goal-aligned diet structure</li>
+            <li>Habit consistency tracking</li>
+            <li>Online session</li>
+          </ul>
+          <a href="programs.html" class="btn btn--secondary pkg-card__cta">View Package</a>
+        </div>
+
+      </div>
+      <div class="programs-teaser__cta reveal">
+        <a href="programs.html" class="btn btn--secondary">See Full Program Details</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       METHOD — Layout only, no images
+  ═══════════════════════════════════════ -->
+  <section class="section method" id="method">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-header__eyebrow section-header__eyebrow--left">The Method</div>
+        <h2 class="section-header__title">The ODU Active <span class="accent">System</span></h2>
+      </div>
+      <div class="method__steps">
+        <div class="method__step reveal">
+          <div class="method__step-num">01</div>
+          <h4 class="method__step-title">Assessment</h4>
+          <p class="method__step-body">Movement, strength, and lifestyle evaluation. Every program starts with understanding where you are.</p>
+        </div>
+        <div class="method__connector reveal"></div>
+        <div class="method__step reveal">
+          <div class="method__step-num">02</div>
+          <h4 class="method__step-title">Strategic Programming</h4>
+          <p class="method__step-body">A customised plan aligned to your goals, schedule, and current capacity.</p>
+        </div>
+        <div class="method__connector reveal"></div>
+        <div class="method__step reveal">
+          <div class="method__step-num">03</div>
+          <h4 class="method__step-title">Measured Tracking</h4>
+          <p class="method__step-body">Strength metrics, performance markers, and consistency data. Progress you can see.</p>
+        </div>
+        <div class="method__connector reveal"></div>
+        <div class="method__step reveal">
+          <div class="method__step-num">04</div>
+          <h4 class="method__step-title">Progressive Adjustment</h4>
+          <p class="method__step-body">Refinement based on data and adaptation — so every phase builds on the last.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       TESTIMONIALS — Atmospheric bg image
+  ═══════════════════════════════════════ -->
+  <section class="testimonials" id="testimonials">
+    <div class="testimonials__bg">
+      <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=1800&q=80" alt="" class="testimonials__bg-img" aria-hidden="true"/>
+      <div class="testimonials__bg-overlay"></div>
+    </div>
+    <div class="container testimonials__inner">
+      <div class="section-header section-header--center reveal">
+        <div class="section-header__eyebrow">Results</div>
+        <h2 class="section-header__title">Client <span class="accent">Outcomes</span></h2>
+      </div>
+      <div class="testimonials__grid">
+        <div class="testimonial-card reveal">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <p class="testimonial-card__quote">"The structure alone changed everything. I stopped guessing and started progressing. Three months in and my numbers are the best they've ever been."</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">JM</div>
+            <div>
+              <div class="testimonial-card__name">Busy Professional</div>
+              <div class="testimonial-card__type">Monthly Package</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <p class="testimonial-card__quote">"I came in as a complete beginner and left with a plan I actually understood. The assessment broke down exactly where I was starting from."</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">AK</div>
+            <div>
+              <div class="testimonial-card__name">Foundational Client</div>
+              <div class="testimonial-card__type">Single Session + Monthly</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <p class="testimonial-card__quote">"Training used to feel like noise. Now it's the most structured part of my week. My energy is up, my output at work is up. It translates."</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">TR</div>
+            <div>
+              <div class="testimonial-card__name">High-Output Leader</div>
+              <div class="testimonial-card__type">Monthly Package</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       FINAL CTA — Full bg image
+  ═══════════════════════════════════════ -->
+  <section class="cta-final" id="cta">
+    <div class="cta-final__bg">
+      <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=1800&q=80" alt="" class="cta-final__bg-img" aria-hidden="true"/>
+      <div class="cta-final__bg-overlay"></div>
+    </div>
+    <div class="container cta-final__inner">
+      <div class="reveal">
+        <div class="label-tag">Get Started</div>
+        <h2 class="cta-final__heading">Built for Steady<br/><span class="text-orange">Advancement.</span></h2>
+        <p class="cta-final__body">No hype. No random intensity. No recycled programming. Just structured progression designed to move you forward — wherever you are starting from.</p>
+        <div class="cta-final__actions">
+          <a href="booking.html" class="btn btn--primary btn--lg">Start With an Assessment</a>
+          <a href="programs.html" class="btn btn--secondary btn--lg">Explore Programs</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__top">
+        <div>
+          <img src="./assets/images/Sample-3(silver).png" alt="ODU Active" class="footer__brand-logo"/>
+          <p class="footer__brand-text">Science Based Coaching. Actualize A Better You.</p>
+        </div>
+        <div>
+          <p class="footer__heading">Navigation</p>
+          <ul class="footer__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="programs.html">Programs</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="booking.html">Booking</a></li>
+        <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__heading">Programs</p>
+          <ul class="footer__links">
+            <li><a href="programs.html">Monthly Package</a></li>
+            <li><a href="programs.html">Single Session</a></li>
+            <li><a href="programs.html">Diet Coaching</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__heading">Connect</p>
+          <ul class="footer__links">
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">TikTok</a></li>
+            <li><a href="#">YouTube</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2026 <span>ODU Active</span>. All rights reserved. Built by Nesture.</p>
+        <div class="footer__socials">
+          <a href="#" class="footer__social-link" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+          <a href="#" class="footer__social-link" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/></svg></a>
+          <a href="#" class="footer__social-link" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+          <a href="#" class="footer__social-link" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+          <a href="#" class="footer__social-link" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/particles.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/core.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
