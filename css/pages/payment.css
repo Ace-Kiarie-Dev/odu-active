@@ -65,7 +65,7 @@
   font-family: var(--font-display); font-size: var(--fs-lg); font-weight: var(--fw-bold);
   text-transform: uppercase; color: var(--color-white); margin: 0;
 }
-.pay-card__body { padding: var(--space-7); }
+.pay-card__body { padding: var(--space-8) var(--space-8); }
 
 /* Order summary */
 .order-pkg {

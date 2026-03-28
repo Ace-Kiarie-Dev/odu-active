@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Book a session with ODU Active — Online or In-Person."/>
-  <title>Booking — ODU Active</title>
+  <meta name="description" content="ODU Active — Complete your booking details."/>
+  <title>Booking Details — ODU Active</title>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet"/>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
   <link rel="stylesheet" href="css/base.css"/>
   <link rel="stylesheet" href="css/components.css"/>
   <link rel="stylesheet" href="css/animations.css"/>
-  <link rel="stylesheet" href="css/pages/booking.css"/>
+  <link rel="stylesheet" href="css/pages/booking-details.css"/>
 </head>
 <body>
 
@@ -49,23 +49,27 @@
   </div>
 
   <!-- HERO -->
-  <section class="book-hero" id="hero">
-    <div class="book-hero__content">
-      <div class="book-hero__eyebrow anim-fade-up anim-delay-1">ODU Active</div>
-      <h1 class="book-hero__heading anim-fade-up anim-delay-2">
-        <span class="book-hero__line">Book Your</span>
-        <span class="book-hero__line book-hero__line--accent">Session.</span>
+  <section class="details-hero">
+    <div class="details-hero__content">
+      <a href="booking.html" class="details-hero__back">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+        Back
+      </a>
+      <div class="details-hero__eyebrow anim-fade-up anim-delay-1">ODU Active</div>
+      <h1 class="details-hero__heading anim-fade-up anim-delay-2">
+        <span class="details-hero__line">Your</span>
+        <span class="details-hero__line details-hero__line--accent">Details.</span>
       </h1>
-      <p class="book-hero__body anim-fade-up anim-delay-3">Choose your session type, select a package, and pick an available date. Your coach confirms within 24 hours.</p>
+      <p class="details-hero__body anim-fade-up anim-delay-3">Pick your preferred time slot and fill in your contact details. We'll confirm within 24 hours.</p>
 
-      <!-- PROGRESS STEPS -->
+      <!-- PROGRESS -->
       <div class="book-progress anim-fade-up anim-delay-4">
-        <div class="book-progress__step active">
-          <span class="book-progress__num">1</span>
+        <div class="book-progress__step done">
+          <span class="book-progress__num">✓</span>
           <span class="book-progress__label">Select</span>
         </div>
-        <div class="book-progress__line"></div>
-        <div class="book-progress__step">
+        <div class="book-progress__line book-progress__line--done"></div>
+        <div class="book-progress__step active">
           <span class="book-progress__num">2</span>
           <span class="book-progress__label">Details</span>
         </div>
@@ -78,139 +82,124 @@
     </div>
   </section>
 
-  <!-- BOOKING SECTION -->
-  <section class="section booking-section" id="booking">
+  <!-- MAIN CONTENT -->
+  <section class="section details-section">
     <div class="container">
+      <div class="details-layout">
 
-      <!-- STEP 1 — SESSION TYPE -->
-      <div class="session-selector reveal">
-        <p class="session-selector__label">Step 1 — Choose Session Type</p>
-        <div class="session-selector__options">
-          <button class="session-option active" data-type="online" id="btn-online">
-            <div class="session-option__icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-            </div>
-            <div class="session-option__text">
-              <h4 class="session-option__title">Online</h4>
-              <p class="session-option__sub">Zoom session — anywhere</p>
-            </div>
-            <div class="session-option__check">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            </div>
-          </button>
-          <button class="session-option" data-type="inperson" id="btn-inperson">
-            <div class="session-option__icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            </div>
-            <div class="session-option__text">
-              <h4 class="session-option__title">In-Person</h4>
-              <p class="session-option__sub">1-on-1 coaching session</p>
-            </div>
-            <div class="session-option__check">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            </div>
-          </button>
-        </div>
-      </div>
+        <!-- LEFT — Time slots + form -->
+        <div class="details-main">
 
-      <!-- STEP 2 — PACKAGE -->
-      <div class="pkg-selector reveal">
-        <p class="pkg-selector__label">Step 2 — Select Package</p>
-        <div class="pkg-selector__options">
-          <button class="pkg-option" data-pkg="monthly" id="pkg-monthly">
-            <span class="pkg-option__name">Monthly Package</span>
-            <span class="pkg-option__price">$300 / mo</span>
-          </button>
-          <button class="pkg-option" data-pkg="single" id="pkg-single">
-            <span class="pkg-option__name">Single Session</span>
-            <span class="pkg-option__price">$25</span>
-          </button>
-          <button class="pkg-option" data-pkg="diet" id="pkg-diet">
-            <span class="pkg-option__name">Diet Coaching</span>
-            <span class="pkg-option__price">$45</span>
-          </button>
-          <button class="pkg-option" data-pkg="consultation" id="pkg-consultation">
-            <span class="pkg-option__name">Consultation</span>
-            <span class="pkg-option__price">$25</span>
-          </button>
-        </div>
-      </div>
-
-      <!-- STEP 3 — CALENDAR -->
-      <div class="calendar-wrap reveal">
-        <p class="calendar-wrap__label">Step 3 — Pick an Available Date</p>
-        <div class="calendar-legend">
-          <span><span class="legend-dot legend-dot--available"></span> Available</span>
-          <span><span class="legend-dot legend-dot--saturday"></span> Sat — Request Only</span>
-          <span><span class="legend-dot legend-dot--booked"></span> Booked</span>
-          <span><span class="legend-dot legend-dot--unavailable"></span> Unavailable</span>
-        </div>
-        <div class="calendar" id="calendar">
-          <div class="calendar__nav">
-            <button class="calendar__nav-btn" id="prevMonth" aria-label="Previous month">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
-            </button>
-            <span class="calendar__month-label" id="monthLabel"></span>
-            <button class="calendar__nav-btn" id="nextMonth" aria-label="Next month">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
-            </button>
+          <!-- BOOKING SUMMARY (locked) -->
+          <div class="details-summary reveal">
+            <div class="details-summary__item">
+              <span class="details-summary__label">Session Type</span>
+              <span class="details-summary__value" id="sumType">—</span>
+            </div>
+            <div class="details-summary__item">
+              <span class="details-summary__label">Package</span>
+              <span class="details-summary__value" id="sumPkg">—</span>
+            </div>
+            <div class="details-summary__item">
+              <span class="details-summary__label">Date</span>
+              <span class="details-summary__value" id="sumDate">—</span>
+            </div>
+            <div class="details-summary__item">
+              <span class="details-summary__label">Price</span>
+              <span class="details-summary__value text-orange" id="sumPrice">—</span>
+            </div>
+            <a href="booking.html" class="details-summary__change">Change</a>
           </div>
-          <div class="calendar__days-header">
-            <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
-          </div>
-          <div class="calendar__grid" id="calendarGrid"></div>
-        </div>
-        <p class="calendar-note">Bookings require a minimum of 2 weeks advance notice. Mon–Fri: 5:00am–11:30am &amp; 2:00pm–8:00pm. Saturday by individual agreement only.</p>
-      </div>
 
+          <!-- SATURDAY NOTICE -->
+          <div class="saturday-notice reveal" id="saturdayNotice" style="display:none;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            <p>Saturday sessions are by individual agreement only. Select a preferred time below and we'll reach out to confirm availability.</p>
+          </div>
+
+          <!-- TIME SLOT SELECTOR -->
+          <div class="timeslot-wrap reveal" id="timeslotWrap">
+            <p class="timeslot-label">Choose a Preferred Time Slot</p>
+
+            <div class="timeslot-windows">
+              <div class="timeslot-window">
+                <p class="timeslot-window__label">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  Morning — 5:00am to 11:30am
+                </p>
+                <div class="timeslot-grid" id="morningSlots"></div>
+              </div>
+              <div class="timeslot-window">
+                <p class="timeslot-window__label">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  Afternoon — 2:00pm to 8:00pm
+                </p>
+                <div class="timeslot-grid" id="afternoonSlots"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CONTACT FORM -->
+          <div class="details-form reveal">
+            <p class="details-form__label">Your Details</p>
+
+            <div class="form-group">
+              <label class="form-label" for="fieldName">Full Name <span class="form-required">*</span></label>
+              <input class="form-input" type="text" id="fieldName" placeholder="Your full name" required/>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="fieldEmail">Email Address <span class="form-required">*</span></label>
+              <input class="form-input" type="email" id="fieldEmail" placeholder="your@email.com" required/>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="fieldPhone">Phone / WhatsApp <span class="form-required">*</span></label>
+              <input class="form-input" type="tel" id="fieldPhone" placeholder="+254 700 000 000" required/>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="fieldMessage">Goals / Notes</label>
+              <textarea class="form-textarea" id="fieldMessage" placeholder="Tell us about your goals, current fitness level, or anything relevant..."></textarea>
+            </div>
+
+            <p class="form-error" id="formError" style="display:none;">Please fill in all required fields and select a time slot.</p>
+
+            <button class="btn btn--primary btn--lg details-submit" id="submitBtn">
+              Confirm Booking Request
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+            <p class="details-disclaimer">Your coach will confirm your booking within 24 hours via WhatsApp.</p>
+          </div>
+
+        </div>
+
+        <!-- RIGHT — Session info sidebar -->
+        <aside class="details-sidebar">
+          <div class="details-info reveal">
+            <h4 class="details-info__heading">Session Info</h4>
+            <div class="details-info__items" id="sessionInfoItems">
+              <!-- Populated by JS -->
+            </div>
+          </div>
+
+          <div class="details-policy reveal">
+            <h4 class="details-policy__heading">Booking Policy</h4>
+            <ul class="details-policy__list">
+              <li>Minimum 2 weeks advance booking required</li>
+              <li>Mon–Fri: 5:00am–11:30am &amp; 2:00pm–8:00pm</li>
+              <li>Saturday by individual agreement only</li>
+              <li>Payment required to secure your package</li>
+              <li>Cancellation: up to 70% refund after review</li>
+            </ul>
+          </div>
+
+          <div class="details-help reveal">
+            <p class="details-help__text">Have questions before booking?</p>
+            <a href="faq.html" class="btn btn--secondary" style="width:100%;justify-content:center;">Read the FAQ</a>
+          </div>
+        </aside>
+
+      </div>
     </div>
   </section>
-
-  <!-- WHAT TO EXPECT -->
-  <section class="section expect" id="expect">
-    <div class="container">
-      <div class="section-header section-header--center reveal">
-        <div class="section-header__eyebrow">The Process</div>
-        <h2 class="section-header__title">What to <span class="accent">Expect</span></h2>
-      </div>
-      <div class="expect__steps">
-        <div class="expect__step reveal">
-          <div class="expect__step-num">01</div>
-          <h4 class="expect__step-title">Select</h4>
-          <p class="expect__step-body">Choose your session type, package, and pick an available date on the calendar above.</p>
-        </div>
-        <div class="expect__connector reveal"></div>
-        <div class="expect__step reveal">
-          <div class="expect__step-num">02</div>
-          <h4 class="expect__step-title">Details</h4>
-          <p class="expect__step-body">Choose your preferred time slot and fill in your contact details and goals.</p>
-        </div>
-        <div class="expect__connector reveal"></div>
-        <div class="expect__step reveal">
-          <div class="expect__step-num">03</div>
-          <h4 class="expect__step-title">Confirm</h4>
-          <p class="expect__step-body">Your coach reviews your request and confirms within 24 hours with full session details.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- STICKY CONTINUE BAR -->
-  <div class="book-bar" id="bookBar">
-    <div class="book-bar__inner">
-      <div class="book-bar__summary">
-        <span class="book-bar__item" id="barType">Online</span>
-        <span class="book-bar__sep">·</span>
-        <span class="book-bar__item" id="barPkg">No package selected</span>
-        <span class="book-bar__sep book-bar__sep--date" id="barDateSep" style="display:none;">·</span>
-        <span class="book-bar__item" id="barDate" style="display:none;"></span>
-      </div>
-      <button class="btn btn--primary book-bar__btn" id="continueBtn" disabled>
-        Continue
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
-      </button>
-    </div>
-  </div>
 
   <!-- FOOTER -->
   <footer class="footer">
@@ -267,7 +256,7 @@
   <script src="js/particles.js"></script>
   <script src="js/navbar.js"></script>
   <script src="js/core.js"></script>
-  <script src="js/booking.js"></script>
+  <script src="js/booking-details.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

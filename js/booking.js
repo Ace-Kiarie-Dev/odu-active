@@ -1,14 +1,11 @@
 /* ============================================================
-   ODU ACTIVE — BOOKING.JS
-   Calendar, session type, package selection, two flows,
-   WhatsApp notification, URL params
+   ODU ACTIVE — BOOKING.JS  (Step 1 of 3)
+   Calendar, session type, package selection, continue bar
    Built by Nesture
    ============================================================ */
 
 'use strict';
 
-// ── CONSTANTS ─────────────────────────────────────────────
-const WHATSAPP_NUMBER = '254725242721';
 const MONTHS = ['January','February','March','April','May','June','July',
                 'August','September','October','November','December'];
 
@@ -20,44 +17,48 @@ const PKG_LABELS = {
 };
 
 const PKG_PRICES = {
-  monthly:      'KES XXXX / month',
-  single:       'KES XXXX',
-  diet:         'KES XXXX',
-  consultation: 'KES XXXX'
+  monthly:      '$300 / month',
+  single:       '$25',
+  diet:         '$45',
+  consultation: '$25'
 };
-
-// Assessment packages — these go through the booking form flow
-const ASSESSMENT_PKGS = ['single', 'consultation'];
 
 // ── STATE ─────────────────────────────────────────────────
 const state = {
-  sessionType:   'online',
-  package:       null,
-  selectedDate:  null,
-  selectedLabel: null,
-  currentYear:   new Date().getFullYear(),
-  currentMonth:  new Date().getMonth(),
-  availability:  {}
+  sessionType:  'online',
+  package:      null,
+  selectedDate: null,
+  dateLabel:    null,
+  isSaturday:   false,
+  currentYear:  new Date().getFullYear(),
+  currentMonth: new Date().getMonth(),
+  availability: {}
 };
 
 // ── INLINE AVAILABILITY FALLBACK ──────────────────────────
-// Used when fetch is blocked locally — Paul updates this too
 const INLINE_AVAILABILITY = {
-  "2026-03-23": "available",
-  "2026-03-24": "available",
-  "2026-03-25": "unavailable",
-  "2026-03-26": "unavailable",
-  "2026-03-27": "available",
-  "2026-03-28": "booked",
   "2026-03-30": "available",
   "2026-03-31": "available",
   "2026-04-01": "available",
-  "2026-04-02": "booked",
+  "2026-04-02": "available",
   "2026-04-03": "available",
+  "2026-04-06": "available",
   "2026-04-07": "available",
-  "2026-04-08": "available",
-  "2026-04-09": "booked",
-  "2026-04-10": "available"
+  "2026-04-08": "booked",
+  "2026-04-09": "available",
+  "2026-04-10": "available",
+  "2026-04-13": "available",
+  "2026-04-14": "available",
+  "2026-04-15": "available",
+  "2026-04-16": "booked",
+  "2026-04-17": "available",
+  "2026-04-22": "available",
+  "2026-04-23": "available",
+  "2026-04-24": "available",
+  "2026-04-27": "available",
+  "2026-04-28": "available",
+  "2026-04-29": "available",
+  "2026-04-30": "available"
 };
 
 // ── LOAD AVAILABILITY ─────────────────────────────────────
@@ -67,13 +68,12 @@ async function loadAvailability() {
     const data = await res.json();
     state.availability = data.days || INLINE_AVAILABILITY;
   } catch {
-    // Fallback for local file:// access
     state.availability = INLINE_AVAILABILITY;
   }
   renderCalendar();
 }
 
-// ── URL PARAMS ────────────────────────────────────────────
+// ── READ URL PARAMS ───────────────────────────────────────
 function readURLParams() {
   const params = new URLSearchParams(window.location.search);
   const pkg    = params.get('package');
@@ -86,7 +86,7 @@ document.querySelectorAll('.session-option').forEach(btn => {
     state.sessionType = btn.dataset.type;
     document.querySelectorAll('.session-option').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-    updateSummary();
+    updateBar();
   });
 });
 
@@ -96,7 +96,7 @@ function setPackage(pkg) {
   document.querySelectorAll('.pkg-option').forEach(b => {
     b.classList.toggle('active', b.dataset.pkg === pkg);
   });
-  updateSummary();
+  updateBar();
 }
 
 document.querySelectorAll('.pkg-option').forEach(btn => {
@@ -107,11 +107,19 @@ document.querySelectorAll('.pkg-option').forEach(btn => {
 const calendarGrid = document.getElementById('calendarGrid');
 const monthLabel   = document.getElementById('monthLabel');
 
+function getMinBookingDate() {
+  const min = new Date();
+  min.setDate(min.getDate() + 14);
+  min.setHours(0, 0, 0, 0);
+  return min;
+}
+
 function renderCalendar() {
   if (!calendarGrid) return;
 
   const { currentYear: year, currentMonth: month } = state;
-  const today = new Date(); today.setHours(0,0,0,0);
+  const today      = new Date(); today.setHours(0, 0, 0, 0);
+  const minBooking = getMinBookingDate();
 
   monthLabel.textContent = `${MONTHS[month]} ${year}`;
 
@@ -120,40 +128,57 @@ function renderCalendar() {
 
   calendarGrid.innerHTML = '';
 
-  // Empty cells
+  // Empty cells before first day
   for (let i = 0; i < firstDay; i++) {
     const el = document.createElement('div');
     el.className = 'cal-day cal-day--empty';
     calendarGrid.appendChild(el);
   }
 
-  // Day cells
   for (let d = 1; d <= daysInMonth; d++) {
-    const date    = new Date(year, month, d); date.setHours(0,0,0,0);
-    const dateStr = `${year}-${String(month+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
-    const status  = state.availability[dateStr] || 'unavailable';
-    const isPast  = date < today;
-    const isToday = date.getTime() === today.getTime();
+    const date      = new Date(year, month, d); date.setHours(0, 0, 0, 0);
+    const dateStr   = `${year}-${String(month + 1).padStart(2, '0')}-${String(d).padStart(2, '0')}`;
+    const dayOfWeek = date.getDay(); // 0=Sun, 6=Sat
+    const isSunday  = dayOfWeek === 0;
+    const isSatday  = dayOfWeek === 6;
+    const isTooSoon = date < minBooking;
+    const isToday   = date.getTime() === today.getTime();
+    const status    = state.availability[dateStr] || 'unavailable';
 
     const cell = document.createElement('div');
     cell.classList.add('cal-day');
     cell.textContent = d;
     if (isToday) cell.classList.add('cal-day--today');
 
-    if (isPast) {
+    if (isSunday || isTooSoon) {
+      // Sundays and too-soon dates always blocked
       cell.classList.add('cal-day--past');
+      if (isTooSoon && !isSunday) {
+        cell.title = 'Bookings require 2 weeks advance notice';
+      }
+    } else if (isSatday) {
+      // Saturday — request only, always clickable regardless of availability.json
+      cell.classList.add('cal-day--saturday');
+      cell.setAttribute('role', 'button');
+      cell.setAttribute('tabindex', '0');
+      cell.title = 'Saturday — by individual agreement only';
+      const label = `${MONTHS[month]} ${d}, ${year} (Saturday)`;
+      cell.addEventListener('click', () => selectDate(dateStr, label, true));
+      cell.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') selectDate(dateStr, label, true);
+      });
+    } else if (status === 'booked') {
+      cell.classList.add('cal-day--booked');
+      cell.title = 'This date is fully booked';
     } else if (status === 'available') {
       cell.classList.add('cal-day--available');
       cell.setAttribute('role', 'button');
       cell.setAttribute('tabindex', '0');
-      cell.setAttribute('aria-label', `Book ${MONTHS[month]} ${d}`);
       const label = `${MONTHS[month]} ${d}, ${year}`;
-      cell.addEventListener('click', () => openModal(dateStr, label));
+      cell.addEventListener('click', () => selectDate(dateStr, label, false));
       cell.addEventListener('keydown', e => {
-        if (e.key === 'Enter' || e.key === ' ') openModal(dateStr, label);
+        if (e.key === 'Enter' || e.key === ' ') selectDate(dateStr, label, false);
       });
-    } else if (status === 'booked') {
-      cell.classList.add('cal-day--booked');
     } else {
       cell.classList.add('cal-day--unavailable');
     }
@@ -162,6 +187,29 @@ function renderCalendar() {
   }
 }
 
+// ── SELECT DATE ───────────────────────────────────────────
+function selectDate(dateStr, label, isSaturday) {
+  // Deselect previous
+  document.querySelectorAll('.cal-day--selected').forEach(el => el.classList.remove('cal-day--selected'));
+
+  // Find and mark selected
+  const cells = calendarGrid.querySelectorAll('.cal-day');
+  const day   = parseInt(dateStr.split('-')[2]);
+  cells.forEach(cell => {
+    if (parseInt(cell.textContent) === day &&
+        !cell.classList.contains('cal-day--empty')) {
+      cell.classList.add('cal-day--selected');
+    }
+  });
+
+  state.selectedDate = dateStr;
+  state.dateLabel    = label;
+  state.isSaturday   = isSaturday;
+
+  updateBar();
+}
+
+// ── CALENDAR NAV ──────────────────────────────────────────
 document.getElementById('prevMonth')?.addEventListener('click', () => {
   state.currentMonth--;
   if (state.currentMonth < 0) { state.currentMonth = 11; state.currentYear--; }
@@ -174,107 +222,48 @@ document.getElementById('nextMonth')?.addEventListener('click', () => {
   renderCalendar();
 });
 
-// ── MODAL ─────────────────────────────────────────────────
-const modalOverlay = document.getElementById('modalOverlay');
-const modalBody    = document.querySelector('.modal__body');
-const modalSuccess = document.getElementById('modalSuccess');
+// ── CONTINUE BAR ──────────────────────────────────────────
+const continueBtn = document.getElementById('continueBtn');
+const barType     = document.getElementById('barType');
+const barPkg      = document.getElementById('barPkg');
+const barDate     = document.getElementById('barDate');
+const barDateSep  = document.getElementById('barDateSep');
 
-function openModal(dateStr, label) {
-  state.selectedDate  = dateStr;
-  state.selectedLabel = label;
+function updateBar() {
+  // Type
+  if (barType) barType.textContent = state.sessionType === 'online' ? 'Online (Zoom)' : 'In-Person';
 
-  document.getElementById('modalDateLabel').textContent = label;
-  document.getElementById('modalTitle').textContent     = 'Book Your Session';
+  // Package
+  if (barPkg) barPkg.textContent = state.package ? PKG_LABELS[state.package] : 'No package selected';
 
-  // Determine which flow to show
-  const isAssessment = !state.package || ASSESSMENT_PKGS.includes(state.package);
-  document.getElementById('flowAssessment').style.display = isAssessment ? '' : 'none';
-  document.getElementById('flowPackage').style.display    = isAssessment ? 'none' : '';
+  // Date
+  if (state.selectedDate) {
+    if (barDate)    { barDate.textContent = state.dateLabel; barDate.style.display = ''; }
+    if (barDateSep) barDateSep.style.display = '';
+  }
 
-  // Update payment amounts
-  const price = state.package ? PKG_PRICES[state.package] : 'KES XXXX';
-  const mpesaEl = document.getElementById('mpesaAmount');
-  const bankEl  = document.getElementById('bankAmount');
-  if (mpesaEl) mpesaEl.textContent = price;
-  if (bankEl)  bankEl.textContent  = price;
-
-  // Build WhatsApp message
-  buildWhatsAppLink(label);
-
-  updateSummary();
-
-  // Show modal
-  modalOverlay.classList.add('open');
-  modalOverlay.setAttribute('aria-hidden', 'false');
-  document.body.style.overflow = 'hidden';
-
-  // Reset states
-  if (modalBody)    modalBody.style.display    = '';
-  if (modalSuccess) modalSuccess.style.display = 'none';
+  // Show bar once package is selected, enable continue when date also selected
+  const bookBar = document.getElementById('bookBar');
+  if (bookBar) bookBar.classList.toggle('visible', !!state.package);
+  const canContinue = !!state.package && !!state.selectedDate;
+  if (continueBtn) continueBtn.disabled = !canContinue;
 }
 
-function closeModal() {
-  modalOverlay.classList.remove('open');
-  modalOverlay.setAttribute('aria-hidden', 'true');
-  document.body.style.overflow = '';
-}
+continueBtn?.addEventListener('click', () => {
+  if (!state.package || !state.selectedDate) return;
 
-document.getElementById('modalClose')?.addEventListener('click', closeModal);
-document.getElementById('modalSuccessClose')?.addEventListener('click', closeModal);
-modalOverlay?.addEventListener('click', e => { if (e.target === modalOverlay) closeModal(); });
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+  const params = new URLSearchParams({
+    type:     state.sessionType,
+    package:  state.package,
+    date:     state.selectedDate,
+    label:    state.dateLabel,
+    saturday: state.isSaturday ? '1' : '0'
+  });
 
-// ── WHATSAPP LINK ─────────────────────────────────────────
-function buildWhatsAppLink(dateLabel) {
-  const pkgLabel  = state.package ? PKG_LABELS[state.package] : 'package';
-  const typeLabel = state.sessionType === 'online' ? 'Online (Zoom)' : 'In-Person';
-  const price     = state.package ? PKG_PRICES[state.package] : '';
-  const msg = `Hi Paul, I've just paid for the *${pkgLabel}* (${typeLabel}) — ${price}. Sending proof of payment now. Preferred date: ${dateLabel}.`;
-  const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
-  const waBtn = document.getElementById('whatsappBtn');
-  if (waBtn) waBtn.href = url;
-}
-
-// ── SUMMARY UPDATE ────────────────────────────────────────
-function updateSummary() {
-  const typeEl  = document.getElementById('summaryType');
-  const pkgEl   = document.getElementById('summaryPackage');
-  const dateEl  = document.getElementById('summaryDate');
-  const priceEl = document.getElementById('summaryPrice');
-
-  if (typeEl)  typeEl.textContent  = state.sessionType === 'online' ? 'Online (Zoom)' : 'In-Person';
-  if (pkgEl)   pkgEl.textContent   = state.package ? PKG_LABELS[state.package] : '— not selected';
-  if (dateEl)  dateEl.textContent  = state.selectedLabel || '—';
-  if (priceEl) priceEl.textContent = state.package ? PKG_PRICES[state.package] : '—';
-}
-
-// ── ASSESSMENT FORM SUBMIT ────────────────────────────────
-document.getElementById('modalSubmitAssessment')?.addEventListener('click', () => {
-  const nameEl  = document.getElementById('fieldName');
-  const emailEl = document.getElementById('fieldEmail');
-  const name    = nameEl?.value.trim();
-  const email   = emailEl?.value.trim();
-
-  if (!name)  { nameEl.style.borderColor  = 'var(--color-orange)'; nameEl.focus(); return; }
-  if (!email) { emailEl.style.borderColor = 'var(--color-orange)'; emailEl.focus(); return; }
-
-  // Build WhatsApp message for assessment
-  const pkgLabel  = state.package ? PKG_LABELS[state.package] : 'Assessment';
-  const typeLabel = state.sessionType === 'online' ? 'Online (Zoom)' : 'In-Person';
-  const phone     = document.getElementById('fieldPhone')?.value.trim() || '';
-  const notes     = document.getElementById('fieldMessage')?.value.trim() || '';
-  const msg = `Hi Paul, I'd like to book a *${pkgLabel}* (${typeLabel}) on *${state.selectedLabel}*.\n\nName: ${name}\nEmail: ${email}${phone ? '\nPhone: ' + phone : ''}${notes ? '\nNotes: ' + notes : ''}`;
-  const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
-
-  // Show success then open WhatsApp
-  if (modalBody)    modalBody.style.display    = 'none';
-  if (modalSuccess) modalSuccess.style.display = 'flex';
-
-  // Open WhatsApp after short delay
-  setTimeout(() => window.open(waUrl, '_blank'), 800);
+  window.location.href = `booking-details.html?${params.toString()}`;
 });
 
 // ── INIT ──────────────────────────────────────────────────
 readURLParams();
 loadAvailability();
-updateSummary();
+updateBar();

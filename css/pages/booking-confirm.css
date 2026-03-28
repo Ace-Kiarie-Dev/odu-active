@@ -1,0 +1,138 @@
+/* ============================================================
+   ODU ACTIVE — BOOKING-CONFIRM.CSS | Built by Nesture
+   ============================================================ */
+
+/* ── CONFIRM SECTION ────────────────────────────────────── */
+.confirm-section {
+  min-height: 100vh;
+  display: flex; align-items: center; justify-content: center;
+  padding-top: calc(var(--nav-height) + var(--space-16));
+  padding-bottom: var(--space-20);
+  padding-inline: var(--space-6);
+  position: relative; z-index: 1;
+}
+.confirm-inner {
+  max-width: 640px; width: 100%; margin: 0 auto;
+  display: flex; flex-direction: column; align-items: center;
+  gap: var(--space-8); text-align: center;
+}
+
+/* ── PROGRESS ───────────────────────────────────────────── */
+.confirm-progress { margin-bottom: var(--space-2); }
+.book-progress {
+  display: flex; align-items: center; justify-content: center; gap: 0;
+}
+.book-progress__step {
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+}
+.book-progress__num {
+  width: 32px; height: 32px; border-radius: 50%;
+  border: 1px solid var(--color-border);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display); font-size: var(--fs-sm); font-weight: var(--fw-bold);
+  color: var(--color-muted); background: var(--color-dark);
+  transition: all var(--transition-base);
+}
+.book-progress__label {
+  font-family: var(--font-display); font-size: 0.6rem; font-weight: var(--fw-bold);
+  letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-muted);
+}
+.book-progress__step.active .book-progress__num {
+  border-color: var(--color-orange); color: var(--color-orange); background: var(--color-orange-dim);
+}
+.book-progress__step.active .book-progress__label { color: var(--color-orange); }
+.book-progress__step.done .book-progress__num {
+  border-color: #22c55e; color: #22c55e; background: rgba(34,197,94,0.1);
+}
+.book-progress__step.done .book-progress__label { color: #22c55e; }
+.book-progress__line {
+  width: 48px; height: 1px; background: var(--color-border);
+  margin: 0 var(--space-2); margin-bottom: 18px;
+}
+.book-progress__line--done { background: #22c55e; }
+
+/* ── ICON ───────────────────────────────────────────────── */
+.confirm-icon {
+  width: 80px; height: 80px; border-radius: 50%;
+  background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.3);
+  display: flex; align-items: center; justify-content: center;
+  color: #22c55e;
+}
+
+/* ── EYEBROW / HEADING ──────────────────────────────────── */
+.confirm-eyebrow {
+  font-family: var(--font-display); font-size: var(--fs-xs); font-weight: var(--fw-bold);
+  letter-spacing: 0.28em; text-transform: uppercase; color: var(--color-orange);
+  margin-bottom: var(--space-4);
+}
+.confirm-heading {
+  font-family: var(--font-display); font-weight: var(--fw-black);
+  font-size: clamp(2.4rem, 6vw, 5rem); line-height: 0.95;
+  letter-spacing: -0.02em; text-transform: uppercase;
+  display: flex; flex-direction: column; align-items: center;
+  margin-bottom: var(--space-5);
+}
+.confirm-heading__line       { color: var(--color-white); display: block; }
+.confirm-heading__line--accent { color: var(--color-orange); }
+.confirm-body {
+  font-size: clamp(0.9rem, 1.8vw, 1.05rem); color: var(--color-silver);
+  font-weight: var(--fw-light); max-width: 48ch; margin: 0 auto; line-height: 1.8;
+}
+
+/* ── BOOKING SUMMARY ────────────────────────────────────── */
+.confirm-summary {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
+  background: var(--color-border); border: 1px solid var(--color-border);
+  border-radius: var(--radius-md); overflow: hidden; width: 100%;
+}
+.confirm-summary__item {
+  background: var(--color-panel);
+  padding: var(--space-5) var(--space-6);
+  display: flex; flex-direction: column; gap: 4px;
+}
+.confirm-summary__label {
+  font-family: var(--font-display); font-size: 0.6rem; font-weight: var(--fw-bold);
+  letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-muted);
+}
+.confirm-summary__value {
+  font-family: var(--font-display); font-size: var(--fs-md); font-weight: var(--fw-bold);
+  color: var(--color-white); text-transform: capitalize;
+}
+
+/* ── ACTIONS ────────────────────────────────────────────── */
+.confirm-actions {
+  display: flex; flex-direction: column; gap: var(--space-3); width: 100%;
+}
+.confirm-wa {
+  width: 100%; justify-content: center; gap: var(--space-3); text-decoration: none;
+}
+
+/* ── NEXT STEPS ─────────────────────────────────────────── */
+.confirm-steps {
+  display: flex; flex-direction: column; gap: var(--space-5);
+  width: 100%; text-align: left;
+  border-top: 1px solid var(--color-border); padding-top: var(--space-8);
+}
+.confirm-step {
+  display: flex; align-items: flex-start; gap: var(--space-5);
+  padding-bottom: var(--space-5); border-bottom: 1px solid var(--color-border);
+}
+.confirm-step:last-child { border-bottom: none; padding-bottom: 0; }
+.confirm-step__num {
+  font-family: var(--font-display); font-weight: var(--fw-black);
+  font-size: var(--fs-2xl); color: var(--color-border-light); line-height: 1; flex-shrink: 0;
+}
+.confirm-step__title {
+  font-family: var(--font-display); font-size: var(--fs-md); font-weight: var(--fw-bold);
+  text-transform: uppercase; color: var(--color-white); margin-bottom: 4px;
+}
+.confirm-step__body {
+  font-size: var(--fs-sm); font-weight: var(--fw-light);
+  color: var(--color-silver); line-height: 1.6; margin: 0; max-width: none;
+}
+
+/* ── RESPONSIVE ─────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .confirm-summary { grid-template-columns: 1fr; }
+  .book-progress__line { width: 28px; }
+}

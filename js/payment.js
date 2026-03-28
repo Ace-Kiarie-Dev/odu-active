@@ -11,24 +11,26 @@ const WHATSAPP_NUMBER = '254725242721';
 const PACKAGES = {
   monthly: {
     label:    'Monthly Package',
-    price:    'KES XXXX',
+    price:    '$300 / month',
     includes: [
-      'Initial movement & lifestyle assessment',
-      'Fully customised monthly training programme',
-      'Recurring structured coaching sessions',
-      'Monthly progress review and adjustment',
-      'Direct communication with Paul'
+      'Diet coaching',
+      'Form correction',
+      'Detailed progress tracking',
+      'Workout strategy and planning',
+      'Access to tools and resources',
+      '24hr response time',
+      'Coaching call'
     ]
   },
   diet: {
-    label:    'Diet Coaching',
-    price:    'KES XXXX',
+    label:    'Diet Coaching Session',
+    price:    '$45',
     includes: [
-      'Dietary assessment and goal alignment',
+      'Nutrition aligned to your training and weight goal',
       'Personalised science-based nutrition plan',
+      'Written diet plan delivered after session',
       'Macro and habit structure guidance',
-      'Nutrition strategy aligned to training',
-      'Follow-up recommendations and resources'
+      'Follow-up included'
     ]
   }
 };
@@ -39,10 +41,15 @@ const pkgKey  = params.get('package') || 'monthly';
 const pkg     = PACKAGES[pkgKey] || PACKAGES.monthly;
 
 // ── POPULATE ORDER SUMMARY ────────────────────────────────
-document.getElementById('orderLabel').textContent = pkg.label;
-document.getElementById('orderPrice').textContent = pkg.price;
-document.getElementById('mpesaAmt').textContent   = pkg.price;
-document.getElementById('bankAmt').textContent    = pkg.price;
+const orderLabel = document.getElementById('orderLabel');
+const orderPrice = document.getElementById('orderPrice');
+const mpesaAmt   = document.getElementById('mpesaAmt');
+const bankAmt    = document.getElementById('bankAmt');
+
+if (orderLabel) orderLabel.textContent = pkg.label;
+if (orderPrice) orderPrice.textContent = pkg.price;
+if (mpesaAmt)   mpesaAmt.textContent   = pkg.price;
+if (bankAmt)    bankAmt.textContent    = pkg.price;
 
 const includesEl = document.getElementById('orderIncludes');
 if (includesEl) {
@@ -69,7 +76,7 @@ document.querySelectorAll('.order-session__btn').forEach(btn => {
 // ── WHATSAPP LINK ─────────────────────────────────────────
 function buildWhatsApp() {
   const typeLabel = sessionType === 'online' ? 'Online (Zoom)' : 'In-Person';
-  const msg = `Hi Paul, I've just completed payment for the *${pkg.label}* (${typeLabel}) — ${pkg.price}. Sending proof of payment now.`;
+  const msg = `Hi, I've just completed payment for the *${pkg.label}* (${typeLabel}) — ${pkg.price}. Sending proof of payment now.`;
   const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
   const btn = document.getElementById('whatsappBtn');
   if (btn) btn.href = url;

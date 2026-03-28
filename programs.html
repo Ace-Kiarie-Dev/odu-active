@@ -20,15 +20,14 @@
   <nav class="navbar" aria-label="Main navigation">
     <div class="navbar__inner">
       <a href="index.html" class="navbar__logo">
-        <img src="./assets/images/Sample-3(silver).png" alt="ODU Active" class="navbar__logo-img"/>
+        <img src="./assets/images/Sample-3(silver)-transparent.png" alt="ODU Active" class="navbar__logo-img"/>
       </a>
       <ul class="navbar__links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="programs.html" class="active">Programs</a></li>
         <li><a href="faq.html">FAQ</a></li>
-        <li><a href="booking.html">Booking</a>
-    <a href="blog.html">Blog</a></li>
+        <li><a href="booking.html">Booking</a></li>
         <li><a href="blog.html">Blog</a></li>
       </ul>
       <div class="navbar__actions">
@@ -45,13 +44,15 @@
     <a href="programs.html" class="active">Programs</a>
     <a href="faq.html">FAQ</a>
     <a href="booking.html">Booking</a>
+    <a href="blog.html">Blog</a>
     <a href="booking.html" class="btn btn--primary">Book Assessment</a>
   </div>
 
   <!-- HERO -->
   <section class="prog-hero" id="hero">
     <div class="prog-hero__bg">
-      <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=1800&q=80" alt="" class="prog-hero__bg-img" aria-hidden="true"/>
+      <!-- REPLACE: Hero background — dark athletic training shot -->
+      <img src="assets/images/placeholder.jpg" alt="" class="prog-hero__bg-img" aria-hidden="true"/>
       <div class="prog-hero__bg-overlay"></div>
     </div>
     <div class="prog-hero__content">
@@ -69,51 +70,96 @@
     </div>
   </section>
 
-  <!-- PACKAGE 1 — MONTHLY -->
+  <!-- ═══════════════════════════════════════
+       PACKAGE 1 — MONTHLY IN-PERSON
+  ═══════════════════════════════════════ -->
   <section class="pkg-section" id="monthly">
     <div class="pkg-section__inner pkg-section__inner--left">
       <div class="pkg-section__text reveal reveal--left">
         <div class="pkg-section__tag">Most Popular</div>
         <div class="label-tag">Package 01</div>
         <h2 class="pkg-section__heading">Monthly<br/><span class="text-orange">Package</span></h2>
-        <p class="pkg-section__body">The foundation of consistent progress. Built for clients who are committed to structured, ongoing development. Each month is a building block, tracked and refined.</p>
-        <div class="pkg-section__details">
-          <div class="pkg-section__detail">
-            <span class="pkg-section__detail-label">Format</span>
-            <span class="pkg-section__detail-value">Online or In-Person</span>
-          </div>
-          <div class="pkg-section__detail">
-            <span class="pkg-section__detail-label">Duration</span>
-            <span class="pkg-section__detail-value">Ongoing — monthly commitment</span>
-          </div>
-          <div class="pkg-section__detail">
-            <span class="pkg-section__detail-label">Sessions</span>
-            <span class="pkg-section__detail-value">TBC — confirm with Paul</span>
-          </div>
-          <div class="pkg-section__detail">
-            <span class="pkg-section__detail-label">Pricing</span>
-            <span class="pkg-section__detail-value pkg-section__detail-value--price">Contact for pricing</span>
+        <p class="pkg-section__body">The foundation of consistent progress. Three structured in-person sessions every week, weekly progress reviews, and a full coaching system built around your goals — not a generic template.</p>
+
+        <!-- FORMAT TABS -->
+        <div class="pkg-format-tabs">
+          <button class="pkg-format-tab active" data-format="inperson">In-Person</button>
+          <button class="pkg-format-tab" data-format="online">Online</button>
+        </div>
+
+        <!-- IN-PERSON DETAILS -->
+        <div class="pkg-format-panel active" id="monthly-inperson">
+          <div class="pkg-section__details">
+            <div class="pkg-section__detail">
+              <span class="pkg-section__detail-label">Price</span>
+              <span class="pkg-section__detail-value pkg-section__detail-value--price">$300 / month</span>
+            </div>
+            <div class="pkg-section__detail">
+              <span class="pkg-section__detail-label">Sessions</span>
+              <span class="pkg-section__detail-value">3 x weekly (1hr each)</span>
+            </div>
+            <div class="pkg-section__detail">
+              <span class="pkg-section__detail-label">Format</span>
+              <span class="pkg-section__detail-value">In-Person</span>
+            </div>
+            <div class="pkg-section__detail">
+              <span class="pkg-section__detail-label">Progress Review</span>
+              <span class="pkg-section__detail-value">Weekly</span>
+            </div>
           </div>
         </div>
+
+        <!-- ONLINE DETAILS -->
+        <div class="pkg-format-panel" id="monthly-online">
+          <div class="pkg-section__details">
+            <div class="pkg-section__detail">
+              <span class="pkg-section__detail-label">Price</span>
+              <span class="pkg-section__detail-value pkg-section__detail-value--price">TBC — contact us to confirm</span>
+            </div>
+            <div class="pkg-section__detail">
+              <span class="pkg-section__detail-label">Sessions</span>
+              <span class="pkg-section__detail-value">TBC — contact us to confirm</span>
+            </div>
+            <div class="pkg-section__detail">
+              <span class="pkg-section__detail-label">Format</span>
+              <span class="pkg-section__detail-value">Zoom (preferred)</span>
+            </div>
+            <div class="pkg-section__detail">
+              <span class="pkg-section__detail-label">Progress Review</span>
+              <span class="pkg-section__detail-value">Weekly</span>
+            </div>
+          </div>
+        </div>
+
         <div class="pkg-section__includes">
           <p class="pkg-section__includes-label">What's Included</p>
           <ul class="pkg-section__list">
-            <li>Initial movement & lifestyle assessment</li>
-            <li>Fully customised monthly training programme</li>
-            <li>Recurring structured coaching sessions</li>
-            <li>Progress tracking — strength, performance, consistency</li>
-            <li>Monthly programme review and adjustment</li>
-            <li>Direct communication with Paul</li>
+            <li>Diet coaching</li>
+            <li>Form correction</li>
+            <li>Detailed progress tracking</li>
+            <li>Workout strategy and planning</li>
+            <li>Access to tools and resources</li>
+            <li>24hr response time</li>
+            <li>Coaching call</li>
           </ul>
         </div>
+
         <div class="pkg-section__who">
           <p class="pkg-section__who-label">Best For</p>
-          <p class="pkg-section__who-body">Busy professionals, performance-oriented clients, and high-output leaders who need a reliable, consistent structure to build around.</p>
+          <p class="pkg-section__who-body">Clients committed to consistent, structured development. Busy professionals, performance-oriented clients, and high-output leaders who need a reliable weekly framework.</p>
         </div>
+
+        <div class="pkg-section__notice">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          Booking must be made at least 2 weeks in advance. Payment required at booking.
+        </div>
+
         <a href="payment.html?package=monthly" class="btn btn--primary btn--lg pkg-section__cta">Book Monthly Package</a>
       </div>
+
       <div class="pkg-section__image-wrap reveal reveal--right">
-        <img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1?w=900&q=80" alt="Monthly package training" class="pkg-section__image"/>
+        <!-- REPLACE: Muscular athlete training in gym — dark aesthetic -->
+        <img src="assets/images/6.png" alt="Monthly package training" class="pkg-section__image"/>
         <div class="pkg-section__image-overlay"></div>
       </div>
     </div>
@@ -121,48 +167,61 @@
 
   <div class="pkg-divider"><div class="pkg-divider__line"></div></div>
 
-  <!-- PACKAGE 2 — SINGLE SESSION -->
+  <!-- ═══════════════════════════════════════
+       PACKAGE 2 — SINGLE SESSION
+  ═══════════════════════════════════════ -->
   <section class="pkg-section" id="single">
     <div class="pkg-section__inner pkg-section__inner--right">
       <div class="pkg-section__image-wrap reveal reveal--left">
-        <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=900&q=80" alt="Single session training" class="pkg-section__image"/>
+        <!-- REPLACE: Coach and client one-on-one session -->
+        <img src="assets/images/4.png" alt="Single session training" class="pkg-section__image"/>
         <div class="pkg-section__image-overlay"></div>
       </div>
       <div class="pkg-section__text reveal reveal--right">
         <div class="label-tag">Package 02</div>
         <h2 class="pkg-section__heading">Single<br/><span class="text-orange">Session</span></h2>
-        <p class="pkg-section__body">One focused, high-value session. Whether you need direction, or want an expert eye on your current training — this session delivers clarity and a concrete next step.</p>
+        <p class="pkg-section__body">One focused, high-value 45-minute session. Whether you need direction, a movement assessment, or an expert eye on your current training — this session delivers clarity and a concrete next step. Booking moves you up the waiting list.</p>
+
         <div class="pkg-section__details">
           <div class="pkg-section__detail">
-            <span class="pkg-section__detail-label">Format</span>
-            <span class="pkg-section__detail-value">Online or In-Person</span>
+            <span class="pkg-section__detail-label">Price</span>
+            <span class="pkg-section__detail-value pkg-section__detail-value--price">$25</span>
           </div>
           <div class="pkg-section__detail">
             <span class="pkg-section__detail-label">Duration</span>
-            <span class="pkg-section__detail-value">TBC — confirm with Paul</span>
+            <span class="pkg-section__detail-value">45 minutes</span>
           </div>
           <div class="pkg-section__detail">
-            <span class="pkg-section__detail-label">Sessions</span>
-            <span class="pkg-section__detail-value">1 dedicated session</span>
+            <span class="pkg-section__detail-label">Format</span>
+            <span class="pkg-section__detail-value">Online (Zoom) or In-Person</span>
           </div>
           <div class="pkg-section__detail">
-            <span class="pkg-section__detail-label">Pricing</span>
-            <span class="pkg-section__detail-value pkg-section__detail-value--price">Contact for pricing</span>
+            <span class="pkg-section__detail-label">Response Time</span>
+            <span class="pkg-section__detail-value">24hrs</span>
           </div>
         </div>
+
         <div class="pkg-section__includes">
           <p class="pkg-section__includes-label">What's Included</p>
           <ul class="pkg-section__list">
+            <li>Direct communication with your coach</li>
             <li>Movement and strength assessment</li>
             <li>Goal clarification and programme direction</li>
             <li>Immediate, actionable output and recommendations</li>
-            <li>Session summary and follow-up notes</li>
+            <li>Moves you up the coaching waiting list</li>
           </ul>
         </div>
+
         <div class="pkg-section__who">
           <p class="pkg-section__who-label">Best For</p>
-          <p class="pkg-section__who-body">Beginners who need a clear starting point, or experienced clients who want a structured assessment before committing to a monthly programme.</p>
+          <p class="pkg-section__who-body">Beginners who need a clear starting point, or experienced clients wanting a structured assessment before committing to a monthly programme.</p>
         </div>
+
+        <div class="pkg-section__notice">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          Booking must be made at least 2 weeks in advance. Payment required at booking.
+        </div>
+
         <a href="booking.html?package=single" class="btn btn--primary btn--lg pkg-section__cta">Book Single Session</a>
       </div>
     </div>
@@ -170,50 +229,78 @@
 
   <div class="pkg-divider"><div class="pkg-divider__line"></div></div>
 
-  <!-- PACKAGE 3 — DIET COACHING -->
+  <!-- ═══════════════════════════════════════
+       PACKAGE 3 — DIET COACHING
+  ═══════════════════════════════════════ -->
   <section class="pkg-section" id="diet">
     <div class="pkg-section__inner pkg-section__inner--left">
       <div class="pkg-section__text reveal reveal--left">
         <div class="label-tag">Package 03</div>
         <h2 class="pkg-section__heading">Diet<br/><span class="text-orange">Coaching</span></h2>
-        <p class="pkg-section__body">Nutrition aligned to your training. A science-based dietary plan built around your goals, your lifestyle, and your performance demands — not generic advice or fad diets.</p>
+        <p class="pkg-section__body">Nutrition aligned to your training and weight goal. A 30-minute science-based dietary session for clients who want to level up their training by dialling in their diet. No recycled plans — not a template.</p>
+
         <div class="pkg-section__details">
           <div class="pkg-section__detail">
-            <span class="pkg-section__detail-label">Format</span>
-            <span class="pkg-section__detail-value">Online</span>
+            <span class="pkg-section__detail-label">Price</span>
+            <span class="pkg-section__detail-value pkg-section__detail-value--price">$45</span>
           </div>
           <div class="pkg-section__detail">
             <span class="pkg-section__detail-label">Duration</span>
-            <span class="pkg-section__detail-value">TBC — confirm with Paul</span>
+            <span class="pkg-section__detail-value">30 minutes</span>
           </div>
           <div class="pkg-section__detail">
-            <span class="pkg-section__detail-label">Sessions</span>
-            <span class="pkg-section__detail-value">1 dedicated coaching session</span>
+            <span class="pkg-section__detail-label">Format</span>
+            <span class="pkg-section__detail-value">Online (Zoom preferred)</span>
           </div>
           <div class="pkg-section__detail">
-            <span class="pkg-section__detail-label">Pricing</span>
-            <span class="pkg-section__detail-value pkg-section__detail-value--price">Contact for pricing</span>
+            <span class="pkg-section__detail-label">Follow-Up</span>
+            <span class="pkg-section__detail-value">Included</span>
           </div>
         </div>
+
         <div class="pkg-section__includes">
           <p class="pkg-section__includes-label">What's Included</p>
           <ul class="pkg-section__list">
-            <li>Dietary assessment and goal alignment</li>
+            <li>Nutrition aligned to your training and weight goal</li>
             <li>Personalised science-based nutrition plan</li>
+            <li>Written diet plan (delivered after session)</li>
             <li>Macro and habit structure guidance</li>
-            <li>Nutrition strategy aligned to training programme</li>
-            <li>Follow-up recommendations and resources</li>
+            <li>Follow-up included</li>
           </ul>
         </div>
+
         <div class="pkg-section__who">
           <p class="pkg-section__who-label">Best For</p>
           <p class="pkg-section__who-body">Clients who are training consistently but not seeing the results they expect — often a nutrition issue, not a training one.</p>
         </div>
+
+        <div class="pkg-section__notice">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          Booking must be made at least 2 weeks in advance. Payment required at booking.
+        </div>
+
         <a href="payment.html?package=diet" class="btn btn--primary btn--lg pkg-section__cta">Book Diet Coaching</a>
       </div>
+
       <div class="pkg-section__image-wrap reveal reveal--right">
-        <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=900&q=80" alt="Diet coaching" class="pkg-section__image"/>
+        <!-- REPLACE: Nutrition / healthy meal prep aesthetic -->
+        <img src="assets/images/7.jpg" alt="Diet coaching" class="pkg-section__image"/>
         <div class="pkg-section__image-overlay"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CANCELLATION POLICY -->
+  <section class="section cancellation" id="cancellation">
+    <div class="container">
+      <div class="cancellation__inner reveal">
+        <div class="cancellation__icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        </div>
+        <div>
+          <h4 class="cancellation__heading">Cancellation Policy</h4>
+          <p class="cancellation__body">Upon cancellation, clients will be compensated up to 70% of their payment. Refunds are processed only after vetting of the cancellation conditions and the condition being deemed worth consideration.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -234,12 +321,12 @@
         <div class="why__item reveal">
           <div class="why__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
           <h4 class="why__title">Measurable Progress</h4>
-          <p class="why__body">Tracked metrics, performance markers, and monthly reviews — progress you can see and quantify.</p>
+          <p class="why__body">Tracked metrics, performance markers, and weekly reviews — progress you can see and quantify.</p>
         </div>
         <div class="why__item reveal">
           <div class="why__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
-          <h4 class="why__title">Science First</h4>
-          <p class="why__body">Every decision is grounded in exercise science — not trends, not guesswork, not what worked for someone else.</p>
+          <h4 class="why__title">24hr Response</h4>
+          <p class="why__body">Direct access to your coach. Questions, adjustments, check-ins — all within 24 hours.</p>
         </div>
         <div class="why__item reveal">
           <div class="why__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
@@ -253,14 +340,15 @@
   <!-- CLOSING CTA -->
   <section class="prog-cta">
     <div class="prog-cta__bg">
-      <img src="https://images.unsplash.com/photo-1608138278545-28c4ee553e49?w=1800&q=80" alt="" class="prog-cta__bg-img" aria-hidden="true"/>
+      <!-- REPLACE: Dark silhouette training shot -->
+      <img src="assets/images/placeholder.jpg" alt="" class="prog-cta__bg-img" aria-hidden="true"/>
       <div class="prog-cta__bg-overlay"></div>
     </div>
     <div class="container prog-cta__inner">
       <div class="reveal">
         <div class="label-tag">Ready to Start</div>
         <h2 class="prog-cta__heading">Not Sure Which<br/><span class="text-orange">Package?</span></h2>
-        <p class="prog-cta__body">Start with an assessment. It's the first step in every pathway — and it gives Paul everything needed to point you in the right direction.</p>
+        <p class="prog-cta__body">Start with an assessment. It's the first step in every pathway — and it gives your coach everything needed to point you in the right direction.</p>
         <div class="prog-cta__actions">
           <a href="booking.html" class="btn btn--primary btn--lg">Book an Assessment</a>
           <a href="faq.html" class="btn btn--secondary btn--lg">Read the FAQ</a>
@@ -285,15 +373,16 @@
             <li><a href="programs.html">Programs</a></li>
             <li><a href="faq.html">FAQ</a></li>
             <li><a href="booking.html">Booking</a></li>
-        <li><a href="blog.html">Blog</a></li>
+            <li><a href="blog.html">Blog</a></li>
           </ul>
         </div>
         <div>
           <p class="footer__heading">Programs</p>
           <ul class="footer__links">
-            <li><a href="#monthly">Monthly Package</a></li>
-            <li><a href="#single">Single Session</a></li>
-            <li><a href="#diet">Diet Coaching</a></li>
+            <li><a href="payment.html?package=monthly">Monthly Package — $300</a></li>
+            <li><a href="booking.html?package=single">Single Session — $25</a></li>
+            <li><a href="payment.html?package=diet">Diet Coaching — $45</a></li>
+            <li><a href="booking.html?package=consultation">Consultation — $25</a></li>
           </ul>
         </div>
         <div>
@@ -323,6 +412,7 @@
   <script src="js/particles.js"></script>
   <script src="js/navbar.js"></script>
   <script src="js/core.js"></script>
+  <script src="js/programs.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
