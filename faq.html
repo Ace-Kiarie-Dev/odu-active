@@ -3,14 +3,11 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="ODU Active — Science Based Coaching. Actualize A Better You."/>
+  <meta name="description" content="ODU Active — Frequently Asked Questions. Everything you need to know about training, booking, payments, and getting started."/>
   <title>FAQ — ODU Active</title>
 
-  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
-  <!-- ODU Active CSS -->
   <link rel="stylesheet" href="css/base.css"/>
   <link rel="stylesheet" href="css/components.css"/>
   <link rel="stylesheet" href="css/animations.css"/>
@@ -18,20 +15,15 @@
 </head>
 <body>
 
-  <!-- PARTICLE CANVAS -->
   <canvas id="particleCanvas"></canvas>
-
-  <!-- ORANGE DOT -->
   <div class="dot" id="dot" aria-hidden="true"></div>
 
-  <!-- ── NAVBAR ── -->
+  <!-- NAVBAR -->
   <nav class="navbar" aria-label="Main navigation">
     <div class="navbar__inner">
-
-      <a href="about.html" class="navbar__logo">
+      <a href="index.html" class="navbar__logo">
         <img src="./assets/images/Sample-3(silver)-transparent.png" alt="ODU Active" class="navbar__logo-img"/>
       </a>
-
       <ul class="navbar__links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
@@ -40,75 +32,523 @@
         <li><a href="booking.html">Booking</a></li>
         <li><a href="blog.html">Blog</a></li>
       </ul>
-
       <div class="navbar__actions">
         <a href="booking.html" class="btn btn--primary">Book Assessment</a>
       </div>
-
       <button class="navbar__hamburger" aria-label="Toggle menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span></span><span></span><span></span>
       </button>
-
     </div>
   </nav>
-
-  <!-- MOBILE MENU -->
   <div class="navbar__mobile" aria-hidden="true">
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="programs.html">Programs</a>
     <a href="faq.html">FAQ</a>
     <a href="booking.html">Booking</a>
+    <a href="blog.html">Blog</a>
     <a href="booking.html" class="btn btn--primary">Book Assessment</a>
   </div>
 
-  <!-- ── MAIN CONTENT ── -->
-  <main style="padding-top: var(--nav-height);">
+  <main>
 
-    <!-- HERO -->
-    <section class="section" id="hero">
-      <!-- content goes here -->
+    <!-- ── HERO ── -->
+    <section class="faq-hero">
+      <div class="faq-hero__inner">
+        <div class="faq-hero__text anim-fade-up anim-delay-1">
+          <div class="faq-eyebrow">FAQ</div>
+          <h1 class="faq-hero__heading">
+            <span class="faq-hero__heading-line">Got</span>
+            <span class="faq-hero__heading-line faq-hero__heading-line--accent">Questions?</span>
+          </h1>
+          <p class="faq-hero__sub">Everything you need to know about training with ODU Active — from your first session to long-term progress.</p>
+        </div>
+
+        <!-- Quick category nav -->
+        <div class="faq-cats anim-fade-up anim-delay-2">
+          <a href="#general" class="faq-cat">General</a>
+          <a href="#getting-started" class="faq-cat">Getting Started</a>
+          <a href="#sessions" class="faq-cat">Sessions</a>
+          <a href="#what-to-bring" class="faq-cat">What to Bring</a>
+          <a href="#payments" class="faq-cat">Payments</a>
+          <a href="#cancellation" class="faq-cat">Cancellation</a>
+        </div>
+      </div>
     </section>
 
-    <!-- PHILOSOPHY -->
-    <section class="section" id="philosophy">
-      <!-- content goes here -->
+    <!-- ── GENERAL ── -->
+    <section class="faq-section" id="general">
+      <div class="faq-section__inner">
+        <div class="faq-section__label">01</div>
+        <h2 class="faq-section__heading">General</h2>
+
+        <div class="accordion faq-accordion" id="accordionGeneral">
+
+          <div class="accordion-item faq-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button faq-btn" type="button" data-bs-toggle="collapse" data-bs-target="#g1" aria-expanded="true">
+                What is ODU Active?
+              </button>
+            </h3>
+            <div id="g1" class="accordion-collapse collapse show" data-bs-parent="#accordionGeneral">
+              <div class="accordion-body faq-body">
+                ODU Active is a science-based personal training service built on over a decade of coaching experience. Founded by Paul, our team designs structured programmes that create real, measurable progress — whether your goal is fat loss, strength, muscle gain, or general fitness. We don't do generic. Every client is assessed, tiered, and coached with a system built around their specific needs.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item faq-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button faq-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#g2">
+                Who is ODU Active for?
+              </button>
+            </h3>
+            <div id="g2" class="accordion-collapse collapse" data-bs-parent="#accordionGeneral">
+              <div class="accordion-body faq-body">
+                ODU Active is for people who are serious about results. We work with beginners who need structure, intermediate athletes who have plateaued, and anyone who wants a coach that takes their goals as seriously as they do. If you're willing to commit, we're equipped to deliver.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item faq-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button faq-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#g3">
+                Where do sessions take place?
+              </button>
+            </h3>
+            <div id="g3" class="accordion-collapse collapse" data-bs-parent="#accordionGeneral">
+              <div class="accordion-body faq-body">
+                We offer both in-person and online sessions. In-person sessions are conducted at agreed locations in Nairobi. Online sessions are held via Zoom. You select your preferred format during the booking process.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item faq-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button faq-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#g4">
+                How long has ODU Active been operating?
+              </button>
+            </h3>
+            <div id="g4" class="accordion-collapse collapse" data-bs-parent="#accordionGeneral">
+              <div class="accordion-body faq-body">
+                Paul began training people informally in 2015 — starting with friends and anyone motivated enough to show up consistently. Over time, demand grew into a structured coaching practice. ODU Active formalises that experience into a system that delivers repeatable, trackable results.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </section>
 
-    <!-- CLIENT PATHWAYS -->
-    <section class="section" id="pathways">
-      <!-- content goes here -->
+    <!-- ── GETTING STARTED ── -->
+    <section class="faq-section faq-section--alt" id="getting-started">
+      <div class="faq-section__inner">
+        <div class="faq-section__label">02</div>
+        <h2 class="faq-section__heading">Getting Started</h2>
+
+        <div class="accordion faq-accordion" id="accordionStart">
+
+          <div class="accordion-item faq-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button faq-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s1">
+                How do I get started with ODU Active?
+              </button>
+            </h3>
+            <div id="s1" class="accordion-collapse collapse" data-bs-parent="#accordionStart">
+              <div class="accordion-body faq-body">
+                Start by booking a Consultation or Initial Assessment through our booking page. Once confirmed, you'll complete our Client Onboarding Form — this helps us understand your health background, fitness history, goals, and lifestyle. Your responses are reviewed, and selected applicants are contacted with a tailored programme recommendation.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item faq-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button faq-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s2">
+                What is the onboarding form and why do I need to fill it in?
+              </button>
+            </h3>
+            <div id="s2" class="accordion-collapse collapse" data-bs-parent="#accordionStart">
+              <div class="accordion-body faq-body">
+                The Client Onboarding Form is how we get to know you before your first session. It covers your health and medical background, fitness history, goals, lifestyle habits, and nutrition. This isn't admin — it's how we filter and tier clients to make sure we give you the right programme from day one. The more honest your responses, the better your results.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item faq-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button faq-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s3">
+                Where do I fill in the onboarding form?
+              </button>
+            </h3>
+            <div id="s3" class="accordion-collapse collapse" data-bs-parent="#accordionStart">
+              <div class="accordion-body faq-body">
+                <p>Your coach will share the onboarding form link after your booking is confirmed. You can also access it directly below.</p>
+                <a href="#" class="btn btn--primary btn--sm faq-form-btn" target="_blank" rel="noopener">
+                  Complete Onboarding Form
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item faq-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button faq-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s4">
+                Do I need prior fitness experience to join?
+              </button>
+            </h3>
+            <div id="s4" class="accordion-collapse collapse" data-bs-parent="#accordionStart">
+              <div class="accordion-body faq-body">
+                No. We work with all levels — from sedentary to very active. The onboarding process helps us place you in the right tier and design a programme at the right intensity for where you are right now.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item faq-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button faq-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s5">
+                Why is the 12-week programme the standard?
+              </button>
+            </h3>
+            <div id="s5" class="accordion-collapse collapse" data-bs-parent="#accordionStart">
+              <div class="accordion-body faq-body">
+                Twelve weeks is the minimum time required to build real, visible traction. Short-term programmes produce surface-level results. The 12-week structure gives your body time to adapt, gives us time to adjust the programme based on your progress, and gives you time to build the habits that make results last. It's not arbitrary — it's the standard because it works.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </section>
 
-    <!-- METHOD -->
-    <section class="section" id="method">
-      <!-- content goes here -->
+    <!-- ── SESSIONS ── -->
+    <section class="faq-section" id="sessions">
+      <div class="faq-section__inner">
+        <div class="faq-section__label">03</div>
+        <h2 class="faq-section__heading">Sessions &amp; Scheduling</h2>
+
+        <div class="accordion faq-accordion" id="accordionSessions">
+
+          <div class="accordion-item faq-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button faq-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ss1">
+                What session types do you offer?
+              </button>
+            </h3>
+            <div id="ss1" class="accordion-collapse collapse" data-bs-parent="#accordionSessions">
+              <div class="accordion-body faq-body">
+                <ul class="faq-list">
+                  <li><strong>Monthly Package</strong> — A structured 12-week coaching programme. Includes regular sessions, progress tracking, and programme adjustments.</li>
+                  <li><strong>Single Session</strong> — A standalone training session. Good for a taster or a one-off workout with a coach.</li>
+                  <li><strong>Diet Coaching</strong> — Nutrition guidance aligned with your training goals. Can be standalone or bundled.</li>
+                  <li><strong>Consultation</strong> — A free introductory session to discuss your goals and how ODU Active can help. No commitment required.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item faq-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button faq-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ss2">
+                What time slots are available?
+              </button>
+            </h3>
+            <div id="ss2" class="accordion-collapse collapse" data-bs-parent="#accordionSessions">
+              <div class="accordion-body faq-body">
+                Sessions are available in two windows: <strong>Morning (5:00am – 11:30am)</strong> and <strong>Afternoon (2:00pm – 8:00pm)</strong> in 30-minute slots. Select your preferred slot during the booking process. Availability varies by date.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item faq-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button faq-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ss3">
+                Can I book on Saturdays?
+              </button>
+            </h3>
+            <div id="ss3" class="accordion-collapse collapse" data-bs-parent="#accordionSessions">
+              <div class="accordion-body faq-body">
+                Saturdays are available as <strong>Request Only</strong> days. You can submit a booking request and your coach will confirm availability. These are not guaranteed slots — confirmation is required before the session is finalised.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item faq-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button faq-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ss4">
+                How are sessions confirmed after booking?
+              </button>
+            </h3>
+            <div id="ss4" class="accordion-collapse collapse" data-bs-parent="#accordionSessions">
+              <div class="accordion-body faq-body">
+                After submitting your booking request on WhatsApp and attaching proof of payment, your coach will review and confirm within 24 hours. You'll receive session details including location (for in-person) or Zoom link (for online).
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </section>
 
-    <!-- ENVIRONMENT -->
-    <section class="section" id="environment">
-      <!-- content goes here -->
+    <!-- ── WHAT TO BRING ── -->
+    <section class="faq-section faq-section--alt" id="what-to-bring">
+      <div class="faq-section__inner">
+        <div class="faq-section__label">04</div>
+        <h2 class="faq-section__heading">What to Bring</h2>
+
+        <p class="faq-section__intro">Every client is briefed on their responsibilities before their first session. Here's what we expect from you — upfront, no surprises.</p>
+
+        <div class="faq-responsibilities">
+          <div class="faq-responsibility">
+            <div class="faq-responsibility__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            </div>
+            <div>
+              <h4 class="faq-responsibility__title">Water</h4>
+              <p class="faq-responsibility__body">Bring enough water for your session. Hydration is your responsibility — we don't supply it at in-person sessions.</p>
+            </div>
+          </div>
+          <div class="faq-responsibility">
+            <div class="faq-responsibility__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.38 3.46L16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.57a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.57a2 2 0 0 0-1.34-2.23z"/></svg>
+            </div>
+            <div>
+              <h4 class="faq-responsibility__title">Proper Attire</h4>
+              <p class="faq-responsibility__body">Wear appropriate training gear. Comfortable, breathable activewear and supportive footwear. No jeans, no open-toed shoes.</p>
+            </div>
+          </div>
+          <div class="faq-responsibility">
+            <div class="faq-responsibility__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div>
+              <h4 class="faq-responsibility__title">Show Up On Time</h4>
+              <p class="faq-responsibility__body">Sessions begin and end at the scheduled time. If you arrive late, the session still ends on time — there are no extensions.</p>
+            </div>
+          </div>
+          <div class="faq-responsibility">
+            <div class="faq-responsibility__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <div>
+              <h4 class="faq-responsibility__title">Communicate Issues</h4>
+              <p class="faq-responsibility__body">If something comes up — pain, scheduling conflicts, a health change — communicate it before your session, not during. Your coach adjusts better with notice.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </section>
 
-    <!-- CLOSING CTA -->
-    <section class="section" id="cta">
-      <!-- content goes here -->
+    <!-- ── PAYMENTS ── -->
+    <section class="faq-section" id="payments">
+      <div class="faq-section__inner">
+        <div class="faq-section__label">05</div>
+        <h2 class="faq-section__heading">Payments</h2>
+
+        <div class="accordion faq-accordion" id="accordionPayments">
+
+          <div class="accordion-item faq-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button faq-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#p1">
+                How do I pay?
+              </button>
+            </h3>
+            <div id="p1" class="accordion-collapse collapse" data-bs-parent="#accordionPayments">
+              <div class="accordion-body faq-body">
+                <p>We accept M-Pesa and bank transfer. Payment details are shown during the booking confirmation step. Here they are for reference:</p>
+                <div class="faq-payment-grid">
+                  <div class="faq-payment-card">
+                    <span class="faq-payment-badge faq-payment-badge--mpesa">M-Pesa</span>
+                    <div class="faq-payment-rows">
+                      <div class="faq-payment-row"><span>Paybill</span><strong>303030</strong></div>
+                      <div class="faq-payment-row"><span>Account No.</span><strong>2055626432</strong></div>
+                      <div class="faq-payment-row"><span>Name</span><strong>ODU Active Fitness</strong></div>
+                    </div>
+                  </div>
+                  <div class="faq-payment-card">
+                    <span class="faq-payment-badge faq-payment-badge--bank">Bank Transfer</span>
+                    <div class="faq-payment-rows">
+                      <div class="faq-payment-row"><span>Bank</span><strong>Absa Bank</strong></div>
+                      <div class="faq-payment-row"><span>Branch</span><strong>TRM</strong></div>
+                      <div class="faq-payment-row"><span>Account No.</span><strong>2055626432</strong></div>
+                      <div class="faq-payment-row"><span>Name</span><strong>ODU Active Fitness</strong></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item faq-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button faq-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#p2">
+                When do I pay?
+              </button>
+            </h3>
+            <div id="p2" class="accordion-collapse collapse" data-bs-parent="#accordionPayments">
+              <div class="accordion-body faq-body">
+                Payment is made before your session is confirmed. After submitting your booking request on WhatsApp, send your payment screenshot alongside the message. Your coach will verify and confirm once payment is received.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item faq-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button faq-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#p3">
+                Are payments refundable?
+              </button>
+            </h3>
+            <div id="p3" class="accordion-collapse collapse" data-bs-parent="#accordionPayments">
+              <div class="accordion-body faq-body">
+                All payments are non-refundable except in cases of a confirmed medical condition or relocation. If you need to cancel for one of these reasons, contact your coach with supporting documentation and we'll review on a case-by-case basis.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item faq-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button faq-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#p4">
+                Do unused sessions roll over?
+              </button>
+            </h3>
+            <div id="p4" class="accordion-collapse collapse" data-bs-parent="#accordionPayments">
+              <div class="accordion-body faq-body">
+                No. All sessions must be used within the agreed programme period. Sessions that expire unused are forfeited. If you're struggling to attend, speak to your coach — we'd rather adjust the schedule than lose your sessions.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CANCELLATION ── -->
+    <section class="faq-section faq-section--alt" id="cancellation">
+      <div class="faq-section__inner">
+        <div class="faq-section__label">06</div>
+        <h2 class="faq-section__heading">Cancellation &amp; Attendance</h2>
+
+        <p class="faq-section__intro">Our full Cancellation &amp; Attendance Agreement is available to read below. Every client agrees to these terms before their first session.</p>
+
+        <div class="accordion faq-accordion" id="accordionCancel">
+
+          <div class="accordion-item faq-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button faq-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c1">
+                How much notice do I need to cancel or reschedule?
+              </button>
+            </h3>
+            <div id="c1" class="accordion-collapse collapse" data-bs-parent="#accordionCancel">
+              <div class="accordion-body faq-body">
+                A minimum of <strong>12 hours' notice</strong> is required for any cancellation or reschedule. Sessions cancelled with less than 12 hours' notice are charged in full.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item faq-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button faq-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c2">
+                What happens if I miss a session without notice?
+              </button>
+            </h3>
+            <div id="c2" class="accordion-collapse collapse" data-bs-parent="#accordionCancel">
+              <div class="accordion-body faq-body">
+                No-shows are charged in full. Your coach reserves that time exclusively for you. If you know you can't make it, communicate — we'd rather reschedule than charge for an empty slot.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item faq-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button faq-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c3">
+                What if I arrive late?
+              </button>
+            </h3>
+            <div id="c3" class="accordion-collapse collapse" data-bs-parent="#accordionCancel">
+              <div class="accordion-body faq-body">
+                Sessions begin and end at the scheduled time. Arriving late means a shorter session — the end time does not move. If you're running late, message your coach immediately so we can make the most of the remaining time.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item faq-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button faq-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c4">
+                What if my coach cancels?
+              </button>
+            </h3>
+            <div id="c4" class="accordion-collapse collapse" data-bs-parent="#accordionCancel">
+              <div class="accordion-body faq-body">
+                If ODU Active cancels a session, it will be rescheduled at no cost to you or credited to your account. This is a two-way agreement — we hold ourselves to the same standard we ask of our clients.
+              </div>
+            </div>
+          </div>
+
+          <!-- Full policy collapsible -->
+          <div class="accordion-item faq-item faq-item--policy">
+            <h3 class="accordion-header">
+              <button class="accordion-button faq-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c5">
+                View Full Cancellation &amp; Attendance Agreement
+              </button>
+            </h3>
+            <div id="c5" class="accordion-collapse collapse" data-bs-parent="#accordionCancel">
+              <div class="accordion-body faq-body">
+                <div class="faq-policy">
+                  <div class="faq-policy__header">
+                    <p class="faq-policy__title">ODU Active — Personal Training Cancellation &amp; Attendance Agreement</p>
+                    <p class="faq-policy__sub">This Agreement is entered into between ODU Active ("Trainer") and the Client upon booking. By proceeding with a session, the Client agrees to the following terms.</p>
+                  </div>
+                  <ol class="faq-policy__list">
+                    <li><strong>Scheduling of Sessions</strong> — All sessions must be scheduled in advance and confirmed by both parties. Scheduled times are reserved exclusively for the Client.</li>
+                    <li><strong>Cancellation &amp; Rescheduling</strong> — The Client agrees to provide a minimum of 12 hours' notice for any cancellation or reschedule.</li>
+                    <li><strong>Late Cancellations</strong> — Any session cancelled with less than 12 hours' notice will be charged in full.</li>
+                    <li><strong>No-Shows</strong> — Failure to attend without notice will result in a full charge.</li>
+                    <li><strong>Late Arrival</strong> — Sessions begin and end at the scheduled time. Clients arriving late receive a shortened session.</li>
+                    <li><strong>Trainer Cancellations</strong> — If the Trainer cancels, the session will be rescheduled or credited at no cost.</li>
+                    <li><strong>Session Validity</strong> — All sessions must be used within the agreed programme period. Expired sessions are forfeited.</li>
+                    <li><strong>Refund Policy</strong> — All payments are non-refundable except in cases of medical conditions or relocation, subject to review.</li>
+                    <li><strong>Agreement &amp; Acknowledgement</strong> — By booking a session, the Client confirms they have read and agreed to all terms above.</li>
+                  </ol>
+                  <a href="policy.html" class="faq-policy__link">
+                    View standalone policy page
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CTA ── -->
+    <section class="faq-cta">
+      <div class="faq-cta__inner anim-fade-up">
+        <div class="faq-eyebrow">Still have questions?</div>
+        <h2 class="faq-cta__heading">Talk to a Coach.</h2>
+        <p class="faq-cta__body">If you didn't find what you were looking for, reach out directly. We'd rather answer a question than lose a potential client to confusion.</p>
+        <div class="faq-cta__actions">
+          <a href="booking.html" class="btn btn--primary btn--lg">Book a Free Consultation</a>
+          <a href="https://wa.me/254700000000" class="btn btn--secondary btn--lg" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+            WhatsApp Us
+          </a>
+        </div>
+      </div>
     </section>
 
   </main>
 
-  <!-- ── FOOTER ── -->
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="footer__inner">
       <div class="footer__top">
-
         <div>
           <img src="./assets/images/Sample-3(silver).png" alt="ODU Active" class="footer__brand-logo"/>
           <p class="footer__brand-text">Science Based Coaching. Actualize A Better You.</p>
         </div>
-
         <div>
           <p class="footer__heading">Navigation</p>
           <ul class="footer__links">
@@ -120,16 +560,15 @@
             <li><a href="blog.html">Blog</a></li>
           </ul>
         </div>
-
         <div>
           <p class="footer__heading">Programs</p>
           <ul class="footer__links">
-            <li><a href="programs.html">Monthly Package</a></li>
-            <li><a href="programs.html">Single Session</a></li>
-            <li><a href="programs.html">Diet Coaching</a></li>
+            <li><a href="payment.html?package=monthly">Monthly Package</a></li>
+            <li><a href="booking.html?package=single">Single Session</a></li>
+            <li><a href="payment.html?package=diet">Diet Coaching</a></li>
+            <li><a href="booking.html?package=consultation">Consultation</a></li>
           </ul>
         </div>
-
         <div>
           <p class="footer__heading">Connect</p>
           <ul class="footer__links">
@@ -140,40 +579,20 @@
             <li><a href="#">LinkedIn</a></li>
           </ul>
         </div>
-
       </div>
-
       <div class="footer__bottom">
-        <p class="footer__copy">
-          &copy; 2026 <span>ODU Active</span>. All rights reserved. Built by Nesture.
-        </p>
+        <p class="footer__copy">&copy; 2026 <span>ODU Active</span>. All rights reserved. Built by Nesture.</p>
         <div class="footer__socials">
-          <!-- Instagram -->
-          <a href="#" class="footer__social-link" aria-label="Instagram">
-            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-          </a>
-          <!-- TikTok -->
-          <a href="#" class="footer__social-link" aria-label="TikTok">
-            <svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/></svg>
-          </a>
-          <!-- YouTube -->
-          <a href="#" class="footer__social-link" aria-label="YouTube">
-            <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-          </a>
-          <!-- Facebook -->
-          <a href="#" class="footer__social-link" aria-label="Facebook">
-            <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-          </a>
-          <!-- LinkedIn -->
-          <a href="#" class="footer__social-link" aria-label="LinkedIn">
-            <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-          </a>
+          <a href="#" class="footer__social-link" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+          <a href="#" class="footer__social-link" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/></svg></a>
+          <a href="#" class="footer__social-link" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+          <a href="#" class="footer__social-link" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+          <a href="#" class="footer__social-link" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- Scripts -->
   <script src="js/particles.js"></script>
   <script src="js/navbar.js"></script>
   <script src="js/core.js"></script>

@@ -1,0 +1,183 @@
+/* ============================================================
+   ODU ACTIVE — POLICY.CSS
+   Standalone Cancellation & Attendance Policy page
+   Built by Nesture
+   ============================================================ */
+
+.policy-section {
+  padding: calc(var(--nav-height) + 4rem) 1.5rem 6rem;
+}
+
+.policy-inner {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+/* Back link */
+.policy-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.35);
+  text-decoration: none;
+  margin-bottom: 3rem;
+  transition: color 0.2s ease;
+  letter-spacing: 0.04em;
+}
+
+.policy-back:hover {
+  color: rgba(255,255,255,0.7);
+}
+
+/* Header */
+.policy-header {
+  margin-bottom: 3.5rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+.policy-eyebrow {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--orange, #f97316);
+  margin-bottom: 1rem;
+}
+
+.policy-heading {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  text-transform: uppercase;
+  line-height: 0.95;
+  color: rgba(255,255,255,0.92);
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.01em;
+}
+
+.policy-sub {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.45);
+  line-height: 1.65;
+  margin-bottom: 1rem;
+  max-width: 520px;
+}
+
+.policy-meta {
+  display: flex;
+  gap: 0.65rem;
+  align-items: center;
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.25);
+  font-family: 'Barlow Condensed', sans-serif;
+  letter-spacing: 0.08em;
+}
+
+/* Policy clauses */
+.policy-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.policy-clause {
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+  gap: 1.5rem;
+  padding: 2rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.policy-clause:last-child {
+  border-bottom: none;
+}
+
+.policy-clause__num {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--orange, #f97316);
+  padding-top: 0.3rem;
+  opacity: 0.7;
+}
+
+.policy-clause__title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 0.65rem;
+}
+
+.policy-clause__content p {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.48);
+  line-height: 1.7;
+  margin-bottom: 0.5rem;
+}
+
+.policy-clause__content p:last-child {
+  margin-bottom: 0;
+}
+
+.policy-clause__content strong {
+  color: rgba(255,255,255,0.75);
+}
+
+.policy-list {
+  padding-left: 1.25rem;
+  margin: 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.policy-list li {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.48);
+  line-height: 1.6;
+}
+
+/* Footer */
+.policy-footer {
+  margin-top: 4rem;
+  padding-top: 3rem;
+  border-top: 1px solid rgba(255,255,255,0.07);
+  text-align: center;
+}
+
+.policy-footer__text {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.35);
+  margin-bottom: 1.5rem;
+}
+
+.policy-footer__actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 480px) {
+  .policy-clause {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .policy-clause__num {
+    padding-top: 0;
+  }
+
+  .policy-footer__actions {
+    flex-direction: column;
+    align-items: center;
+  }
+}
