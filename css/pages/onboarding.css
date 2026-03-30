@@ -1,0 +1,349 @@
+/* ============================================================
+   ODU ACTIVE — ONBOARDING.CSS
+   Built by Nesture
+   ============================================================ */
+
+.ob-main {
+  padding: calc(var(--nav-height, 72px) + 3rem) 1.5rem 6rem;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.ob-inner {
+  width: 100%;
+  max-width: 620px;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+/* ── HEADER ── */
+.ob-eyebrow {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-orange, #f97316);
+  margin-bottom: 0.5rem;
+}
+
+.ob-heading {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: clamp(3rem, 10vw, 5.5rem);
+  line-height: 0.9;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.ob-heading__line { display: block; color: rgba(255,255,255,0.9); }
+.ob-heading__line--accent { color: var(--color-orange, #f97316); }
+
+.ob-subhead {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.45);
+  line-height: 1.65;
+  max-width: 540px;
+}
+
+/* ── PROGRESS BAR ── */
+.ob-progress {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.ob-progress__track {
+  height: 3px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.ob-progress__fill {
+  height: 100%;
+  background: var(--color-orange, #f97316);
+  border-radius: 999px;
+  transition: width 0.4s ease;
+  width: 12.5%; /* 1/8 */
+}
+
+.ob-progress__label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+}
+
+/* ── FORM ── */
+.ob-form { display: flex; flex-direction: column; gap: 0; }
+
+/* ── SECTIONS ── */
+.ob-section { display: none; }
+.ob-section.active { display: block; animation: obFadeIn 0.35s ease; }
+
+@keyframes obFadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.ob-section__header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+.ob-section__num {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--color-orange, #f97316);
+  opacity: 0.7;
+}
+
+.ob-section__title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.9);
+  margin: 0;
+}
+
+/* ── FIELDS GRID ── */
+.ob-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.ob-field { display: flex; flex-direction: column; gap: 0.4rem; }
+.ob-field--full { grid-column: 1 / -1; }
+
+/* ── LABELS ── */
+.ob-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+}
+
+.ob-required { color: var(--color-orange, #f97316); }
+
+/* ── INPUTS ── */
+.ob-input {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
+  padding: 0.7rem 0.95rem;
+  font-family: 'Barlow', sans-serif;
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.85);
+  width: 100%;
+  transition: border-color 0.2s ease, background 0.2s ease;
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.ob-input::placeholder { color: rgba(255,255,255,0.2); }
+
+.ob-input:focus {
+  border-color: var(--color-orange, #f97316);
+  background: rgba(255,255,255,0.06);
+}
+
+.ob-input:invalid:not(:placeholder-shown) {
+  border-color: rgba(239,68,68,0.5);
+}
+
+.ob-textarea { resize: vertical; min-height: 90px; }
+
+.ob-select {
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='rgba(255,255,255,0.4)' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.9rem center;
+  padding-right: 2.5rem;
+  background-color: rgba(255,255,255,0.04);
+}
+
+.ob-select option {
+  background: #111;
+  color: rgba(255,255,255,0.85);
+}
+
+/* ── RADIO GROUP ── */
+.ob-radio-group {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.ob-radio {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  padding: 0.55rem 1rem;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.6);
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.ob-radio:has(input:checked) {
+  border-color: var(--color-orange, #f97316);
+  color: rgba(255,255,255,0.9);
+}
+
+.ob-radio input { display: none; }
+
+/* ── CHECKBOX GROUP ── */
+.ob-checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.ob-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.6);
+  padding: 0.45rem 0;
+}
+
+.ob-checkbox input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 4px;
+  background: transparent;
+  cursor: pointer;
+  accent-color: var(--color-orange, #f97316);
+  flex-shrink: 0;
+}
+
+.ob-checkbox--large {
+  padding: 0.75rem;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
+  margin-top: 0.75rem;
+}
+
+.ob-checkbox--large:has(input:checked) {
+  border-color: rgba(249,115,22,0.4);
+}
+
+/* ── POLICY BOX ── */
+.ob-policy-box {
+  background: rgba(249,115,22,0.05);
+  border: 1px solid rgba(249,115,22,0.15);
+  border-radius: 10px;
+  padding: 1.25rem;
+}
+
+.ob-policy-box__text {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.ob-policy-box__text a {
+  color: var(--color-orange, #f97316);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ── FINAL MESSAGE ── */
+.ob-final-msg {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 10px;
+  padding: 1.25rem;
+}
+
+.ob-final-msg svg {
+  color: var(--color-orange, #f97316);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.ob-final-msg p {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.45);
+  line-height: 1.6;
+  margin: 0;
+  font-style: italic;
+}
+
+/* ── NAV BUTTONS ── */
+.ob-nav {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.ob-nav__back,
+.ob-nav__next,
+.ob-nav__submit {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.ob-nav__back { margin-right: auto; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 540px) {
+  .ob-fields { grid-template-columns: 1fr; }
+  .ob-field--full { grid-column: 1; }
+  .ob-main { padding-left: 1rem; padding-right: 1rem; }
+}
+
+/* ── PACKAGE BANNER ── */
+.ob-pkg-banner {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+  padding: 0.65rem 1rem;
+  background: rgba(249,115,22,0.08);
+  border: 1px solid rgba(249,115,22,0.2);
+  border-radius: 8px;
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.55);
+}
+.ob-pkg-banner svg { color: var(--color-orange, #f97316); flex-shrink: 0; }
+.ob-pkg-banner strong { color: rgba(255,255,255,0.85); font-weight: 600; }
+
+/* ── FIELD ERROR STATE ── */
+.ob-field--error .ob-label { color: rgba(239,68,68,0.9); }
+.ob-field--error .ob-radio,
+.ob-field--error .ob-checkbox { border-color: rgba(239,68,68,0.4); }
+.ob-input--error {
+  border-color: rgba(239,68,68,0.6) !important;
+  background: rgba(239,68,68,0.05) !important;
+}

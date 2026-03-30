@@ -54,10 +54,10 @@
     <section class="policy-section">
       <div class="policy-inner">
 
-        <!-- Back link -->
-        <a href="faq.html" class="policy-back anim-fade-up anim-delay-1">
+        <!-- Back link — reads ?from= param -->
+        <a href="faq.html" class="policy-back anim-fade-up anim-delay-1" id="policyBack">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
-          Back to FAQ
+          <span id="policyBackLabel">Back to FAQ</span>
         </a>
 
         <!-- Header -->
@@ -160,7 +160,7 @@
           <p class="policy-footer__text">Questions about this policy? Reach out before booking — we're happy to clarify.</p>
           <div class="policy-footer__actions">
             <a href="booking.html" class="btn btn--primary">Book a Session</a>
-            <a href="faq.html" class="btn btn--secondary">Back to FAQ</a>
+            <a href="faq.html" class="btn btn--secondary" id="policyFooterBack">Back to FAQ</a>
           </div>
         </div>
 
@@ -223,6 +223,22 @@
   <script src="js/particles.js"></script>
   <script src="js/navbar.js"></script>
   <script src="js/core.js"></script>
+  <script>
+    // Smart back button — reads ?from= param
+    (function() {
+      const from = new URLSearchParams(window.location.search).get('from');
+      const backLink = document.getElementById('policyBack');
+      const footerBack = document.getElementById('policyFooterBack');
+      if (from === 'programs') {
+        const href = 'programs.html';
+        const label = 'Back to Programs';
+        if (backLink) { backLink.href = href; }
+        if (document.getElementById('policyBackLabel')) document.getElementById('policyBackLabel').textContent = label;
+        if (footerBack) { footerBack.href = href; footerBack.textContent = label; }
+      }
+      // default is faq.html (already set in HTML)
+    })();
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

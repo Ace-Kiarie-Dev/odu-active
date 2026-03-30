@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="ODU Active — Client Onboarding Form. Complete this form to begin your training journey."/>
+  <title>Client Onboarding — ODU Active</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/base.css"/>
+  <link rel="stylesheet" href="css/components.css"/>
+  <link rel="stylesheet" href="css/animations.css"/>
+  <link rel="stylesheet" href="css/pages/onboarding.css"/>
+</head>
+<body>
+
+  <canvas id="particleCanvas"></canvas>
+  <div class="dot" id="dot" aria-hidden="true"></div>
+
+  <nav class="navbar" aria-label="Main navigation">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__logo">
+        <img src="./assets/images/Sample-3(silver)-transparent.png" alt="ODU Active" class="navbar__logo-img"/>
+      </a>
+      <ul class="navbar__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="programs.html">Programs</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="booking.html">Booking</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+      <div class="navbar__actions">
+        <a href="booking.html" class="btn btn--primary">Book Assessment</a>
+      </div>
+      <button class="navbar__hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="navbar__mobile" aria-hidden="true">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="programs.html">Programs</a>
+    <a href="faq.html">FAQ</a>
+    <a href="booking.html">Booking</a>
+    <a href="blog.html">Blog</a>
+    <a href="booking.html" class="btn btn--primary">Book Assessment</a>
+  </div>
+
+  <main class="ob-main">
+    <div class="ob-inner">
+
+      <!-- HEADER -->
+      <div class="ob-header anim-fade-up anim-delay-1">
+        <div class="ob-eyebrow">ODU Active</div>
+        <h1 class="ob-heading">
+          <span class="ob-heading__line">Client</span>
+          <span class="ob-heading__line ob-heading__line--accent">Onboarding.</span>
+        </h1>
+        <p class="ob-subhead">Please complete this form honestly. This helps us tailor your training programme and ensure your safety. Your responses will be reviewed — only selected applicants will be contacted.</p>
+      </div>
+
+      <!-- PROGRESS INDICATOR -->
+      <div class="ob-progress anim-fade-up anim-delay-2" id="obProgress">
+        <div class="ob-progress__track">
+          <div class="ob-progress__fill" id="obProgressFill"></div>
+        </div>
+        <span class="ob-progress__label" id="obProgressLabel">Section 1 of 8</span>
+      </div>
+
+      <!-- FORM -->
+      <form
+        action="https://formspree.io/f/mgopkvdo"
+        method="POST"
+        class="ob-form anim-fade-up anim-delay-3"
+        id="obForm"
+        novalidate
+      >
+        <!-- Hidden redirect after submit -->
+        <input type="hidden" name="_next" value="onboarding-thanks.html"/>
+        <input type="hidden" name="_subject" value="New ODU Active Client Onboarding Submission"/>
+
+        <!-- ═══════════════════════════════
+             SECTION 1 — BASIC INFORMATION
+        ═══════════════════════════════ -->
+        <div class="ob-section active" id="section-1" data-section="1">
+          <div class="ob-section__header">
+            <span class="ob-section__num">01</span>
+            <h2 class="ob-section__title">Basic Information</h2>
+          </div>
+
+          <div class="ob-fields">
+            <div class="ob-field ob-field--full">
+              <label class="ob-label" for="fullName">Full Name <span class="ob-required">*</span></label>
+              <input class="ob-input" type="text" id="fullName" name="Full Name" required placeholder="Your full name"/>
+            </div>
+            <div class="ob-field">
+              <label class="ob-label" for="phone">Phone Number <span class="ob-required">*</span></label>
+              <input class="ob-input" type="tel" id="phone" name="Phone Number" required placeholder="+254 7XX XXX XXX"/>
+            </div>
+            <div class="ob-field">
+              <label class="ob-label" for="email">Email Address <span class="ob-required">*</span></label>
+              <input class="ob-input" type="email" id="email" name="Email" required placeholder="you@example.com"/>
+            </div>
+            <div class="ob-field">
+              <label class="ob-label" for="occupation">Occupation</label>
+              <input class="ob-input" type="text" id="occupation" name="Occupation" placeholder="Your job or field"/>
+            </div>
+            <div class="ob-field">
+              <label class="ob-label" for="dob">Date of Birth <span class="ob-required">*</span></label>
+              <input class="ob-input" type="date" id="dob" name="Date of Birth" required/>
+            </div>
+            <div class="ob-field">
+              <label class="ob-label" for="emergencyName">Emergency Contact Name <span class="ob-required">*</span></label>
+              <input class="ob-input" type="text" id="emergencyName" name="Emergency Contact Name" required placeholder="Full name"/>
+            </div>
+            <div class="ob-field">
+              <label class="ob-label" for="emergencyPhone">Emergency Contact Phone <span class="ob-required">*</span></label>
+              <input class="ob-input" type="tel" id="emergencyPhone" name="Emergency Contact Phone" required placeholder="+254 7XX XXX XXX"/>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══════════════════════════════
+             SECTION 2 — HEALTH & MEDICAL
+        ═══════════════════════════════ -->
+        <div class="ob-section" id="section-2" data-section="2">
+          <div class="ob-section__header">
+            <span class="ob-section__num">02</span>
+            <h2 class="ob-section__title">Health &amp; Medical</h2>
+          </div>
+
+          <div class="ob-fields">
+            <div class="ob-field ob-field--full">
+              <label class="ob-label">Do you have any medical conditions? <span class="ob-required">*</span></label>
+              <div class="ob-radio-group">
+                <label class="ob-radio"><input type="radio" name="Has Medical Conditions" value="Yes" required/><span>Yes</span></label>
+                <label class="ob-radio"><input type="radio" name="Has Medical Conditions" value="No"/><span>No</span></label>
+              </div>
+            </div>
+            <div class="ob-field ob-field--full" id="medConditionsField" style="display:none;">
+              <label class="ob-label" for="medConditions">If yes, please specify</label>
+              <textarea class="ob-input ob-textarea" id="medConditions" name="Medical Conditions Details" rows="3" placeholder="Describe any conditions..."></textarea>
+            </div>
+            <div class="ob-field ob-field--full">
+              <label class="ob-label">Check any that apply:</label>
+              <div class="ob-checkbox-group">
+                <label class="ob-checkbox"><input type="checkbox" name="Symptoms" value="Chest pain during exercise"/><span>Chest pain during exercise</span></label>
+                <label class="ob-checkbox"><input type="checkbox" name="Symptoms" value="Dizziness or fainting"/><span>Dizziness / fainting</span></label>
+                <label class="ob-checkbox"><input type="checkbox" name="Symptoms" value="Joint problems"/><span>Joint problems</span></label>
+                <label class="ob-checkbox"><input type="checkbox" name="Symptoms" value="None of the above"/><span>None of the above</span></label>
+              </div>
+            </div>
+            <div class="ob-field ob-field--full">
+              <label class="ob-label">Are you currently on medication? <span class="ob-required">*</span></label>
+              <div class="ob-radio-group">
+                <label class="ob-radio"><input type="radio" name="On Medication" value="Yes" required/><span>Yes</span></label>
+                <label class="ob-radio"><input type="radio" name="On Medication" value="No"/><span>No</span></label>
+              </div>
+            </div>
+            <div class="ob-field ob-field--full" id="medDetailsField" style="display:none;">
+              <label class="ob-label" for="medDetails">Medication details</label>
+              <input class="ob-input" type="text" id="medDetails" name="Medication Details" placeholder="Name and purpose of medication"/>
+            </div>
+            <div class="ob-field ob-field--full">
+              <label class="ob-label">Cleared by a doctor to exercise? <span class="ob-required">*</span></label>
+              <div class="ob-radio-group">
+                <label class="ob-radio"><input type="radio" name="Doctor Cleared" value="Yes" required/><span>Yes</span></label>
+                <label class="ob-radio"><input type="radio" name="Doctor Cleared" value="No"/><span>No</span></label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══════════════════════════════
+             SECTION 3 — FITNESS BACKGROUND
+        ═══════════════════════════════ -->
+        <div class="ob-section" id="section-3" data-section="3">
+          <div class="ob-section__header">
+            <span class="ob-section__num">03</span>
+            <h2 class="ob-section__title">Fitness Background</h2>
+          </div>
+
+          <div class="ob-fields">
+            <div class="ob-field ob-field--full">
+              <label class="ob-label" for="activityLevel">Current activity level <span class="ob-required">*</span></label>
+              <select class="ob-input ob-select" id="activityLevel" name="Activity Level" required>
+                <option value="" disabled selected>Select your level</option>
+                <option value="Sedentary">Sedentary — little to no exercise</option>
+                <option value="Lightly Active">Lightly Active — 1–2 days/week</option>
+                <option value="Moderately Active">Moderately Active — 3–4 days/week</option>
+                <option value="Very Active">Very Active — 5+ days/week</option>
+              </select>
+            </div>
+            <div class="ob-field ob-field--full">
+              <label class="ob-label">Worked with a trainer before? <span class="ob-required">*</span></label>
+              <div class="ob-radio-group">
+                <label class="ob-radio"><input type="radio" name="Previous Trainer" value="Yes" required/><span>Yes</span></label>
+                <label class="ob-radio"><input type="radio" name="Previous Trainer" value="No"/><span>No</span></label>
+              </div>
+            </div>
+            <div class="ob-field ob-field--full">
+              <label class="ob-label" for="prevExperience">Previous training experience</label>
+              <textarea class="ob-input ob-textarea" id="prevExperience" name="Previous Training Experience" rows="3" placeholder="What have you done before? Gym, sport, home workouts..."></textarea>
+            </div>
+            <div class="ob-field ob-field--full">
+              <label class="ob-label" for="whatWorked">What worked / what didn't</label>
+              <textarea class="ob-input ob-textarea" id="whatWorked" name="What Worked or Didnt" rows="3" placeholder="Be honest — this helps us build a better programme for you..."></textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══════════════════════════════
+             SECTION 4 — GOALS
+        ═══════════════════════════════ -->
+        <div class="ob-section" id="section-4" data-section="4">
+          <div class="ob-section__header">
+            <span class="ob-section__num">04</span>
+            <h2 class="ob-section__title">Goals</h2>
+          </div>
+
+          <div class="ob-fields">
+            <div class="ob-field ob-field--full">
+              <label class="ob-label" for="primaryGoal">Primary goal <span class="ob-required">*</span></label>
+              <select class="ob-input ob-select" id="primaryGoal" name="Primary Goal" required>
+                <option value="" disabled selected>Select your primary goal</option>
+                <option value="Fat Loss">Fat Loss</option>
+                <option value="Muscle Gain">Muscle Gain</option>
+                <option value="Strength">Strength</option>
+                <option value="Endurance">Endurance / Fitness</option>
+                <option value="Toning">Toning</option>
+                <option value="General Health">General Health</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div class="ob-field ob-field--full">
+              <label class="ob-label" for="specificGoal">Specific goal <span class="ob-required">*</span></label>
+              <textarea class="ob-input ob-textarea" id="specificGoal" name="Specific Goal" rows="2" required placeholder="e.g. Lose 10kg, run 5km, build visible muscle..."></textarea>
+            </div>
+            <div class="ob-field">
+              <label class="ob-label" for="timeline">Timeline <span class="ob-required">*</span></label>
+              <select class="ob-input ob-select" id="timeline" name="Timeline" required>
+                <option value="" disabled selected>How soon?</option>
+                <option value="1-3 months">1–3 months</option>
+                <option value="3-6 months">3–6 months</option>
+                <option value="6-12 months">6–12 months</option>
+                <option value="12+ months">12+ months</option>
+                <option value="No deadline">No specific deadline</option>
+              </select>
+            </div>
+            <div class="ob-field ob-field--full">
+              <label class="ob-label" for="whyGoal">Why is this goal important to you? <span class="ob-required">*</span></label>
+              <textarea class="ob-input ob-textarea" id="whyGoal" name="Why Goal Is Important" rows="3" required placeholder="The more honest, the better the programme we can build..."></textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══════════════════════════════
+             SECTION 5 — LIFESTYLE
+        ═══════════════════════════════ -->
+        <div class="ob-section" id="section-5" data-section="5">
+          <div class="ob-section__header">
+            <span class="ob-section__num">05</span>
+            <h2 class="ob-section__title">Lifestyle</h2>
+          </div>
+
+          <div class="ob-fields">
+            <div class="ob-field">
+              <label class="ob-label" for="trainingDays">Training days per week <span class="ob-required">*</span></label>
+              <select class="ob-input ob-select" id="trainingDays" name="Training Days Per Week" required>
+                <option value="" disabled selected>Select</option>
+                <option value="1">1 day</option>
+                <option value="2">2 days</option>
+                <option value="3">3 days</option>
+                <option value="4">4 days</option>
+                <option value="5">5 days</option>
+                <option value="6+">6+ days</option>
+              </select>
+            </div>
+            <div class="ob-field">
+              <label class="ob-label" for="sleepHours">Sleep hours per night</label>
+              <select class="ob-input ob-select" id="sleepHours" name="Sleep Hours">
+                <option value="" disabled selected>Select</option>
+                <option value="Less than 5">Less than 5hrs</option>
+                <option value="5-6">5–6hrs</option>
+                <option value="6-7">6–7hrs</option>
+                <option value="7-8">7–8hrs</option>
+                <option value="8+">8hrs+</option>
+              </select>
+            </div>
+            <div class="ob-field">
+              <label class="ob-label" for="stressLevel">Stress level</label>
+              <select class="ob-input ob-select" id="stressLevel" name="Stress Level">
+                <option value="" disabled selected>Select</option>
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+              </select>
+            </div>
+            <div class="ob-field">
+              <label class="ob-label" for="waterIntake">Daily water intake</label>
+              <select class="ob-input ob-select" id="waterIntake" name="Water Intake">
+                <option value="" disabled selected>Select</option>
+                <option value="Less than 1L">Less than 1L</option>
+                <option value="1-2L">1–2L</option>
+                <option value="2-3L">2–3L</option>
+                <option value="3L+">3L+</option>
+              </select>
+            </div>
+            <div class="ob-field">
+              <label class="ob-label" for="alcohol">Alcohol consumption</label>
+              <select class="ob-input ob-select" id="alcohol" name="Alcohol Consumption">
+                <option value="" disabled selected>Select</option>
+                <option value="Never">Never</option>
+                <option value="Occasionally">Occasionally</option>
+                <option value="Weekly">Weekly</option>
+                <option value="Daily">Daily</option>
+              </select>
+            </div>
+            <div class="ob-field">
+              <label class="ob-label">Smoking?</label>
+              <div class="ob-radio-group">
+                <label class="ob-radio"><input type="radio" name="Smoking" value="Yes"/><span>Yes</span></label>
+                <label class="ob-radio"><input type="radio" name="Smoking" value="No"/><span>No</span></label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══════════════════════════════
+             SECTION 6 — NUTRITION
+        ═══════════════════════════════ -->
+        <div class="ob-section" id="section-6" data-section="6">
+          <div class="ob-section__header">
+            <span class="ob-section__num">06</span>
+            <h2 class="ob-section__title">Nutrition</h2>
+          </div>
+
+          <div class="ob-fields">
+            <div class="ob-field ob-field--full">
+              <label class="ob-label" for="dailyMeals">Typical daily meals</label>
+              <textarea class="ob-input ob-textarea" id="dailyMeals" name="Typical Daily Meals" rows="4" placeholder="Walk us through what you usually eat in a day — breakfast, lunch, dinner, snacks..."></textarea>
+            </div>
+            <div class="ob-field ob-field--full">
+              <label class="ob-label" for="dietaryRestrictions">Dietary restrictions</label>
+              <input class="ob-input" type="text" id="dietaryRestrictions" name="Dietary Restrictions" placeholder="e.g. Vegetarian, halal, no dairy..."/>
+            </div>
+            <div class="ob-field ob-field--full">
+              <label class="ob-label" for="allergies">Allergies</label>
+              <input class="ob-input" type="text" id="allergies" name="Allergies" placeholder="e.g. Peanuts, gluten, lactose..."/>
+            </div>
+            <div class="ob-field ob-field--full">
+              <label class="ob-label">Willing to adjust your diet? <span class="ob-required">*</span></label>
+              <div class="ob-radio-group">
+                <label class="ob-radio"><input type="radio" name="Willing to Adjust Diet" value="Yes" required/><span>Yes</span></label>
+                <label class="ob-radio"><input type="radio" name="Willing to Adjust Diet" value="I'll try"/><span>I'll try</span></label>
+                <label class="ob-radio"><input type="radio" name="Willing to Adjust Diet" value="No"/><span>No</span></label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══════════════════════════════
+             SECTION 7 — COMMITMENT
+        ═══════════════════════════════ -->
+        <div class="ob-section" id="section-7" data-section="7">
+          <div class="ob-section__header">
+            <span class="ob-section__num">07</span>
+            <h2 class="ob-section__title">Commitment</h2>
+          </div>
+
+          <div class="ob-fields">
+            <div class="ob-field ob-field--full">
+              <label class="ob-label">I am willing to follow a structured programme <span class="ob-required">*</span></label>
+              <div class="ob-radio-group">
+                <label class="ob-radio"><input type="radio" name="Willing to Follow Programme" value="Yes" required/><span>Yes</span></label>
+                <label class="ob-radio"><input type="radio" name="Willing to Follow Programme" value="No"/><span>No</span></label>
+              </div>
+            </div>
+            <div class="ob-field ob-field--full">
+              <label class="ob-label">I am willing to track my progress <span class="ob-required">*</span></label>
+              <div class="ob-radio-group">
+                <label class="ob-radio"><input type="radio" name="Willing to Track Progress" value="Yes" required/><span>Yes</span></label>
+                <label class="ob-radio"><input type="radio" name="Willing to Track Progress" value="No"/><span>No</span></label>
+              </div>
+            </div>
+            <div class="ob-field ob-field--full">
+              <label class="ob-label">I will train consistently <span class="ob-required">*</span></label>
+              <div class="ob-radio-group">
+                <label class="ob-radio"><input type="radio" name="Will Train Consistently" value="Yes" required/><span>Yes</span></label>
+                <label class="ob-radio"><input type="radio" name="Will Train Consistently" value="No"/><span>No</span></label>
+              </div>
+            </div>
+            <div class="ob-field">
+              <label class="ob-label" for="prefTime">Preferred training time</label>
+              <select class="ob-input ob-select" id="prefTime" name="Preferred Training Time">
+                <option value="" disabled selected>Select</option>
+                <option value="Early morning (5am–8am)">Early morning (5am–8am)</option>
+                <option value="Morning (8am–11:30am)">Morning (8am–11:30am)</option>
+                <option value="Afternoon (2pm–5pm)">Afternoon (2pm–5pm)</option>
+                <option value="Evening (5pm–8pm)">Evening (5pm–8pm)</option>
+              </select>
+            </div>
+            <div class="ob-field">
+              <label class="ob-label" for="prefLocation">Preferred training location</label>
+              <select class="ob-input ob-select" id="prefLocation" name="Preferred Location">
+                <option value="" disabled selected>Select</option>
+                <option value="Online (Zoom)">Online (Zoom)</option>
+                <option value="In-Person">In-Person</option>
+                <option value="Either">Either works</option>
+              </select>
+            </div>
+            <div class="ob-field ob-field--full">
+              <label class="ob-label" for="whyNow">Why are you starting now? <span class="ob-required">*</span></label>
+              <textarea class="ob-input ob-textarea" id="whyNow" name="Why Starting Now" rows="3" required placeholder="What's changed or what's driving you to start today?"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══════════════════════════════
+             SECTION 8 — PAYMENT & AGREEMENT
+        ═══════════════════════════════ -->
+        <div class="ob-section" id="section-8" data-section="8">
+          <div class="ob-section__header">
+            <span class="ob-section__num">08</span>
+            <h2 class="ob-section__title">Package &amp; Agreement</h2>
+          </div>
+
+          <div class="ob-fields">
+            <div class="ob-field ob-field--full">
+              <label class="ob-label" for="packageSelect">Package selection <span class="ob-required">*</span></label>
+              <select class="ob-input ob-select" id="packageSelect" name="Package Selection" required>
+                <option value="" disabled selected>Select a package</option>
+                <option value="Monthly Package">Monthly Package</option>
+                <option value="Single Session">Single Session</option>
+                <option value="Diet Coaching">Diet Coaching</option>
+                <option value="Consultation">Consultation (Free)</option>
+              </select>
+            </div>
+            <div class="ob-field ob-field--full">
+              <label class="ob-label">Preferred payment method <span class="ob-required">*</span></label>
+              <div class="ob-radio-group">
+                <label class="ob-radio"><input type="radio" name="Payment Method" value="M-Pesa" required/><span>M-Pesa</span></label>
+                <label class="ob-radio"><input type="radio" name="Payment Method" value="Bank Transfer"/><span>Bank Transfer</span></label>
+              </div>
+            </div>
+
+            <!-- Policy agreement -->
+            <div class="ob-field ob-field--full">
+              <div class="ob-policy-box">
+                <p class="ob-policy-box__text">By submitting this form you confirm you have read and agree to the <a href="policy.html" target="_blank" rel="noopener">ODU Active Cancellation &amp; Attendance Policy</a>.</p>
+                <label class="ob-checkbox ob-checkbox--large">
+                  <input type="checkbox" name="Cancellation Policy Agreed" value="Yes" id="policyCheck" required/>
+                  <span>I understand and agree to the cancellation policy <span class="ob-required">*</span></span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Final message -->
+            <div class="ob-field ob-field--full">
+              <div class="ob-final-msg">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>
+                <p>Your responses will be reviewed. Only selected applicants will be contacted. We take every submission seriously.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- NAV BUTTONS -->
+        <div class="ob-nav" id="obNav">
+          <button type="button" class="btn btn--secondary ob-nav__back" id="obBack" style="display:none;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            Back
+          </button>
+          <button type="button" class="btn btn--primary ob-nav__next" id="obNext">
+            Next
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </button>
+          <button type="submit" class="btn btn--primary ob-nav__submit" id="obSubmit" style="display:none;">
+            Submit Application
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+        </div>
+
+      </form>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__top">
+        <div>
+          <img src="./assets/images/Sample-3(silver).png" alt="ODU Active" class="footer__brand-logo"/>
+          <p class="footer__brand-text">Science Based Coaching. Actualize A Better You.</p>
+        </div>
+        <div>
+          <p class="footer__heading">Navigation</p>
+          <ul class="footer__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="programs.html">Programs</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="booking.html">Booking</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__heading">Programs</p>
+          <ul class="footer__links">
+            <li><a href="payment.html?package=monthly">Monthly Package</a></li>
+            <li><a href="booking.html?package=single">Single Session</a></li>
+            <li><a href="payment.html?package=diet">Diet Coaching</a></li>
+            <li><a href="booking.html?package=consultation">Consultation</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__heading">Connect</p>
+          <ul class="footer__links">
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">TikTok</a></li>
+            <li><a href="#">YouTube</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2026 <span>ODU Active</span>. All rights reserved. Built by Nesture.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/particles.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/core.js"></script>
+  <script src="js/onboarding.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

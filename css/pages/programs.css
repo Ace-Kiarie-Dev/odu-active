@@ -239,3 +239,50 @@
   .prog-cta__actions { flex-direction: column; width: 100%; }
   .prog-cta__actions .btn { width: 100%; justify-content: center; }
 }
+
+/* ── NEW PACKAGE TAG VARIANTS ── */
+.pkg-section__tag--recommended {
+  background: var(--color-orange);
+  color: var(--color-black);
+}
+.pkg-section__tag--elite {
+  background: #fff;
+  color: #000;
+}
+
+/* ── FLOATING CANCELLATION POLICY BUTTON ── */
+.float-policy {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.1rem;
+  background: rgba(8,8,8,0.92);
+  border: 1px solid rgba(232,68,10,0.45);
+  border-radius: 999px;
+  color: rgba(255,255,255,0.85);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.4), 0 0 0 1px rgba(232,68,10,0.1);
+  transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+.float-policy svg { color: var(--color-orange, #e8440a); flex-shrink: 0; }
+.float-policy:hover {
+  border-color: rgba(232,68,10,0.9);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(232,68,10,0.2), 0 0 0 1px rgba(232,68,10,0.25);
+}
+@media (max-width: 480px) {
+  .float-policy span { display: none; }
+  .float-policy { padding: 0.75rem; bottom: 1.5rem; right: 1.5rem; }
+  .float-policy svg { width: 18px; height: 18px; }
+}
