@@ -1,14 +1,24 @@
 /* ── NESTURE FOOTER CREDIT LINK ──
-   Add this to css/base.css or css/components.css
+   Add to css/base.css or css/components.css
    ============================================================ */
+
+@keyframes nesturePulse {
+  0%, 100% { color: var(--color-orange, #f97316); }
+  50%       { color: rgba(249, 115, 22, 0.4); }
+}
+
 .footer__nesture {
   color: var(--color-orange, #f97316);
   text-decoration: none;
   font-weight: 600;
-  transition: opacity 0.2s ease;
+  animation: nesturePulse 2.4s ease-in-out 3; /* pulses 3x then stops */
+  transition: color 0.2s ease, opacity 0.2s ease;
 }
+
 .footer__nesture:hover {
-  opacity: 0.75;
+  animation: none;
+  color: #fff;
+  opacity: 0.9;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
