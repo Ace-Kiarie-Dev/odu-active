@@ -1,0 +1,14 @@
+/* ── NESTURE FOOTER CREDIT LINK ──
+   Add this to css/base.css or css/components.css
+   ============================================================ */
+.footer__nesture {
+  color: var(--color-orange, #f97316);
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity 0.2s ease;
+}
+.footer__nesture:hover {
+  opacity: 0.75;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

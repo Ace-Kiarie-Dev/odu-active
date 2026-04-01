@@ -77,8 +77,6 @@
         id="obForm"
         novalidate
       >
-        <!-- Hidden redirect after submit -->
-        <input type="hidden" name="_next" value="onboarding-thanks.html"/>
         <input type="hidden" name="_subject" value="New ODU Active Client Onboarding Submission"/>
 
         <!-- ═══════════════════════════════
@@ -432,9 +430,10 @@
               <label class="ob-label" for="packageSelect">Package selection <span class="ob-required">*</span></label>
               <select class="ob-input ob-select" id="packageSelect" name="Package Selection" required>
                 <option value="" disabled selected>Select a package</option>
-                <option value="Monthly Package">Monthly Package</option>
-                <option value="Single Session">Single Session</option>
-                <option value="Diet Coaching">Diet Coaching</option>
+                <option value="Monthly Package">Monthly Package — $300/mo</option>
+                <option value="3-Month Program">3-Month Program — $560</option>
+                <option value="6-Month Program">6-Month Program — $800</option>
+                <option value="Diet Coaching">Diet Coaching — $45</option>
                 <option value="Consultation">Consultation (Free)</option>
               </select>
             </div>
@@ -484,6 +483,24 @@
         </div>
 
       </form>
+
+      <!-- SUCCESS OVERLAY -->
+      <div class="ob-success" id="obSuccess" style="display:none;">
+        <div class="ob-success__icon">
+          <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>
+        </div>
+        <div class="ob-eyebrow">ODU Active</div>
+        <h2 class="ob-success__heading">Application<br/><span class="ob-success__accent">Received.</span></h2>
+        <p class="ob-success__body">Thank you — your onboarding form has been submitted. You'll now be taken to the payment page to complete your booking.</p>
+        <div class="ob-success__countdown">
+          Redirecting in <span id="obCountdown">5</span>s...
+        </div>
+        <a href="payment.html" class="btn btn--primary ob-success__btn" id="obPaymentLink">
+          Go to Payment Now
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+
     </div>
   </main>
 
@@ -518,16 +535,16 @@
         <div>
           <p class="footer__heading">Connect</p>
           <ul class="footer__links">
-            <li><a href="#">Instagram</a></li>
-            <li><a href="#">TikTok</a></li>
-            <li><a href="#">YouTube</a></li>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">LinkedIn</a></li>
+            <li><a href="https://www.instagram.com/oduactive" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://www.tiktok.com/@oduactive" target="_blank" rel="noopener">TikTok</a></li>
+            <li><a href="https://www.youtube.com/@OduActive" target="_blank" rel="noopener">YouTube</a></li>
+            <li><a href="https://www.facebook.com/share/g/1CzqJcqeXd/" target="_blank" rel="noopener">Facebook</a></li>
+            <li><a href="https://www.linkedin.com/in/paul-oduor-76a581387" target="_blank" rel="noopener">LinkedIn</a></li>
           </ul>
         </div>
       </div>
       <div class="footer__bottom">
-        <p class="footer__copy">&copy; 2026 <span>ODU Active</span>. All rights reserved. Built by Nesture.</p>
+        <p class="footer__copy">&copy; 2026 <span>ODU Active</span>. All rights reserved. Built by <a href="https://www.nesturex.com" target="_blank" rel="noopener" class="footer__nesture">Nesture</a>.</p>
       </div>
     </div>
   </footer>
@@ -536,6 +553,7 @@
   <script src="js/navbar.js"></script>
   <script src="js/core.js"></script>
   <script src="js/onboarding.js"></script>
+  <script src="js/onboarding-ajax.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
