@@ -10,39 +10,48 @@
 const WHATSAPP_NUMBER = '254725242721';
 
 const PKG_LABELS = {
-  monthly:      'Monthly Package',
-  single:       'Single Session',
-  diet:         'Diet Coaching',
-  consultation: 'Consultation'
+  monthly: 'Monthly Package',
+  single: 'Single Session',
+  diet: 'Diet Coaching',
+  consultation: 'Consultation',
+  'two-month': '2-Month Program',
+  'three-month': '3-Month Program',
+  'six-month': '6-Month Program'
 };
 
 const PKG_PRICES = {
-  monthly:      '$300 / month',
-  single:       '$25',
-  diet:         '$45',
-  consultation: '$25'
+  monthly: '$300 / month',
+  single: '$25',
+  diet: '$45',
+  consultation: 'Complimentary',
+  'two-month': '$560 / 2 months',
+  'three-month': '$800 / 3 months',
+  'six-month': '$1,600 / 6 months'
 };
 
 // Duration of each package in minutes — used for slot display info
 const PKG_DURATION = {
-  monthly:      60,
-  single:       45,
-  diet:         30,
-  consultation: 45
+  monthly: 60,
+  single: 45,
+  diet: 30,
+  consultation: 45,
+  'two-month': 60,
+  'three-month': 60,
+  'six-month': 60
 };
 
 // Packages that go to confirm page (WhatsApp booking request)
 // vs payment page (pay first)
-const CONFIRM_PKGS  = ['single', 'consultation'];
-const PAYMENT_PKGS  = ['monthly', 'diet'];
+const CONFIRM_PKGS = ['single', 'consultation'];
+const PAYMENT_PKGS = ['monthly', 'diet', 'two-month', 'three-month', 'six-month'];
 
 // ── READ URL PARAMS ───────────────────────────────────────
-const params     = new URLSearchParams(window.location.search);
-const sessionType = params.get('type')     || 'online';
-const pkg         = params.get('package')  || '';
-const dateStr     = params.get('date')     || '';
-const dateLabel   = params.get('label')    || dateStr;
-const isSaturday  = params.get('saturday') === '1';
+const params = new URLSearchParams(window.location.search);
+const sessionType = params.get('type') || 'online';
+const pkg = params.get('package') || '';
+const dateStr = params.get('date') || '';
+const dateLabel = params.get('label') || dateStr;
+const isSaturday = params.get('saturday') === '1';
 
 // Guard — if no valid params, redirect back
 if (!pkg || !dateStr) {
@@ -50,25 +59,25 @@ if (!pkg || !dateStr) {
 }
 
 // ── POPULATE SUMMARY ──────────────────────────────────────
-const sumType  = document.getElementById('sumType');
-const sumPkg   = document.getElementById('sumPkg');
-const sumDate  = document.getElementById('sumDate');
+const sumType = document.getElementById('sumType');
+const sumPkg = document.getElementById('sumPkg');
+const sumDate = document.getElementById('sumDate');
 const sumPrice = document.getElementById('sumPrice');
 
-if (sumType)  sumType.textContent  = sessionType === 'online' ? 'Online (Zoom)' : 'In-Person';
-if (sumPkg)   sumPkg.textContent   = PKG_LABELS[pkg]  || pkg;
-if (sumDate)  sumDate.textContent  = dateLabel;
-if (sumPrice) sumPrice.textContent = PKG_PRICES[pkg]  || '—';
+if (sumType) sumType.textContent = sessionType === 'online' ? 'Online (Zoom)' : 'In-Person';
+if (sumPkg) sumPkg.textContent = PKG_LABELS[pkg] || pkg;
+if (sumDate) sumDate.textContent = dateLabel;
+if (sumPrice) sumPrice.textContent = PKG_PRICES[pkg] || '—';
 
 // ── SESSION INFO SIDEBAR ──────────────────────────────────
 const sessionInfoItems = document.getElementById('sessionInfoItems');
 if (sessionInfoItems && pkg) {
   const formatLabel = sessionType === 'online' ? 'Zoom (Online)' : 'In-Person';
-  const duration    = PKG_DURATION[pkg] ? `${PKG_DURATION[pkg]} min` : 'TBC';
+  const duration = PKG_DURATION[pkg] ? `${PKG_DURATION[pkg]} min` : 'TBC';
   const items = [
-    { label: 'Format',   value: formatLabel },
+    { label: 'Format', value: formatLabel },
     { label: 'Duration', value: duration },
-    { label: 'Price',    value: PKG_PRICES[pkg] || '—' },
+    { label: 'Price', value: PKG_PRICES[pkg] || '—' },
     { label: 'Response', value: 'Within 24 hours' }
   ];
   sessionInfoItems.innerHTML = items.map(i => `
@@ -94,9 +103,9 @@ function generateSlots(startH, startM, endH, endM, containerId) {
   let h = startH, m = startM;
 
   while (h < endH || (h === endH && m <= endM)) {
-    const label  = formatTime(h, m);
-    const slot   = document.createElement('button');
-    slot.className   = 'timeslot';
+    const label = formatTime(h, m);
+    const slot = document.createElement('button');
+    slot.className = 'timeslot';
     slot.textContent = label;
     slot.dataset.time = label;
 
@@ -131,7 +140,7 @@ const submitBtn = document.getElementById('submitBtn');
 const formError = document.getElementById('formError');
 
 submitBtn?.addEventListener('click', () => {
-  const name  = document.getElementById('fieldName')?.value.trim();
+  const name = document.getElementById('fieldName')?.value.trim();
   const email = document.getElementById('fieldEmail')?.value.trim();
   const phone = document.getElementById('fieldPhone')?.value.trim();
   const notes = document.getElementById('fieldMessage')?.value.trim() || '';
@@ -139,9 +148,9 @@ submitBtn?.addEventListener('click', () => {
   // Validation
   if (!name || !email || !phone || !selectedSlot) {
     if (formError) formError.style.display = 'block';
-    if (!name)         document.getElementById('fieldName').style.borderColor  = 'var(--color-orange)';
-    if (!email)        document.getElementById('fieldEmail').style.borderColor = 'var(--color-orange)';
-    if (!phone)        document.getElementById('fieldPhone').style.borderColor = 'var(--color-orange)';
+    if (!name) document.getElementById('fieldName').style.borderColor = 'var(--color-orange)';
+    if (!email) document.getElementById('fieldEmail').style.borderColor = 'var(--color-orange)';
+    if (!phone) document.getElementById('fieldPhone').style.borderColor = 'var(--color-orange)';
     if (!selectedSlot) {
       document.getElementById('timeslotWrap').scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
@@ -151,9 +160,9 @@ submitBtn?.addEventListener('click', () => {
   if (formError) formError.style.display = 'none';
 
   const typeLabel = sessionType === 'online' ? 'Online (Zoom)' : 'In-Person';
-  const pkgLabel  = PKG_LABELS[pkg] || pkg;
-  const price     = PKG_PRICES[pkg] || '';
-  const satNote   = isSaturday ? ' (Saturday — pending agreement)' : '';
+  const pkgLabel = PKG_LABELS[pkg] || pkg;
+  const price = PKG_PRICES[pkg] || '';
+  const satNote = isSaturday ? ' (Saturday — pending agreement)' : '';
 
   // Build WhatsApp message
   const msg = [
@@ -175,28 +184,28 @@ submitBtn?.addEventListener('click', () => {
     // Monthly / Diet → payment page
     const nextParams = new URLSearchParams({
       package: pkg,
-      date:    dateLabel,
-      time:    selectedSlot,
-      type:    sessionType
+      date: dateLabel,
+      time: selectedSlot,
+      type: sessionType
     });
     window.location.href = `payment.html?${nextParams.toString()}`;
   } else {
     // Single / Consultation → confirm page
     const nextParams = new URLSearchParams({
       package: pkg,
-      date:    dateLabel,
-      time:    selectedSlot,
-      type:    sessionType,
-      name:    name,
-      wa:      waUrl
+      date: dateLabel,
+      time: selectedSlot,
+      type: sessionType,
+      name: name,
+      wa: waUrl
     });
     window.location.href = `booking-confirm.html?${nextParams.toString()}`;
   }
 });
 
 // Clear field error highlight on input
-['fieldName','fieldEmail','fieldPhone'].forEach(id => {
-  document.getElementById(id)?.addEventListener('input', function() {
+['fieldName', 'fieldEmail', 'fieldPhone'].forEach(id => {
+  document.getElementById(id)?.addEventListener('input', function () {
     this.style.borderColor = '';
     if (formError) formError.style.display = 'none';
   });

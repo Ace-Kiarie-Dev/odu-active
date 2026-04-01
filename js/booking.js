@@ -14,6 +14,7 @@ const PKG_LABELS = {
   single:        'Single Session',
   diet:          'Diet Coaching',
   consultation:  'Consultation',
+  'two-month':   '2-Month Program',
   'three-month': '3-Month Program',
   'six-month':   '6-Month Program'
 };
@@ -23,8 +24,9 @@ const PKG_PRICES = {
   single:        '$25',
   diet:          '$45',
   consultation:  'Complimentary',
-  'three-month': '$560',
-  'six-month':   '$800'
+  'two-month':   '$560',
+  'three-month': '$800',
+  'six-month':   '$1,600'
 };
 
 // ── STATE ─────────────────────────────────────────────────

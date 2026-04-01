@@ -27,7 +27,7 @@ const pkg         = params.get('package') || '';
 const dateLabel   = params.get('date')    || '';
 const timeSlot    = params.get('time')    || '';
 const sessionType = params.get('type')    || 'online';
-const waUrl       = params.get('wa')      || '#';
+const waUrl       = params.get('wa')      || 'https://wa.me/254725242721';
 
 // Populate summary
 const confPkg   = document.getElementById('confPkg');

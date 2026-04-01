@@ -15,6 +15,7 @@
   // Package → payment.html param mapping
   const PKG_PARAM = {
     'Monthly Package':  'monthly',
+    '2-Month Program':  'two-month',
     '3-Month Program':  'three-month',
     '6-Month Program':  'six-month',
     'Diet Coaching':    'diet',
