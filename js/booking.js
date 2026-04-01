@@ -24,9 +24,9 @@ const PKG_PRICES = {
   single:        '$25',
   diet:          '$45',
   consultation:  'Complimentary',
-  'two-month':   '$560',
-  'three-month': '$800',
-  'six-month':   '$1,600'
+  'two-month':   '$560 / 2 months',
+  'three-month': '$800 / 3 months',
+  'six-month':   '$1,600 / 6 months'
 };
 
 // ── STATE ─────────────────────────────────────────────────
@@ -52,11 +52,14 @@ async function loadAvailability() {
     const data = await res.json();
     const days = data.days || {};
     Object.entries(days).forEach(([dateStr, status]) => {
+      // Only mark booked if explicitly "booked" AND not explicitly "available"
       if (status === 'booked') state.bookedDates[dateStr] = true;
+      if (status === 'available') delete state.bookedDates[dateStr]; // available always wins
     });
   } catch {
     // No JSON — all Mon–Fri open by default
   }
+  // Hardcoded overrides always win last
   Object.entries(BOOKED_DATES).forEach(([d, s]) => {
     if (s === 'booked') state.bookedDates[d] = true;
   });

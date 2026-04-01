@@ -8,18 +8,24 @@
 'use strict';
 
 const PKG_LABELS = {
-  monthly:      'Monthly Package',
-  single:       'Single Session',
-  diet:         'Diet Coaching',
-  consultation: 'Consultation'
+  monthly:       'Monthly Package',
+  single:        'Single Session',
+  diet:          'Diet Coaching',
+  consultation:  'Consultation',
+  'two-month':   '2-Month Program',
+  'three-month': '3-Month Program',
+  'six-month':   '6-Month Program'
 };
 
 // Prices — update when Paul confirms Monthly Online pricing
 const PKG_PRICES = {
-  single:       'KES 1,500',
-  consultation: 'Complimentary',
-  monthly:      'See Payment Page',   // TBC from Paul
-  diet:         'See Payment Page'    // TBC from Paul
+  monthly:       '$300 / month',
+  single:        '$25',
+  diet:          '$45',
+  consultation:  'Complimentary',
+  'two-month':   '$560 / 2 months',
+  'three-month': '$800 / 3 months',
+  'six-month':   '$1,600 / 6 months'
 };
 
 const params      = new URLSearchParams(window.location.search);
