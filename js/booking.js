@@ -1,6 +1,7 @@
 /* ============================================================
    ODU ACTIVE — BOOKING.JS  (Step 1 of 3)
    Calendar, session type, package selection, continue bar
+   Currency-aware (USD ↔ KES via currency.js)
    Built by Nesture
    ============================================================ */
 
@@ -19,15 +20,21 @@ const PKG_LABELS = {
   'six-month':   '6-Month Program'
 };
 
-const PKG_PRICES = {
-  monthly:       '$300 / month',
-  single:        '$25',
-  diet:          '$45',
-  consultation:  'Complimentary',
-  'two-month':   '$560 / 2 months',
-  'three-month': '$800 / 3 months',
-  'six-month':   '$1,600 / 6 months'
+const PKG_SUFFIX = {
+  monthly:       ' / month',
+  single:        '',
+  diet:          '',
+  consultation:  '',
+  'two-month':   ' / 2 months',
+  'three-month': ' / 3 months',
+  'six-month':   ' / 6 months'
 };
+
+// Returns display price string for a given pkg in current currency
+function getPkgPrice(pkg) {
+  if (pkg === 'consultation') return 'Complimentary';
+  return CURRENCY.getPrice(pkg, PKG_SUFFIX[pkg] || '');
+}
 
 // ── STATE ─────────────────────────────────────────────────
 const state = {
@@ -42,7 +49,6 @@ const state = {
 };
 
 // ── HARDCODED BOOKED DATES ────────────────────────────────
-// Add any explicitly booked dates here: "YYYY-MM-DD": "booked"
 const BOOKED_DATES = {};
 
 // ── LOAD AVAILABILITY JSON (optional) ────────────────────
@@ -52,14 +58,12 @@ async function loadAvailability() {
     const data = await res.json();
     const days = data.days || {};
     Object.entries(days).forEach(([dateStr, status]) => {
-      // Only mark booked if explicitly "booked" AND not explicitly "available"
       if (status === 'booked') state.bookedDates[dateStr] = true;
-      if (status === 'available') delete state.bookedDates[dateStr]; // available always wins
+      if (status === 'available') delete state.bookedDates[dateStr];
     });
   } catch {
     // No JSON — all Mon–Fri open by default
   }
-  // Hardcoded overrides always win last
   Object.entries(BOOKED_DATES).forEach(([d, s]) => {
     if (s === 'booked') state.bookedDates[d] = true;
   });
@@ -96,6 +100,51 @@ document.querySelectorAll('.pkg-option').forEach(btn => {
   btn.addEventListener('click', () => setPackage(btn.dataset.pkg));
 });
 
+// ── UPDATE PKG OPTION PRICE SPANS ────────────────────────
+function updateBookingPrices() {
+  document.querySelectorAll('[data-pkg-price]').forEach(el => {
+    const pkg = el.dataset.pkgPrice;
+    if (!pkg) return;
+    el.textContent = getPkgPrice(pkg);
+  });
+
+  // Footer links
+  document.querySelectorAll('[data-footer-pkg]').forEach(el => {
+    const pkg   = el.dataset.footerPkg;
+    const label = el.dataset.footerLabel || '';
+    if (!pkg) return;
+    el.textContent = `${label}${getPkgPrice(pkg)}`;
+  });
+
+  // Sync toggle buttons
+  document.querySelectorAll('.currency-toggle__btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.currency === CURRENCY.current);
+  });
+}
+
+// ── CURRENCY TOGGLE ───────────────────────────────────────
+function buildCurrencyToggle() {
+  if (document.getElementById('currencyToggle')) return;
+  const toggle = document.createElement('div');
+  toggle.className = 'currency-toggle';
+  toggle.id = 'currencyToggle';
+  toggle.setAttribute('role', 'group');
+  toggle.setAttribute('aria-label', 'Currency selector');
+  toggle.innerHTML = `
+    <span class="currency-toggle__label">Price in</span>
+    <button class="currency-toggle__btn${CURRENCY.current === 'USD' ? ' active' : ''}" data-currency="USD">USD</button>
+    <button class="currency-toggle__btn${CURRENCY.current === 'KES' ? ' active' : ''}" data-currency="KES">KES</button>
+  `;
+  toggle.querySelectorAll('.currency-toggle__btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (btn.dataset.currency !== CURRENCY.current) CURRENCY.toggle();
+    });
+  });
+  document.body.appendChild(toggle);
+}
+
+document.addEventListener('currencyChange', updateBookingPrices);
+
 // ── CALENDAR ──────────────────────────────────────────────
 const calendarGrid = document.getElementById('calendarGrid');
 const monthLabel   = document.getElementById('monthLabel');
@@ -113,7 +162,6 @@ function renderCalendar() {
 
   calendarGrid.innerHTML = '';
 
-  // Empty cells before 1st of month
   for (let i = 0; i < firstDay; i++) {
     const el = document.createElement('div');
     el.className = 'cal-day cal-day--empty';
@@ -123,7 +171,7 @@ function renderCalendar() {
   for (let d = 1; d <= daysInMonth; d++) {
     const date       = new Date(year, month, d); date.setHours(0, 0, 0, 0);
     const dateStr    = `${year}-${String(month + 1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
-    const dayOfWeek  = date.getDay(); // 0=Sun … 6=Sat
+    const dayOfWeek  = date.getDay();
     const isSunday   = dayOfWeek === 0;
     const isSaturday = dayOfWeek === 6;
     const isWeekday  = dayOfWeek >= 1 && dayOfWeek <= 5;
@@ -139,7 +187,6 @@ function renderCalendar() {
     if (isSunday || isPast) {
       cell.classList.add('cal-day--past');
     } else if (isSaturday) {
-      // Saturday — request only
       cell.classList.add('cal-day--saturday');
       cell.setAttribute('role', 'button');
       cell.setAttribute('tabindex', '0');
@@ -153,7 +200,6 @@ function renderCalendar() {
       cell.classList.add('cal-day--booked');
       cell.title = 'This date is fully booked';
     } else if (isWeekday) {
-      // All Mon–Fri available
       cell.classList.add('cal-day--available');
       cell.setAttribute('role', 'button');
       cell.setAttribute('tabindex', '0');
@@ -224,12 +270,15 @@ continueBtn?.addEventListener('click', () => {
     package:  state.package,
     date:     state.selectedDate,
     label:    state.dateLabel,
-    saturday: state.isSaturday ? '1' : '0'
+    saturday: state.isSaturday ? '1' : '0',
+    currency: CURRENCY.current
   });
   window.location.href = `booking-details.html?${params.toString()}`;
 });
 
 // ── INIT ──────────────────────────────────────────────────
+buildCurrencyToggle();
 readURLParams();
 loadAvailability();
 updateBar();
+updateBookingPrices();
