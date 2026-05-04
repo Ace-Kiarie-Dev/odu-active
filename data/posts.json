@@ -1,33 +1,154 @@
 {
   "posts": [
     {
-      "id": "training-not-like-anyone-else",
-      "title": "Why Your Training Should Not Look Like Anyone Else's",
-      "category": "Training",
-      "date": "2026-04-20",
-      "readTime": "8 min read",
-      "excerpt": "Most people accept the idea that training should vary by occupation. They are partially right \u2014 but occupation is a proxy variable, not an actual prescription. Here are the seven factors that actually determine how a person should train.",
-      "image": "assets/images/blog/article-1.jpg",
+      "id": "what-a-good-coach-actually-does",
+      "title": "What a Good Coach Actually Does",
+      "category": "Philosophy",
+      "date": "2026-05-01",
+      "readTime": "9 min read",
+      "excerpt": "Most people who have struggled with their fitness have simply never worked with someone who understood their life well enough to build something that fits inside it. The problem is rarely discipline.",
+      "image": "assets/images/blog/article-3.jpg",
       "author": "Paul Oduor",
       "featured": true,
       "published": true,
       "content": [
         {
           "type": "lead",
-          "text": "Most people accept the idea that training should vary by occupation or lifestyle \u2014 and they are partially right. But occupation is a proxy variable, not an actual prescription."
+          "text": "Most people who have struggled with their fitness have simply never worked with someone who understood their life well enough to build something that fits inside it. Good coaching looks nothing like what most people have experienced."
         },
         {
           "type": "paragraph",
-          "text": "It gives you a rough starting hypothesis about a person, nothing more. The construction worker accumulates mechanical load through his workday \u2014 true. The desk worker carries postural patterns from eight hours of sitting \u2014 also true. But the moment you use those observations as a training prescription rather than a starting point, you are making lazy decisions dressed up as logic."
+          "text": "The problem is rarely discipline. Most people who have tried and stopped were not lacking commitment — they were working with a process that was never built around their life. Before we get into what good coaching actually involves, I've recorded a short companion video where I walk through this in my own voice."
+        },
+        {
+          "type": "video",
+          "youtubeId": "D1bktwYwb0c",
+          "title": "What a Good Coach Actually Does — Paul Oduor"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "factor",
+          "number": "01",
+          "title": "Start Where the Person Actually Is",
+          "paragraphs": [
+            "The first thing a good coach does is resist the urge to prescribe anything. Before a program, before a protocol, before a single recommendation — there is an assessment. A real one.",
+            "Not just body composition and movement screens. But life. Schedule. Sleep quality. Stress load. What the last several years have looked like in terms of physical activity. What has been tried before and why it did not hold.",
+            "People come to coaching carrying a history. A good coach does not skip past that — because that history contains useful data.",
+            "The individual who has been running hard professionally for years, who has allowed their body to fall down the priority list not out of carelessness but out of genuine demand — that person needs a different starting point than someone who simply has not gotten around to it yet."
+          ]
+        },
+        {
+          "type": "quote",
+          "text": "Seeing someone clearly, where they actually are, without projecting where they should be — that is the foundation. Failed attempts are data. A good coach reads them, not dismisses them."
+        },
+        {
+          "type": "factor",
+          "number": "02",
+          "title": "Teach the Process, Not Just the Movements",
+          "paragraphs": [
+            "There is a version of coaching where the client shows up, does what they are told, and leaves. It works — until it does not. Until travel disrupts the schedule, or a demanding week pulls everything off course, and there is no internal reference point to come back to.",
+            "A good coach is building something deeper than compliance. They are building understanding.",
+            "When a client understands why — what is actually happening to their metabolism, their hormonal profile, their cognitive performance — they stop needing to be convinced to train. They have a reason that belongs to them.",
+            "People who operate at a high level professionally tend to make better decisions when they understand the system. Fitness is a system. The body responds to inputs in predictable ways. A coach who explains those mechanisms is giving their client a tool they carry far beyond any single session."
+          ]
+        },
+        {
+          "type": "quote",
+          "text": "The goal of good coaching is not dependence. It is competence. Understanding converts a passenger into a participant. That shift changes everything."
+        },
+        {
+          "type": "factor",
+          "number": "03",
+          "title": "An Honest Case For a Path Forward",
+          "paragraphs": [
+            "At a certain point in the coaching relationship, a recommendation has to be made. A direction proposed. And how that moment is handled reveals a great deal about the coach.",
+            "A good coach makes that recommendation the way any trusted professional does. Clearly. With reasoning. Based on what they have actually observed about this specific person — not a template, not a trend, not what worked for the last client.",
+            "What that conversation should never involve is manufactured urgency. The people who respond well to pressure tend not to stay — because they signed up for something that was sold, not something that was explained.",
+            "A recommendation made honestly, with clear reasoning and genuine belief in the individual's capacity to follow through — that lands differently. It asks for a decision, not a reaction. And the commitment that follows is a different quality of commitment."
+          ]
+        },
+        {
+          "type": "quote",
+          "text": "Honest persuasion and pressure are not the same thing. One builds commitment. The other borrows it. The person choosing something they understand holds to it when things get hard. And they will get hard."
+        },
+        {
+          "type": "factor",
+          "number": "04",
+          "title": "Stay Honest. Stay Basic. Ignore the Rest.",
+          "paragraphs": [
+            "The fitness industry produces an extraordinary volume of content. New frameworks, new terminology, new reasons to believe that what you have been doing is wrong and something else is now correct. Most of it is driven by attention, not evidence.",
+            "A good coach is not indifferent to new information. But they are anchored to something the noise cannot touch — the fundamentals of human physiology have not changed."
+          ]
+        },
+        {
+          "type": "list",
+          "items": [
+            "Resistance training that progressively challenges the muscle.",
+            "Sufficient protein to support recovery and body composition.",
+            "Sleep that is protected, not squeezed in around everything else.",
+            "Stress that is managed rather than accumulated and stored.",
+            "Consistent low-level movement throughout the day — quiet, underestimated, and powerful over time."
+          ]
         },
         {
           "type": "paragraph",
-          "text": "What actually determines how a person should train is a more specific set of factors. Here they are, explained plainly \u2014 and if you'd rather hear me lay this out in my own voice, I've recorded a companion video below."
+          "text": "These things work. They have always worked. They work for people with demanding schedules, in their 40s and 50s, when motivation is high and when it has completely disappeared. That reliability is the point."
+        },
+        {
+          "type": "paragraph",
+          "text": "Part of a coach's role is to be a filter. To stand between their client and the volume of conflicting information and say — here is what is relevant to you, here is what you can ignore, here is what the evidence actually supports. That clarity is a service in itself."
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "heading",
+          "text": "In Summary"
+        },
+        {
+          "type": "paragraph",
+          "text": "Good coaching is not complicated. But it is rare. It requires someone who listens before they prescribe, who teaches rather than just instructs, and who is honest enough to make a clear recommendation without dressing it in urgency or exaggeration."
+        },
+        {
+          "type": "cta",
+          "eyebrow": "Start the Conversation",
+          "headline": "The first step is being seen clearly.",
+          "text": "ODU Active works with a small number of executives and senior professionals in Nairobi. The first conversation is an assessment — your life, your schedule, your history — before any program is proposed.",
+          "label": "Book Assessment",
+          "link": "booking.html"
+        }
+      ]
+    },
+    {
+      "id": "training-not-like-anyone-else",
+      "title": "Why Your Training Should Not Look Like Anyone Else's",
+      "category": "Training",
+      "date": "2026-04-20",
+      "readTime": "8 min read",
+      "excerpt": "Most people accept the idea that training should vary by occupation. They are partially right — but occupation is a proxy variable, not an actual prescription. Here are the seven factors that actually determine how a person should train.",
+      "image": "assets/images/blog/article-1.jpg",
+      "author": "Paul Oduor",
+      "featured": false,
+      "published": true,
+      "content": [
+        {
+          "type": "lead",
+          "text": "Most people accept the idea that training should vary by occupation or lifestyle — and they are partially right. But occupation is a proxy variable, not an actual prescription."
+        },
+        {
+          "type": "paragraph",
+          "text": "It gives you a rough starting hypothesis about a person, nothing more. The construction worker accumulates mechanical load through his workday — true. The desk worker carries postural patterns from eight hours of sitting — also true. But the moment you use those observations as a training prescription rather than a starting point, you are making lazy decisions dressed up as logic."
+        },
+        {
+          "type": "paragraph",
+          "text": "What actually determines how a person should train is a more specific set of factors. Here they are, explained plainly — and if you'd rather hear me lay this out in my own voice, I've recorded a companion video below."
         },
         {
           "type": "video",
           "youtubeId": "tYTxGhQz0Yk",
-          "title": "Why Your Training Should Not Look Like Anyone Else's \u2014 Paul Oduor"
+          "title": "Why Your Training Should Not Look Like Anyone Else's — Paul Oduor"
         },
         {
           "type": "divider"
@@ -37,10 +158,10 @@
           "number": "01",
           "title": "Total Stress Load",
           "paragraphs": [
-            "The body does not separate stress into categories. It does not file physical stress in one drawer and psychological stress in another. It processes all of it through the same system \u2014 and that system has a ceiling.",
-            "When you are running a company, managing people, navigating financial pressure, and making high-stakes decisions daily, your nervous system is operating in a state of sustained alertness. The brain reads those demands as threat signals and responds accordingly \u2014 releasing cortisol and adrenaline, elevating heart rate, keeping the body primed for action. The problem is that in most executive scenarios, there is no physical release for that activation. The meeting ends, the tension remains, and the body stays partially switched on.",
-            "Over time, this becomes the baseline. The system stops returning to a fully recovered state between demands. And because exercise \u2014 particularly high-intensity exercise \u2014 is itself a stress stimulus, adding it on top of an already loaded system does not produce the adaptation you are expecting. It compounds the deficit instead.",
-            "A manual worker's fatigue is largely mechanical. The muscles and joints are loaded, and recovery is primarily about tissue repair. An executive's fatigue runs through the nervous system itself \u2014 which means the recovery requirement is deeper, slower, and more easily disrupted."
+            "The body does not separate stress into categories. It does not file physical stress in one drawer and psychological stress in another. It processes all of it through the same system — and that system has a ceiling.",
+            "When you are running a company, managing people, navigating financial pressure, and making high-stakes decisions daily, your nervous system is operating in a state of sustained alertness. The brain reads those demands as threat signals and responds accordingly — releasing cortisol and adrenaline, elevating heart rate, keeping the body primed for action. The problem is that in most executive scenarios, there is no physical release for that activation. The meeting ends, the tension remains, and the body stays partially switched on.",
+            "Over time, this becomes the baseline. The system stops returning to a fully recovered state between demands. And because exercise — particularly high-intensity exercise — is itself a stress stimulus, adding it on top of an already loaded system does not produce the adaptation you are expecting. It compounds the deficit instead.",
+            "A manual worker's fatigue is largely mechanical. The muscles and joints are loaded, and recovery is primarily about tissue repair. An executive's fatigue runs through the nervous system itself — which means the recovery requirement is deeper, slower, and more easily disrupted."
           ]
         },
         {
@@ -48,9 +169,9 @@
           "number": "02",
           "title": "Sleep Quality",
           "paragraphs": [
-            "Training does not make you fitter. Recovery from training makes you fitter. The session is just the trigger \u2014 a controlled stress that signals the body to repair and adapt. That repair happens almost entirely during sleep, specifically during the deeper stages where growth hormone is released and muscle protein synthesis peaks.",
-            "If sleep is compromised \u2014 whether from stress, irregular schedules, travel across time zones, or simply insufficient hours \u2014 the adaptation process is blunted regardless of how well the program is designed. Two people with identical fitness levels, following identical programs, will diverge significantly in results if their sleep profiles are different.",
-            "What makes this more complicated for the executive profile is that stress directly degrades sleep quality. Even when the hours are adequate, chronic nervous system activation produces lighter, less restorative sleep \u2014 the kind where you wake up having technically slept but not having genuinely recovered. Sleep cannot be assessed in isolation. It is downstream of stress load, which means addressing one without addressing the other gives you an incomplete picture."
+            "Training does not make you fitter. Recovery from training makes you fitter. The session is just the trigger — a controlled stress that signals the body to repair and adapt. That repair happens almost entirely during sleep, specifically during the deeper stages where growth hormone is released and muscle protein synthesis peaks.",
+            "If sleep is compromised — whether from stress, irregular schedules, travel across time zones, or simply insufficient hours — the adaptation process is blunted regardless of how well the program is designed. Two people with identical fitness levels, following identical programs, will diverge significantly in results if their sleep profiles are different.",
+            "What makes this more complicated for the executive profile is that stress directly degrades sleep quality. Even when the hours are adequate, chronic nervous system activation produces lighter, less restorative sleep — the kind where you wake up having technically slept but not having genuinely recovered. Sleep cannot be assessed in isolation. It is downstream of stress load, which means addressing one without addressing the other gives you an incomplete picture."
           ]
         },
         {
@@ -58,9 +179,9 @@
           "number": "03",
           "title": "Hormonal Environment",
           "paragraphs": [
-            "Hormones govern how the body responds to training. Testosterone supports muscle protein synthesis \u2014 the process by which the body repairs and builds muscle tissue after a session. Growth hormone supports tissue repair and fat metabolism. Insulin sensitivity determines how efficiently the body processes carbohydrates for fuel and recovery. All three shift meaningfully with age, and the shift accelerates from the mid-thirties onward.",
+            "Hormones govern how the body responds to training. Testosterone supports muscle protein synthesis — the process by which the body repairs and builds muscle tissue after a session. Growth hormone supports tissue repair and fat metabolism. Insulin sensitivity determines how efficiently the body processes carbohydrates for fuel and recovery. All three shift meaningfully with age, and the shift accelerates from the mid-thirties onward.",
             "A 48-year-old executive and a 26-year-old athlete can perform identical movements in the gym and have fundamentally different physiological responses. The older individual requires longer recovery windows between sessions, responds better to moderate intensity over high frequency, and needs more deliberate attention to protein intake to stimulate the same level of muscle repair.",
-            "Chronic stress compounds this further. Sustained high cortisol actively suppresses testosterone production. So the executive who is both aging and chronically stressed is operating with a hormonal environment that works against adaptation \u2014 not because of poor effort, but because the internal conditions are not conducive to it. A program that ignores this will consistently underdeliver."
+            "Chronic stress compounds this further. Sustained high cortisol actively suppresses testosterone production. So the executive who is both aging and chronically stressed is operating with a hormonal environment that works against adaptation — not because of poor effort, but because the internal conditions are not conducive to it. A program that ignores this will consistently underdeliver."
           ]
         },
         {
@@ -69,8 +190,8 @@
           "title": "Injury History and Structural Patterns",
           "paragraphs": [
             "Years of occupational posture leave a physical record in the body. The tissues, joints, and movement patterns adapt to whatever position and demand they are exposed to most consistently.",
-            "A desk-based professional sitting for eight to ten hours daily develops predictable patterns: the hip flexors shorten because the hip is held in a bent position for extended periods. The muscles at the front of the chest tighten while those between the shoulder blades weaken from sustained rounding. The lower back loses its natural curve and absorbs load it was not designed to carry independently. These are not minor inconveniences \u2014 they are structural realities that determine what movements are safe, what needs to be corrected before adding load, and what compensations the body will default to under fatigue.",
-            "An executive who travels frequently adds joint compression from hours in aircraft seats, disrupted circulation, and the cumulative effect of working from non-ergonomic surfaces. These patterns must be assessed and addressed before a program adds significant intensity. Loading a dysfunctional movement pattern does not strengthen it \u2014 it reinforces the dysfunction and accelerates wear on the structures already compensating."
+            "A desk-based professional sitting for eight to ten hours daily develops predictable patterns: the hip flexors shorten because the hip is held in a bent position for extended periods. The muscles at the front of the chest tighten while those between the shoulder blades weaken from sustained rounding. The lower back loses its natural curve and absorbs load it was not designed to carry independently. These are not minor inconveniences — they are structural realities that determine what movements are safe, what needs to be corrected before adding load, and what compensations the body will default to under fatigue.",
+            "An executive who travels frequently adds joint compression from hours in aircraft seats, disrupted circulation, and the cumulative effect of working from non-ergonomic surfaces. These patterns must be assessed and addressed before a program adds significant intensity. Loading a dysfunctional movement pattern does not strengthen it — it reinforces the dysfunction and accelerates wear on the structures already compensating."
           ]
         },
         {
@@ -79,8 +200,8 @@
           "title": "Psychological Relationship With Effort",
           "paragraphs": [
             "This one is particular to high performers and rarely discussed in conventional fitness programming.",
-            "Executives and founders have typically built their careers by outworking problems \u2014 by applying sustained, high-intensity effort until results appear. That disposition is an asset in business. In training, it is frequently a liability.",
-            "The person who cannot train at moderate intensity because it does not feel productive is at significant risk. They push through sessions when the body is signaling recovery need. They interpret rest days as laziness rather than prescription. They escalate volume or intensity when progress stalls, when the correct response would often be the opposite. The result is accumulated fatigue that compounds over weeks until performance drops sharply \u2014 at which point they have been in deficit for longer than they realize.",
+            "Executives and founders have typically built their careers by outworking problems — by applying sustained, high-intensity effort until results appear. That disposition is an asset in business. In training, it is frequently a liability.",
+            "The person who cannot train at moderate intensity because it does not feel productive is at significant risk. They push through sessions when the body is signaling recovery need. They interpret rest days as laziness rather than prescription. They escalate volume or intensity when progress stalls, when the correct response would often be the opposite. The result is accumulated fatigue that compounds over weeks until performance drops sharply — at which point they have been in deficit for longer than they realize.",
             "A competent coach identifies this pattern early and programs around it deliberately. Not by removing challenge, but by reframing what productive effort actually looks like at each phase of training. Sometimes the most demanding thing to prescribe is restraint."
           ]
         },
@@ -90,8 +211,8 @@
           "title": "Nutritional Consistency and Context",
           "paragraphs": [
             "The body builds and repairs tissue using raw materials from food. Adequate protein is required to support muscle repair after training, and sufficient overall energy intake is required to fund both performance and recovery. When either is consistently insufficient, adaptation stalls regardless of how well everything else is managed.",
-            "The challenge for the executive profile is not usually knowledge \u2014 most high performers are broadly aware of what good nutrition looks like. The challenge is consistency under pressure. Skipped meals during demanding days, heavy client dinners, irregular travel schedules, and reliance on convenience options when time is short all create nutritional environments that undermine recovery even when training is sound.",
-            "There is also a less obvious issue. Chronic stress elevates cortisol, which increases appetite for calorie-dense foods and promotes fat storage \u2014 particularly around the abdomen. The executive under sustained pressure is fighting a hormonal headwind that makes body composition management harder even with reasonable dietary habits. A program that does not account for this nutritional context is working with an incomplete picture."
+            "The challenge for the executive profile is not usually knowledge — most high performers are broadly aware of what good nutrition looks like. The challenge is consistency under pressure. Skipped meals during demanding days, heavy client dinners, irregular travel schedules, and reliance on convenience options when time is short all create nutritional environments that undermine recovery even when training is sound.",
+            "There is also a less obvious issue. Chronic stress elevates cortisol, which increases appetite for calorie-dense foods and promotes fat storage — particularly around the abdomen. The executive under sustained pressure is fighting a hormonal headwind that makes body composition management harder even with reasonable dietary habits. A program that does not account for this nutritional context is working with an incomplete picture."
           ]
         },
         {
@@ -100,7 +221,7 @@
           "title": "Time Architecture",
           "paragraphs": [
             "The question is not simply how much time someone has available to train. It is when that time exists, what precedes it, and how reliably it can be protected.",
-            "Training immediately after a high-pressure event \u2014 a difficult negotiation, a tense board session \u2014 means walking into the gym with an already activated nervous system. The session will feel harder, perceived effort will be higher, and recovery afterward will be slower. Where the schedule allows, a short decompression window before training produces meaningfully better sessions and better adaptation.",
+            "Training immediately after a high-pressure event — a difficult negotiation, a tense board session — means walking into the gym with an already activated nervous system. The session will feel harder, perceived effort will be higher, and recovery afterward will be slower. Where the schedule allows, a short decompression window before training produces meaningfully better sessions and better adaptation.",
             "The second dimension is schedule robustness. A program designed around five structured sessions per week assumes a level of predictability that most executives do not have. Travel, crisis management, and shifting priorities will reliably disrupt the plan. A program that falls apart when a session is missed is not built for that life. The prescription needs to be effective when compressed, flexible enough to survive disruption, and consistent enough over time to produce cumulative progress. Consistency across months matters far more than perfection across any given week."
           ]
         },
@@ -109,7 +230,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Across all seven of these factors, the through-line is the same. Generic programming fails not because the exercises are wrong, but because it is built on assumptions about who is doing them and what conditions they are recovering under. Intelligent programming starts with an accurate picture of both \u2014 and adjusts as that picture changes."
+          "text": "Across all seven of these factors, the through-line is the same. Generic programming fails not because the exercises are wrong, but because it is built on assumptions about who is doing them and what conditions they are recovering under. Intelligent programming starts with an accurate picture of both — and adjusts as that picture changes."
         },
         {
           "type": "cta",
@@ -127,7 +248,7 @@
       "category": "Training",
       "date": "2026-03-12",
       "readTime": "12 min read",
-      "excerpt": "Most people think muscles are about how you look. They are wrong. Muscle is the single most important tissue in your body for long-term health \u2014 and most people are losing it without knowing it.",
+      "excerpt": "Most people think muscles are about how you look. They are wrong. Muscle is the single most important tissue in your body for long-term health — and most people are losing it without knowing it.",
       "image": "assets/images/blog/article-2.jpg",
       "author": "Paul Oduor",
       "featured": false,
@@ -135,11 +256,11 @@
       "content": [
         {
           "type": "lead",
-          "text": "Most people think muscles are about how you look. They are wrong. Muscle is the single most important tissue in your body for long-term health \u2014 and most people are losing it without knowing it. Here is what is actually at stake."
+          "text": "Most people think muscles are about how you look. They are wrong. Muscle is the single most important tissue in your body for long-term health — and most people are losing it without knowing it. Here is what is actually at stake."
         },
         {
           "type": "heading",
-          "text": "01 \u2014 Movement & Posture"
+          "text": "01 — Movement & Posture"
         },
         {
           "type": "paragraph",
@@ -147,19 +268,19 @@
         },
         {
           "type": "paragraph",
-          "text": "Every voluntary movement your body makes is muscular. Walking, climbing stairs, turning your head, picking up a glass \u2014 all of it is orchestrated by muscles contracting and releasing in precise sequences. When that system is underdeveloped, movements that should be effortless become labored. You compensate. You shift load to joints that were not designed to carry it. Over time, that compensation becomes chronic pain."
+          "text": "Every voluntary movement your body makes is muscular. Walking, climbing stairs, turning your head, picking up a glass — all of it is orchestrated by muscles contracting and releasing in precise sequences. When that system is underdeveloped, movements that should be effortless become labored. You compensate. You shift load to joints that were not designed to carry it. Over time, that compensation becomes chronic pain."
         },
         {
           "type": "paragraph",
-          "text": "Lower back pain is the most common example. The majority of non-traumatic lower back pain is not a spine problem. It is a stability problem. The deep stabilizing muscles \u2014 the multifidus, the transverse abdominis, the posterior chain \u2014 are supposed to hold the spine in a neutral position under load. When they are weak, the spine is poorly supported. Discs compress unevenly. Nerve roots get irritated. The pain feels structural because it presents structurally, but the origin is muscular insufficiency."
+          "text": "Lower back pain is the most common example. The majority of non-traumatic lower back pain is not a spine problem. It is a stability problem. The deep stabilizing muscles — the multifidus, the transverse abdominis, the posterior chain — are supposed to hold the spine in a neutral position under load. When they are weak, the spine is poorly supported. Discs compress unevenly. Nerve roots get irritated. The pain feels structural because it presents structurally, but the origin is muscular insufficiency."
         },
         {
           "type": "paragraph",
-          "text": "The same applies to the neck and hips. Desk workers who develop chronic neck pain are not suffering from a cervical spine disorder in most cases. They are suffering from weak deep neck flexors that cannot hold the head \u2014 which weighs roughly 5 kilograms \u2014 in a proper position for hours at a time. Every centimetre the head drifts forward adds effective load on the cervical spine. Muscles that are not strong enough to counter that drift eventually give out."
+          "text": "The same applies to the neck and hips. Desk workers who develop chronic neck pain are not suffering from a cervical spine disorder in most cases. They are suffering from weak deep neck flexors that cannot hold the head — which weighs roughly 5 kilograms — in a proper position for hours at a time. Every centimetre the head drifts forward adds effective load on the cervical spine. Muscles that are not strong enough to counter that drift eventually give out."
         },
         {
           "type": "quote",
-          "text": "Strength is stability. Stability is the absence of pain. The joint is rarely the root cause \u2014 the muscles that govern it are."
+          "text": "Strength is stability. Stability is the absence of pain. The joint is rarely the root cause — the muscles that govern it are."
         },
         {
           "type": "paragraph",
@@ -167,23 +288,23 @@
         },
         {
           "type": "heading",
-          "text": "02 \u2014 Metabolism"
+          "text": "02 — Metabolism"
         },
         {
           "type": "paragraph",
-          "text": "Your body is burning calories right now, doing nothing. That is your basal metabolic rate \u2014 the energy cost of simply being alive. It funds your heartbeat, your breathing, your organ function, your cellular repair. And it is largely determined by how much muscle you are carrying."
+          "text": "Your body is burning calories right now, doing nothing. That is your basal metabolic rate — the energy cost of simply being alive. It funds your heartbeat, your breathing, your organ function, your cellular repair. And it is largely determined by how much muscle you are carrying."
         },
         {
           "type": "stat-row",
           "stats": [
-            { "value": "2\u20133", "label": "Calories burned per kg of body fat daily at rest" },
+            { "value": "2–3", "label": "Calories burned per kg of body fat daily at rest" },
             { "value": "13", "label": "Calories burned per kg of muscle daily at rest" },
             { "value": "48h", "label": "Duration of elevated metabolism after resistance training" }
           ]
         },
         {
           "type": "paragraph",
-          "text": "A person carrying 10 additional kilograms of muscle over a sedentary counterpart burns over 100 extra calories daily without doing anything. Over a year, that is the caloric equivalent of more than 10 kilograms of fat \u2014 simply by existing with more muscle on the frame."
+          "text": "A person carrying 10 additional kilograms of muscle over a sedentary counterpart burns over 100 extra calories daily without doing anything. Over a year, that is the caloric equivalent of more than 10 kilograms of fat — simply by existing with more muscle on the frame."
         },
         {
           "type": "paragraph",
@@ -191,39 +312,39 @@
         },
         {
           "type": "paragraph",
-          "text": "Resistance training also creates metabolic demand that persists well beyond the session itself. The process of repairing and rebuilding muscle tissue \u2014 muscle protein synthesis \u2014 is energetically expensive and continues for up to 48 hours after a session. Building muscle is a long-term metabolic investment. Every kilogram added raises the floor of your resting energy expenditure permanently, making body composition easier to manage across your entire life."
+          "text": "Resistance training also creates metabolic demand that persists well beyond the session itself. The process of repairing and rebuilding muscle tissue — muscle protein synthesis — is energetically expensive and continues for up to 48 hours after a session. Building muscle is a long-term metabolic investment. Every kilogram added raises the floor of your resting energy expenditure permanently, making body composition easier to manage across your entire life."
         },
         {
           "type": "heading",
-          "text": "03 \u2014 Blood Sugar Regulation"
+          "text": "03 — Blood Sugar Regulation"
         },
         {
           "type": "paragraph",
-          "text": "Every time you eat carbohydrates, your digestive system breaks them down into glucose and releases that glucose into the bloodstream. Your pancreas responds by secreting insulin, which acts as a key \u2014 unlocking cells to absorb and use that glucose. The organ most responsible for absorbing it is skeletal muscle."
+          "text": "Every time you eat carbohydrates, your digestive system breaks them down into glucose and releases that glucose into the bloodstream. Your pancreas responds by secreting insulin, which acts as a key — unlocking cells to absorb and use that glucose. The organ most responsible for absorbing it is skeletal muscle."
         },
         {
           "type": "paragraph",
-          "text": "Roughly 70 to 80 percent of post-meal glucose uptake happens in skeletal muscle. Insulin signals muscle cells to move glucose transporters \u2014 specifically GLUT4 \u2014 to the cell surface, where they pull glucose in from the blood. More muscle mass means more of these transporters, more surface area for absorption, and faster clearance of glucose from the blood."
+          "text": "Roughly 70 to 80 percent of post-meal glucose uptake happens in skeletal muscle. Insulin signals muscle cells to move glucose transporters — specifically GLUT4 — to the cell surface, where they pull glucose in from the blood. More muscle mass means more of these transporters, more surface area for absorption, and faster clearance of glucose from the blood."
         },
         {
           "type": "paragraph",
-          "text": "When muscle mass is low, this system becomes inefficient. Glucose lingers in the bloodstream. The pancreas secretes more insulin to compensate. Over time, cells become less responsive to insulin \u2014 this is insulin resistance, the foundational defect in type 2 diabetes. The condition does not appear overnight. It develops across years of a glucose management system that is chronically underpowered relative to dietary load."
+          "text": "When muscle mass is low, this system becomes inefficient. Glucose lingers in the bloodstream. The pancreas secretes more insulin to compensate. Over time, cells become less responsive to insulin — this is insulin resistance, the foundational defect in type 2 diabetes. The condition does not appear overnight. It develops across years of a glucose management system that is chronically underpowered relative to dietary load."
         },
         {
           "type": "quote",
-          "text": "During muscle contraction, muscle cells absorb glucose without requiring insulin at all \u2014 bypassing the insulin pathway entirely. This is why exercise immediately lowers blood glucose."
+          "text": "During muscle contraction, muscle cells absorb glucose without requiring insulin at all — bypassing the insulin pathway entirely. This is why exercise immediately lowers blood glucose."
         },
         {
           "type": "paragraph",
-          "text": "Building and maintaining muscle mass is one of the most powerful interventions available for blood sugar management \u2014 more durable than most dietary changes, and without the side effects of pharmaceutical intervention."
+          "text": "Building and maintaining muscle mass is one of the most powerful interventions available for blood sugar management — more durable than most dietary changes, and without the side effects of pharmaceutical intervention."
         },
         {
           "type": "heading",
-          "text": "04 \u2014 Protection"
+          "text": "04 — Protection"
         },
         {
           "type": "paragraph",
-          "text": "The human body is regularly subjected to physical stress \u2014 sudden loads, falls, collisions, awkward movements. Muscle is the first line of defense against all of it."
+          "text": "The human body is regularly subjected to physical stress — sudden loads, falls, collisions, awkward movements. Muscle is the first line of defense against all of it."
         },
         {
           "type": "paragraph",
@@ -231,7 +352,7 @@
         },
         {
           "type": "paragraph",
-          "text": "But the protective function goes deeper than impact absorption. Every major joint \u2014 knee, hip, shoulder, ankle \u2014 depends on the surrounding musculature to maintain proper alignment and distribute load evenly across the joint surface. When those muscles are weak or imbalanced, the joint moves in ways it was not designed to. Cartilage wears unevenly. Ligaments are placed under stress they are not meant to carry."
+          "text": "But the protective function goes deeper than impact absorption. Every major joint — knee, hip, shoulder, ankle — depends on the surrounding musculature to maintain proper alignment and distribute load evenly across the joint surface. When those muscles are weak or imbalanced, the joint moves in ways it was not designed to. Cartilage wears unevenly. Ligaments are placed under stress they are not meant to carry."
         },
         {
           "type": "paragraph",
@@ -239,11 +360,11 @@
         },
         {
           "type": "paragraph",
-          "text": "This protection also scales with age. Falls are the leading cause of injury-related death in adults over 65. The ability to recover balance \u2014 to arrest a fall in progress \u2014 requires rapid muscle activation in the lower body. People with strong legs and good neuromuscular coordination either do not fall or stop themselves before hitting the ground. Muscle built earlier in life is protection deposited in advance."
+          "text": "This protection also scales with age. Falls are the leading cause of injury-related death in adults over 65. The ability to recover balance — to arrest a fall in progress — requires rapid muscle activation in the lower body. People with strong legs and good neuromuscular coordination either do not fall or stop themselves before hitting the ground. Muscle built earlier in life is protection deposited in advance."
         },
         {
           "type": "heading",
-          "text": "05 \u2014 Hormonal Environment"
+          "text": "05 — Hormonal Environment"
         },
         {
           "type": "paragraph",
@@ -255,11 +376,11 @@
         },
         {
           "type": "paragraph",
-          "text": "Cortisol is the third variable. It is a stress hormone \u2014 necessary in acute situations but damaging in chronically elevated states. It promotes fat storage, suppresses immune function, impairs sleep, and degrades muscle tissue. Muscle mass buffers cortisol's impact. Physically strong individuals show lower cortisol responses to equivalent psychological stressors than their sedentary counterparts."
+          "text": "Cortisol is the third variable. It is a stress hormone — necessary in acute situations but damaging in chronically elevated states. It promotes fat storage, suppresses immune function, impairs sleep, and degrades muscle tissue. Muscle mass buffers cortisol's impact. Physically strong individuals show lower cortisol responses to equivalent psychological stressors than their sedentary counterparts."
         },
         {
           "type": "quote",
-          "text": "During contraction, muscle releases myokines \u2014 proteins that act on other tissues to suppress inflammation, improve insulin sensitivity, and support neuroplasticity. BDNF, one of these molecules, directly supports cognitive function."
+          "text": "During contraction, muscle releases myokines — proteins that act on other tissues to suppress inflammation, improve insulin sensitivity, and support neuroplasticity. BDNF, one of these molecules, directly supports cognitive function."
         },
         {
           "type": "paragraph",
@@ -267,11 +388,11 @@
         },
         {
           "type": "heading",
-          "text": "06 \u2014 Disease Resilience"
+          "text": "06 — Disease Resilience"
         },
         {
           "type": "paragraph",
-          "text": "When the body comes under serious physiological stress \u2014 surgery, cancer treatment, sepsis, organ failure \u2014 it needs resources it cannot source fast enough from food alone. It turns to muscle."
+          "text": "When the body comes under serious physiological stress — surgery, cancer treatment, sepsis, organ failure — it needs resources it cannot source fast enough from food alone. It turns to muscle."
         },
         {
           "type": "paragraph",
@@ -280,7 +401,7 @@
         {
           "type": "stat-row",
           "stats": [
-            { "value": "30%", "label": "Of cancer deaths attributed to cachexia \u2014 muscle wasting \u2014 not the tumor itself" },
+            { "value": "30%", "label": "Of cancer deaths attributed to cachexia — muscle wasting — not the tumor itself" },
             { "value": "Higher", "label": "Post-surgical infection rates in patients with low pre-operative muscle mass" }
           ]
         },
@@ -290,11 +411,11 @@
         },
         {
           "type": "paragraph",
-          "text": "The surgical evidence is equally specific. Low muscle mass is now a formal pre-operative risk factor, assessed via CT scan as part of standard sarcopenia screening before major procedures. Patients flagged as sarcopenic have measurably higher rates of post-surgical infection, longer ICU stays, and higher 30 and 90-day mortality \u2014 independent of age, body weight, and the complexity of the procedure itself."
+          "text": "The surgical evidence is equally specific. Low muscle mass is now a formal pre-operative risk factor, assessed via CT scan as part of standard sarcopenia screening before major procedures. Patients flagged as sarcopenic have measurably higher rates of post-surgical infection, longer ICU stays, and higher 30 and 90-day mortality — independent of age, body weight, and the complexity of the procedure itself."
         },
         {
           "type": "paragraph",
-          "text": "In chronic conditions like heart failure, kidney disease, and COPD, skeletal muscle mass is an independent predictor of survival. Not correlated \u2014 independent. When researchers control for every other variable, muscle mass retains its predictive power."
+          "text": "In chronic conditions like heart failure, kidney disease, and COPD, skeletal muscle mass is an independent predictor of survival. Not correlated — independent. When researchers control for every other variable, muscle mass retains its predictive power."
         },
         {
           "type": "quote",
@@ -302,7 +423,7 @@
         },
         {
           "type": "heading",
-          "text": "07 \u2014 Aging"
+          "text": "07 — Aging"
         },
         {
           "type": "paragraph",
@@ -310,11 +431,11 @@
         },
         {
           "type": "paragraph",
-          "text": "The consequences compound across systems. Metabolism slows as muscle mass falls, making fat gain easier and weight management harder. Blood sugar regulation weakens, increasing diabetes risk. Bone density declines in parallel \u2014 bone and muscle are mechanically coupled, and the loss of muscular load on bone accelerates osteoporosis. Joint stability deteriorates. Balance degrades. The hormonal environment shifts toward lower testosterone, lower growth hormone, and higher chronic cortisol."
+          "text": "The consequences compound across systems. Metabolism slows as muscle mass falls, making fat gain easier and weight management harder. Blood sugar regulation weakens, increasing diabetes risk. Bone density declines in parallel — bone and muscle are mechanically coupled, and the loss of muscular load on bone accelerates osteoporosis. Joint stability deteriorates. Balance degrades. The hormonal environment shifts toward lower testosterone, lower growth hormone, and higher chronic cortisol."
         },
         {
           "type": "paragraph",
-          "text": "Cognitively, the picture is also concerning. Muscle contraction drives BDNF production, which supports the growth and maintenance of neurons \u2014 particularly in the hippocampus, the brain region central to memory and learning. Sarcopenic individuals show higher rates of cognitive decline and dementia than age-matched peers who have preserved muscle mass."
+          "text": "Cognitively, the picture is also concerning. Muscle contraction drives BDNF production, which supports the growth and maintenance of neurons — particularly in the hippocampus, the brain region central to memory and learning. Sarcopenic individuals show higher rates of cognitive decline and dementia than age-matched peers who have preserved muscle mass."
         },
         {
           "type": "quote",
@@ -322,7 +443,7 @@
         },
         {
           "type": "paragraph",
-          "text": "The critical point is that this process does not announce itself. A 35-year-old losing muscle at the standard rate does not feel it. A 45-year-old does not feel it. By 55 or 60, the losses have accumulated to the point where functional decline becomes visible \u2014 but the window for easy intervention has been narrowing for two decades."
+          "text": "The critical point is that this process does not announce itself. A 35-year-old losing muscle at the standard rate does not feel it. A 45-year-old does not feel it. By 55 or 60, the losses have accumulated to the point where functional decline becomes visible — but the window for easy intervention has been narrowing for two decades."
         },
         {
           "type": "paragraph",
@@ -349,7 +470,7 @@
         },
         {
           "type": "paragraph",
-          "text": "The people who understand this early build the kind of body that does not just look capable \u2014 it is capable, consistently, across decades."
+          "text": "The people who understand this early build the kind of body that does not just look capable — it is capable, consistently, across decades."
         },
         {
           "type": "cta",

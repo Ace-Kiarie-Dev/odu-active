@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git checkout *)",
+      "Bash(grep -rn '\\\\$25\\\\|\\\\$300\\\\|\\\\$560\\\\|\\\\$800\\\\|\\\\$1,600\\\\|\\\\$45' --include=\"*.html\" .)",
+      "Bash(grep -n \"payment\\\\|pricing\\\\|\\\\$\" onboarding.html)",
+      "Bash(grep -n \"payment\\\\|payment.html\\\\|\\\\$\" onboarding.html)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)"
+    ]
+  }
+}

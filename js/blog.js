@@ -25,7 +25,12 @@ function formatDate(dateStr) {
 
 // ── CATEGORY COLOR ────────────────────────────────────────
 function catColor(cat) {
-  const map = { Training: '#E8440A', Nutrition: '#22c55e', 'Client Stories': '#3b82f6' };
+  const map = {
+    Training:         '#E8440A',
+    Nutrition:        '#22c55e',
+    'Client Stories': '#3b82f6',
+    Philosophy:       '#C8CDD4'
+  };
   return map[cat] || '#9AA0A8';
 }
 
