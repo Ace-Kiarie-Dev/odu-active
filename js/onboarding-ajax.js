@@ -1,7 +1,7 @@
 /* ============================================================
    ODU ACTIVE — ONBOARDING-AJAX.JS
    Intercepts form submit, POSTs to Formspree via fetch(),
-   shows branded success screen, redirects to payment.html
+   shows branded success screen, redirects to onboarding-thanks.html
    Built by Nesture
    ============================================================ */
 
@@ -12,15 +12,7 @@
   const FORMSPREE_ID = 'mgopkvdo';
   const REDIRECT_DELAY = 5; // seconds before auto-redirect
 
-  // Package → payment.html param mapping
-  const PKG_PARAM = {
-    'Monthly Package':  'monthly',
-    '2-Month Program':  'two-month',
-    '3-Month Program':  'three-month',
-    '6-Month Program':  'six-month',
-    'Diet Coaching':    'diet',
-    'Consultation':     'consultation'
-  };
+  const THANKS_URL = 'onboarding-thanks.html';
 
   const form        = document.getElementById('obForm');
   const successEl   = document.getElementById('obSuccess');
@@ -46,14 +38,6 @@
     // Collect form data
     const formData = new FormData(form);
 
-    // Determine payment redirect URL from selected package
-    const selectedPkg = document.getElementById('packageSelect')?.value || '';
-    const pkgParam    = PKG_PARAM[selectedPkg] || 'monthly';
-
-    // Also check URL param as fallback
-    const urlPkg = new URLSearchParams(window.location.search).get('package') || pkgParam;
-    const paymentUrl = `payment.html?package=${PKG_PARAM[selectedPkg] || urlPkg}`;
-
     try {
       const response = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
         method:  'POST',
@@ -62,8 +46,7 @@
       });
 
       if (response.ok) {
-        // Show success screen
-        showSuccess(paymentUrl);
+        showSuccess();
       } else {
         const data = await response.json();
         const msg  = data?.errors?.map(e => e.message).join(', ') || 'Something went wrong. Please try again.';
@@ -76,15 +59,15 @@
     }
   });
 
-  function showSuccess(paymentUrl) {
+  function showSuccess() {
     // Hide form sections + progress + nav
     document.querySelectorAll('.ob-section, .ob-progress, .ob-nav, .ob-pkg-banner').forEach(el => {
       el.style.display = 'none';
     });
     form.style.display = 'none';
 
-    // Update payment link
-    if (paymentLink) paymentLink.href = paymentUrl;
+    // Update link if element exists
+    if (paymentLink) paymentLink.href = THANKS_URL;
 
     // Show success overlay
     if (successEl) successEl.style.display = 'flex';
@@ -101,7 +84,7 @@
       if (countdown) countdown.textContent = count;
       if (count <= 0) {
         clearInterval(timer);
-        window.location.href = paymentUrl;
+        window.location.href = THANKS_URL;
       }
     }, 1000);
   }

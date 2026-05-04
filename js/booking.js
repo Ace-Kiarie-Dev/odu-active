@@ -1,7 +1,6 @@
 /* ============================================================
    ODU ACTIVE — BOOKING.JS  (Step 1 of 3)
    Calendar, session type, package selection, continue bar
-   Currency-aware (USD ↔ KES via currency.js)
    Built by Nesture
    ============================================================ */
 
@@ -19,22 +18,6 @@ const PKG_LABELS = {
   'three-month': '3-Month Program',
   'six-month':   '6-Month Program'
 };
-
-const PKG_SUFFIX = {
-  monthly:       ' / month',
-  single:        '',
-  diet:          '',
-  consultation:  '',
-  'two-month':   ' / 2 months',
-  'three-month': ' / 3 months',
-  'six-month':   ' / 6 months'
-};
-
-// Returns display price string for a given pkg in current currency
-function getPkgPrice(pkg) {
-  if (pkg === 'consultation') return 'Complimentary';
-  return CURRENCY.getPrice(pkg, PKG_SUFFIX[pkg] || '');
-}
 
 // ── STATE ─────────────────────────────────────────────────
 const state = {
@@ -99,51 +82,6 @@ function setPackage(pkg) {
 document.querySelectorAll('.pkg-option').forEach(btn => {
   btn.addEventListener('click', () => setPackage(btn.dataset.pkg));
 });
-
-// ── UPDATE PKG OPTION PRICE SPANS ────────────────────────
-function updateBookingPrices() {
-  document.querySelectorAll('[data-pkg-price]').forEach(el => {
-    const pkg = el.dataset.pkgPrice;
-    if (!pkg) return;
-    el.textContent = getPkgPrice(pkg);
-  });
-
-  // Footer links
-  document.querySelectorAll('[data-footer-pkg]').forEach(el => {
-    const pkg   = el.dataset.footerPkg;
-    const label = el.dataset.footerLabel || '';
-    if (!pkg) return;
-    el.textContent = `${label}${getPkgPrice(pkg)}`;
-  });
-
-  // Sync toggle buttons
-  document.querySelectorAll('.currency-toggle__btn').forEach(btn => {
-    btn.classList.toggle('active', btn.dataset.currency === CURRENCY.current);
-  });
-}
-
-// ── CURRENCY TOGGLE ───────────────────────────────────────
-function buildCurrencyToggle() {
-  if (document.getElementById('currencyToggle')) return;
-  const toggle = document.createElement('div');
-  toggle.className = 'currency-toggle';
-  toggle.id = 'currencyToggle';
-  toggle.setAttribute('role', 'group');
-  toggle.setAttribute('aria-label', 'Currency selector');
-  toggle.innerHTML = `
-    <span class="currency-toggle__label">Price in</span>
-    <button class="currency-toggle__btn${CURRENCY.current === 'USD' ? ' active' : ''}" data-currency="USD">USD</button>
-    <button class="currency-toggle__btn${CURRENCY.current === 'KES' ? ' active' : ''}" data-currency="KES">KES</button>
-  `;
-  toggle.querySelectorAll('.currency-toggle__btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      if (btn.dataset.currency !== CURRENCY.current) CURRENCY.toggle();
-    });
-  });
-  document.body.appendChild(toggle);
-}
-
-document.addEventListener('currencyChange', updateBookingPrices);
 
 // ── CALENDAR ──────────────────────────────────────────────
 const calendarGrid = document.getElementById('calendarGrid');
@@ -270,15 +208,12 @@ continueBtn?.addEventListener('click', () => {
     package:  state.package,
     date:     state.selectedDate,
     label:    state.dateLabel,
-    saturday: state.isSaturday ? '1' : '0',
-    currency: CURRENCY.current
+    saturday: state.isSaturday ? '1' : '0'
   });
   window.location.href = `booking-details.html?${params.toString()}`;
 });
 
 // ── INIT ──────────────────────────────────────────────────
-buildCurrencyToggle();
 readURLParams();
 loadAvailability();
 updateBar();
-updateBookingPrices();

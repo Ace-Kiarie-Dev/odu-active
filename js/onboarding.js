@@ -1,6 +1,6 @@
 /* ============================================================
    ODU ACTIVE — ONBOARDING.JS
-   Multi-step form, package pre-selection, payment redirect
+   Multi-step form, package pre-selection
    Built by Nesture
    ============================================================ */
 
@@ -8,8 +8,6 @@
 
 const TOTAL_SECTIONS = 8;
 let currentSection = 1;
-
-const PAYMENT_PACKAGES = ['monthly', 'three-month', 'six-month', 'diet', 'consultation'];
 
 const PKG_NAMES = {
   monthly:       'Monthly Package',
@@ -47,12 +45,8 @@ function preSelectPackage() {
 // ── SET REDIRECT AFTER FORMSPREE SUBMIT ───────────────────
 function setRedirect() {
   if (!obForm) return;
-  const pkg      = urlPackage || 'monthly';
-  const nextPage = PAYMENT_PACKAGES.includes(pkg)
-    ? `payment.html?package=${pkg}`
-    : 'onboarding-thanks.html';
   const hiddenNext = obForm.querySelector('input[name="_next"]');
-  if (hiddenNext) hiddenNext.value = nextPage;
+  if (hiddenNext) hiddenNext.value = 'onboarding-thanks.html';
 }
 
 // ── SHOW PACKAGE CONTEXT BANNER ───────────────────────────
